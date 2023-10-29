@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     background-color: bisque;
-    background-image: url(../images/developer-illustration.png);
+    background-image: url(/assets/images/developer-illustration.png);
     background-repeat: no-repeat;
     background-size: 400px 250px;
     background-position: 95% 90%;
