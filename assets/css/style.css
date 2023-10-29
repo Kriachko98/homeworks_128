@@ -12,17 +12,20 @@ body {
 .list--homework {
     list-style: square;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 75px;
 }
 
 .link--homework {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    margin-bottom: 10px;
 }
 
 .link--homework:hover {
     text-decoration: underline;
     color: gray;
+}
+
+.name--homework {
+    margin-bottom: 10px;
 }
