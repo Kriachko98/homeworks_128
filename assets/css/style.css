@@ -1,0 +1,25 @@
+body {
+    background-color: bisque;
+}
+
+.main--title {
+    margin-top: 100px;
+    margin-left: 100px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.list--homework {
+    list-style: square;
+    margin-top: 50px;
+}
+
+.link--homework {
+    text-decoration: none;
+    color: black;
+}
+
+.link--homework:hover {
+    text-decoration: underline;
+    color: gray;
+}
