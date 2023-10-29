@@ -1,0 +1,138 @@
+.wrapper {
+    display: flex;
+
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 350px;
+    height: 1350px;
+    background-color: bisque;
+}
+
+.photo {
+    width: 350px;
+}
+
+.div--button {
+    padding-left: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+}
+
+.icon--language {
+    width: 40px;
+    height: 30px;
+    margin: 0; 
+}
+
+.icon--language:hover {
+    opacity: 0.5;
+}
+
+.contacts {
+    list-style: none;
+}
+
+.title--sidebar {
+    padding-left: 40px;
+    margin-top: 50px;
+}
+
+.hard--skills {
+    padding-left: 55px;
+    list-style-type: square;
+}
+
+.soft--skills {
+    padding-left: 55px;
+    list-style-type: square;
+}
+
+.link--contacts {
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
+}
+
+.link--contacts:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+
+/* Main iformation */
+main {
+    width: 900px;
+    height: 1350px;
+    background-color: rgb(253, 249, 242);
+}
+
+/* About me */
+.about--me {
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.profession {
+    color: rgb(34, 31, 31);
+    letter-spacing: 1px;
+}
+
+.name {
+    color: #444141;
+}
+
+.introduction {
+    width: 700px;
+}
+
+/* Expirience */
+.expirience {
+    margin-top: 70px;
+    margin-left: 80px; 
+}
+
+.first--job {
+   margin: 0;
+   font-size: 20px;
+}
+
+.time--job {
+    margin: 0;
+    color: gray;
+}
+
+.second--job {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.list--job {
+    width: 500px;
+}
+
+/* Education */
+.education {
+    margin-top: 70px;
+    margin-left: 80px;
+}
+
+.study--place {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.speciality {
+    margin: 0;
+}
+
+.study--time {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: gray;
+}

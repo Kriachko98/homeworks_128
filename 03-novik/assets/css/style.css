@@ -1,0 +1,18 @@
+/* Rating stars */
+.black-star-rating {
+    width: 26px;
+    height: 26px;
+    background-image: url(/03/assets/images/black-star-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style: none;
+}
+
+.gray-star-rating {
+    width: 26px;
+    height: 26px;
+    background-image: url(/03/assets/images/gray-star-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style: none;
+}
