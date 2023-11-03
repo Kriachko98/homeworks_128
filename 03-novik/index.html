@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denis Novik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header class="header">
         <nav class="navigation">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
@@ -20,91 +24,108 @@
         </nav>
     </header>
     <main>
+        <!-- Novik -->
         <section class="novik-section">
             <h1 class="name-title">Denis Novik</h1>
             <img class="my-photo" src="assets/images/denis-novik.jpg" alt="my photo">
         </section>
         <!-- About me -->
         <section id="about-me" class="about-me-section">
-            <h2 class="about-me-title">About me</h2>
-            <p class="introduction">Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.</p>
-            <p class="introduction">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
-            <p class="introduction">Ready to implement excellent projects with wonderful people.</p>
+            <div class="container-introduction">
+                <h2 class="title">About me</h2>
+                <p class="introduction-me">Hi, I'm Denis – UX/UI designer from Minsk. <br> I'm interested in design and everything connected with it.</p>
+                <p class="introduction-study">I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+                <p class="introduction-ready">Ready to implement excellent projects with wonderful people.</p>
+            </div>
         </section>
         <!-- Skills -->
         <section id="skills" class="skills-section">
-            <h2 class="skills-title">Skills</h2>
-            <div class="text-skills">I work in such programs as</div>
-            <ul class="work-programs">
-                <li>
-                    <div class="program-icon"><img src="assets/images/Ps-icon.jpg" alt="Photoshop"></div>
-                    <div class="program-name">Adobe Photoshop</div>
-                    <ul class="rating-list">
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="gray-star-rating"></li>
-                        <li class="gray-star-rating"></li>
-                        <li class="gray-star-rating"></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="program-icon"><img src="assets/images/Ai-icon.png" alt="Illustrator"></div>
-                    <div class="program-name">Adobe Illustrator</div>
-                    <ul class="rating-list">
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="gray-star-rating"></li>
-                        <li class="gray-star-rating"></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="program-icon"><img src="assets/images/Ae-icon.png" alt="After Effects"></div>
-                    <div class="program-name">Adobe After Effects</div>
-                    <ul class="rating-list">
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="gray-star-rating"></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="program-icon"><img src="assets/images/Figma-icon.png" alt="Figma"></div>
-                    <div class="program-name">Figma</div>
-                    <ul class="rating-list">
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                        <li class="black-star-rating"></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="container-skills">
+                <h2 class="title skills">Skills</h2>
+                <div class="text-skills">I work in such programs as</div>
+                <ul class="work-programs">
+                    <li>
+                        <div class="program-icon"><img src="assets/images/Ps-icon.jpg" alt="Photoshop"></div>
+                        <div class="program-name">Adobe Photoshop</div>
+                        <div class="rating-list">
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="program-icon"><img src="assets/images/Ai-icon.png" alt="Illustrator"></div>
+                        <div class="program-name">Adobe Illustrator</div>
+                        <div class="rating-list">
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="program-icon"><img src="assets/images/Ae-icon.png" alt="After Effects"></div>
+                        <div class="program-name">Adobe After Effects</div>
+                        <div class="rating-list">
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                        </div>
+                    </li>
+                    <li class="last">
+                        <div class="program-icon"><img src="assets/images/Figma-icon.png" alt="Figma"></div>
+                        <div class="program-name">Figma</div>
+                        <div class="rating-list">
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                            <span class="star-rating"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
         <!-- Portfolio -->
         <section id="portfolio" class="portfolio-section">
-            <h2 class="portfolio-title">Portfolio</h2>
-            <img class="work-example" src="assets/images/Fashion-Store.jpg" alt="Online fashion store">
-            <div class="work-name"><a target="_blank" href="https://lms.beetroot.academy/studying/clnx3gcc72x1x0813u313zunx/homework/clnx7ughb3hx6081374uhp6d5">Online fashion store - Homepage</a></div>
-            <img class="work-example" src="assets/images/reebok_web.jpg" alt="Reebok Store">
-            <div class="work-name"><a target="_blank" href="https://lms.beetroot.academy/studying/clnx3gcc72x1x0813u313zunx/homework/clnx7ughb3hx6081374uhp6d5">Reebok Store - Concept</a></div>
-            <img class="work-example" src="assets/images/braun-landing.jpg" alt="Braun Landing Page">
-            <div class="work-name"><a target="_blank" href="https://lms.beetroot.academy/studying/clnx3gcc72x1x0813u313zunx/homework/clnx7ughb3hx6081374uhp6d5">Braun Landing Page - Concept</a></div>
+            <h2 class="title">Portfolio</h2>
+            <div class="work-example">
+                <img src="assets/images/Fashion-Store.jpg" alt="Online fashion store">
+            </div>
+            <div class="work-name"><a class="link-work" target="_blank" href="https://lms.beetroot.academy/studying/clnx3gcc72x1x0813u313zunx/homework/clnx7ughb3hx6081374uhp6d5">Online fashion store - <br> Homepage</a></div>
+            <div class="work-example">
+                <img src="assets/images/reebok_web.jpg" alt="Reebok Store">
+            </div>
+            <div class="work-name"><a class="link-work" target="_blank" href="https://lms.beetroot.academy/studying/clnx3gcc72x1x0813u313zunx/homework/clnx7ughb3hx6081374uhp6d5">Reebok Store - Concept</a></div>
+            <div class="work-example">
+                <img src="assets/images/braun-landing.jpg" alt="Braun Landing Page">
+            </div>
+            <div class="work-name"><a class="link-work" target="_blank" href="https://lms.beetroot.academy/studying/clnx3gcc72x1x0813u313zunx/homework/clnx7ughb3hx6081374uhp6d5">Braun Landing Page - Concept</a></div>
         </section>
     </main>
     <!-- Contacts -->
     <footer id="contacts">
-        <h2 class="contacts-title">Contacts</h2>
-        <p class="text-contacts">Want to know more or just chat? You are welcome!</p>
-        <button type="button" class="button">Send message</button>
-        <ul class="media-list">
-            <li><a target="_blank" href="https://www.linkedin.com/"><img class="media-icon" src="assets/images/linkedin-icon.png" alt="LinkedIn"></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/"><img class="media-icon" src="assets/images/instagram-icon.png" alt="Instagram"></a></li>
-            <li><a target="_blank" href="https://www.behance.net/"><img class="media-icon" src="assets/images/behance--icon.png" alt="Behance"></a></li>
-            <li><a target="_blank" href="https://dribbble.com/"><img class="media-icon" src="assets/images/dribble-icon.png" alt="Dribble"></a></li>
-        </ul>
-        <div class="text-media">Like me on LinkedIn, Instagram, Behance, Dribble</div>
+        <div class="container-contacts">
+            <h2 class="title-contacts">Contacts</h2>
+            <p class="text-contacts">Want to know more or just chat? You are welcome!</p>
+            <div class="button-wrapper">
+                <button type="button" class="button">Send message</button>
+            </div>
+            <div class="media-wrapper">
+                <ul class="media-list">
+                    <li><a target="_blank" href="https://www.linkedin.com/"><img class="media-icon" src="assets/images/linkedin-icon.png" alt="LinkedIn"></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/"><img class="media-icon" src="assets/images/instagram-icon.png" alt="Instagram"></a></li>
+                    <li><a target="_blank" href="https://www.behance.net/"><img class="media-icon" src="assets/images/behance--icon.png" alt="Behance"></a></li>
+                    <li><a target="_blank" href="https://dribbble.com/"><img class="media-icon" src="assets/images/dribble-icon.png" alt="Dribble"></a></li>
+                </ul>
+            </div>
+            <div class="text-media">Like me on <br> LinkedIn, Instagram, Behance, Dribble</div>
+        </div>
     </footer>
 </body>
 </html>
