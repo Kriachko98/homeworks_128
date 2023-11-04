@@ -44,6 +44,10 @@ img {
     vertical-align: top;
 }
 
+a, button {
+    transition: all .2s ease;
+}
+
 /* Header */
 .header {
     margin: 0 120px;
@@ -258,6 +262,7 @@ vertical-align: top;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -279,6 +284,10 @@ vertical-align: top;
     display: inline-block;
     margin-right: 50px;
     margin-left: -4px;
+}
+
+.media-list li:hover {
+    opacity: .5;
 }
 
 .media-list li:last-child {
