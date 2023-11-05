@@ -1,0 +1,34 @@
+form {
+    margin-top: 75px;
+    margin-left: 150px;
+    background-color: lightgray;
+    border: 3px solid gray;
+    width: 700px;
+    padding: 30px;
+}
+
+div {
+    width: 700px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 170px;
+}
+
+.sex {
+    width: 100px;
+}
+
+.agreement {
+    width: 400px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    margin: 20px 30px 0;
+}
