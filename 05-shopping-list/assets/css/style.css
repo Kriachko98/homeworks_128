@@ -1,0 +1,189 @@
+:root {
+    --var-hover-bg: #625E77;
+    --ver-light-bg: #88839E;
+    --var-dark-bg: #7A7593;
+    --var-checked-color: #9B96AC;
+    --var-unchecked-color: #FFFFFF;
+}
+
+body {
+    width: min(90%, 793px);
+    margin: 100px auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    border: 7px solid white;
+    box-shadow: 0 0 1px 1px black;
+}
+
+/* Header */
+header {
+    background-color: #4A4F56;
+    margin: 0;
+    color: #FF8984;
+    text-align: center;
+}
+
+.title {
+    margin-top: 0;
+    padding-top: 19px;
+    margin-bottom: 4px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h1 + p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Form */
+main {
+    background-color: #3B3F45;
+    margin: 0;
+}
+
+form {
+    width: min(70%, 534px);
+    margin: 0 129px 0 130px;
+    padding: 20px 0 45px;
+}
+
+form > div {
+    color: var(--var-unchecked-color);
+    height: 45px;
+}
+
+form > div:nth-child(odd) {
+    background-color: var(--ver-light-bg);
+}
+
+div:nth-child(even) {
+    background-color: var(--var-dark-bg);
+}
+
+form > div:hover {
+    background-color: var(--var-hover-bg);
+    box-sizing: border-box;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+
+form > div:active {
+    background-color: rgb(147, 56, 56);
+    box-sizing: border-box;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+
+input:checked + label {
+    color: var(--var-checked-color);
+    text-decoration: line-through;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.custom--checkbox + label {
+    padding-left: 12px;
+    line-height: 45px;
+    position: relative;
+}
+
+.custom--checkbox + label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    background: white;
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+
+.custom--checkbox:checked + label::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 3px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 18px;
+    top: 5px;
+}
+
+#label {
+    padding-left: 47px;
+}
+
+.pickles::after {
+    content: "(for the next lessons about CSS)";
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.apples::after {
+    content: "(for more CSS manipulations)";
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.oranges::after {
+    content: "(because they are awesome)";
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.plates::after {
+    content: "(hm... they always dissapear)";
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.sake::after {
+    content: "(for my friends)";
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* Bon appetit */
+footer {
+    background-color: #3B3F45;
+    height: 90px;
+}
+
+.footer--section {
+    background-color: #4A4F56;
+    width: min(70%, 534px);
+    margin: 0 129px 45px 130px;
+    padding: 12px 0;
+    text-align: center;
+    color: #FF8984;
+}
