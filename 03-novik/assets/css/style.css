@@ -28,7 +28,6 @@
 body {
     font-family: 'Inter', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    width: min(100%, 1440px);
     font-size: 18px;
     color: var(--var-black-color);
 }
