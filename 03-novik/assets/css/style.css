@@ -32,6 +32,11 @@ body {
     color: var(--var-black-color);
 }
 
+.container {
+    width: min(90%, 970px);
+    margin-inline: auto;
+}
+
 ul {
     list-style: none;
 }
@@ -113,35 +118,24 @@ vertical-align: top;
 
 .introduction-me {
     width: 480px;
-    margin: 0 480px 30px;
+    margin: 0 auto 30px;
+    text-align: center;
 }
 
 .introduction-study {
-    margin-bottom: 30px;
     width: 406px;
-    margin: 0 517px 30px;
+    margin: 0 auto 30px;
+    text-align: center;
 }
 
 .introduction-ready {
     width: 321px;
-    margin: 0 560px 30px;
-}
-
-.container-introduction {
+    margin: 0 auto;
     padding-bottom: 100px;
     text-align: center;
 }
 
 /* Skills */
-.skills-section {
-    padding: 100px 0 101px;
-}
-
-.container-skills {
-    width: min(90%, 970px);
-    margin: 0 auto;
-}
-
 .skills {
     margin-bottom: 20px;
     padding-bottom: 0;
@@ -153,6 +147,10 @@ vertical-align: top;
     text-align: center;
     margin-bottom: 50px;
     font-weight: 700;
+}
+
+.work-programs {
+    padding-bottom: 100px;
 }
 
 .work-programs li {
@@ -229,11 +227,6 @@ vertical-align: top;
 }
 
 /* Contacts */
-.container-contacts {
-    width: min(90%, 970px);
-    margin: 0 auto;
-}
-
 .title-contacts {
     font-size: 34px;
     padding-top: 100px;
@@ -307,4 +300,5 @@ vertical-align: top;
     width: 200px;
     margin: 0 auto 100px;
     text-align: center;
+    font-size: 14px;
 }
