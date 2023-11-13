@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <form method="post" action="">
+    <form method="post" action="" enctype="multipart/form-data">
         <div>
             <label for="name">Повне ім'я</label>
             <input id="name" type="text" name="name" required>
@@ -27,7 +27,7 @@
         </div>
         <div>
             <label for="photo">Ваша фотографія</label>
-            <input type="file" id="photo" name="photo">
+            <input type="file" id="photo" name="photo" accept=".png, .jpg, .jpeg">
         </div>
         <div>
             <label>Стать</label>
@@ -78,7 +78,7 @@
         </div>
         <div>
             <label for="comment">Коментар</label>
-            <input type="text">
+            <input type="text" id="comment" name="comment">
         </div>
         <div>
             <input type="checkbox" id="agreement" name="agreement" required>
