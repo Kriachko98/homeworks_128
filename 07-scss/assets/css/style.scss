@@ -1,0 +1,24 @@
+@import '_variables';
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin fz($px){
+    font-size: ($px / 16) * 1rem;
+}
+
+body {
+    color: $primory-color;
+    background-color: $primory-color2;
+}
+
+div {
+    color: $primory-color2;
+    
+}
+
+
+
+
