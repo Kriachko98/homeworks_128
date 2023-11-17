@@ -1,0 +1,411 @@
+:root {
+    --var-color-black: #2F281E;
+    --var-color-gray: #544837;
+    --var-color-orange: #F90;
+    --var-color-lightblue: #BCD0E5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--var-color-gray);
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+
+a, button {
+    transition: all .2s ease;
+}
+
+/* Header */
+header {
+    height: 80px;
+}
+
+.wrapper--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div--logo a > img{
+    width: 200px;
+    height: 32px;
+}
+
+.list--nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: 400;
+    padding: 26px 0;
+}
+
+.list--nav > li a{
+    line-height: 1.75rem;
+    color: var(--var-color-black);
+    text-decoration: none;
+}
+
+.list--nav > li a:hover {
+    color: var(--var-color-orange);
+}
+
+.buttons--wrapper {
+    width: 252px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn--sign--in {
+    width: 110px;
+    padding: 13px 0;
+    font-weight: 600;
+    text-align: center;
+    color: var(--var-color-black);
+    border: 1px solid var(--var-color-lightblue);
+    background-color: #fff;
+}
+
+.btn--sign--in:hover {
+    background-color: var(--var-color-lightblue);
+    color: white;
+}
+
+.btn--sign--up {
+    width: 110px;
+    padding: 13px 0;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border: 1px solid var(--var-color-orange);
+    background-color: var(--var-color-orange);
+}
+
+.btn--sign--up:hover {
+    color: var(--var-color-orange);
+    background-color: white;
+    border: 1px solid var(--var-color-orange);
+}
+
+/* First section */
+.first--section {
+    padding-top: 70px;
+    margin-bottom: 99px;
+}
+
+.first--wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.superpowers {
+    width: 500px;
+}
+
+.superpowers > h1 {
+    margin: 97px 0 30px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 3.375rem;
+    color: var(--var-color-black);
+}
+
+.superpowers > p {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.btn--start {
+    width: 180px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: var(--var-color-orange);
+    border: 1px solid var(--var-color-orange);
+    padding: 13px 0;
+}
+
+.btn--start:hover {
+    color: var(--var-color-orange);
+    background-color: white;
+}
+
+.happy--people {
+    width: 644px;
+    height: 495px;
+}
+
+/* Icon section */
+.section--icon {
+    height: 510px;
+    background-image: url(/08-productly/assets/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+}
+
+.tools--title {
+    width: 539px;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--var-color-black);
+    margin: 0 auto 50px;
+    text-align: center;
+    line-height: normal;
+}
+
+.list--tools {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.list--tools > li {
+    width: 270px;
+}
+
+.list--tools > li > img {
+    width: 50px;
+    aspect-ratio: 1;
+    margin-bottom: 30px;
+}
+
+.name--tools {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--var-color-black);
+    margin-bottom: 16px;
+}
+.text--tools {
+    line-height: 1.625rem;
+    margin-bottom: 70px;
+}
+
+.btn--now {
+    width: 180px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: var(--var-color-orange);
+    border: 1px solid var(--var-color-orange);
+    padding: 13px 0;
+}
+
+.btn--now:hover {
+    color: var(--var-color-orange);
+    background-color: white;
+}
+
+.div--btn--now {
+    width: 180px;
+    margin: 0 auto 78px;
+}
+
+/* Design Professionals section */
+.design--section {
+    padding-top: 100px;
+}
+
+.design--wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.part--design {
+    width: 525px;
+    padding-top: 20px;
+}
+
+.part--design > div {
+    line-height: 1.625rem;
+}
+
+.design--title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--var-color-black);
+}
+
+.design--text {
+    line-height: 1.625rem;
+    margin-bottom: 40px;
+}
+
+.design--list {
+    list-style: none;
+}
+
+.design--list > li > div {
+    font-weight: 700;
+    line-height: 1.625rem;
+    color: var(--var-color-black);
+    margin-bottom: 10px;
+}
+
+.design--list > li > p {
+    line-height: 1.625rem;
+}
+
+.design--list > li {
+    margin-bottom: 30px;
+}
+
+.design--list > :last-child {
+    margin-bottom: 20px;
+}
+
+.red--boy {
+    width: 562px;
+    height: 573px;
+}
+
+/* Product Managers section */
+.manager--section {
+    padding-top: 100px;
+    margin-bottom: 100px;
+}
+
+.manager--wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.manager--part {
+    width: 505px;
+    padding-bottom: 18px;
+}
+
+.manager--part > div {
+    padding-top: 48px;
+    line-height: 1.625rem;
+}
+
+.manager--title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--var-color-black);
+    margin-bottom: 20px;
+}
+
+.manager--text {
+    line-height: 1.625rem;
+    margin-bottom: 40px;
+}
+
+.manager--list {
+    list-style: none;
+}
+
+.manager--list li {
+    line-height: 1.625rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.flag--icon {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* Marketers section */
+.marketers--section {
+    margin-bottom: 101px;
+}
+
+.part--marketers {
+    width: 486px;
+    padding-top: 40px;
+}
+
+.part--marketers > div {
+    line-height: 1.625rem;
+}
+
+.yellow--boy {
+    width: 540px;
+    height: 610px;
+}
+
+/* Footer */
+footer {
+    margin-bottom: 55px;
+}
+
+.footer--wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+.footer--list {
+    width: 135px;
+}
+
+.name--ul {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+    color: var(--var-color-black);
+    margin-bottom: 30px;
+}
+
+.footer--ul {
+    list-style: none;
+}
+
+.footer--ul > li {
+    line-height: 1.625rem;
+    margin-bottom: 15px;
+}
+
+.footer--ul > li:hover {
+    text-decoration: underline;
+}
+
+.footer--link {
+    text-decoration: none;
+    color: var(--var-color-gray);
+    line-height: 1.625rem;
+}
+
+.div--form {
+    width: 340px;
+}
+
+.name--form {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+    color: var(--var-color-black);
+    width: 280px;
+    margin-bottom: 25px;
+}
+
+.input--phone {
+    width: 340px;
+    height: 50px;
+    border: 1px solid var(--var-color-lightblue);
+    margin-bottom: 25px;
+}
+
+.input--phone::placeholder {
+    color: var(--var-color-lightblue);
+    font-weight: 400;
+}
