@@ -152,7 +152,7 @@ header {
 /* Icon section */
 .section--icon {
     height: 510px;
-    background-image: url(/08-productly/assets/images/bg.png);
+    background-image: url(../images/bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;  
 }
