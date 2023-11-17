@@ -408,4 +408,5 @@ footer {
 .input--phone::placeholder {
     color: var(--var-color-lightblue);
     font-weight: 400;
+    padding-left: 10px;
 }
