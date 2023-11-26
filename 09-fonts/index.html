@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header--wrapper">
-                <div>
+                <div class="nav--wrapper">
                     <div class="option">
                         <a class="lang" href="#">eng</a>
-                        <a href="#">Documentation</a> /
-                        <a href="#">Who's using</a>
                     </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li>/</li>
+                            <li><a href="#">Who's using</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="logo">
-                    <img src="assets/image/company-logo-black.svg" alt="Konstrukt logo">
+                    <a href="#"><img src="assets/image/company-logo-black.svg" alt="Konstrukt logo"></a>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Main -->
     <main>
         <section>
             <div class="container">
@@ -42,12 +49,12 @@
                 <h2>react fundamentals</h2>
                 <p>React Native runs on React, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
                 <div>We’re going to cover the core concepts behind React:</div>
-                <ul>
-                    <li>+ components. The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in.</li>
-                    <li>+ JSX. React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so: &lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;.</li>
-                    <li>The React docs have a comprehensive guide to JSX you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a name for the cat, name, and embedding it with curly braces inside &lt;Text&gt;</li>
-                    <li>+ props. Props is short for “properties”. </li>
-                    <li>+ state. While you can think of props as arguments you use to configure how components render, state is like a component’s personal data storage. State is useful for handling data that changes over time or that comes from user interaction. State gives your components memory!</li>
+                <ul class="react--list">
+                    <li><span class="span--bold">+ components.</span> The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in.</li>
+                    <li><span class="span--bold">+ JSX.</span> React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so: <span class="span--bg">&lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;</span>.</li>
+                    <li>The React docs have a comprehensive guide to JSX you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span class="span--bg">name</span> for the cat, name, and embedding it with curly braces inside <span class="span--bg">&lt;Text&gt;</span></li>
+                    <li><span class="span--bold">+ props.</span> Props is short for “properties”. </li>
+                    <li><span class="span--bold">+ state.</span> While you can think of props as arguments you use to configure how components render, state is like a component’s personal data storage. State is useful for handling data that changes over time or that comes from user interaction. State gives your components memory!</li>
                 </ul>
             </div>
         </section>
@@ -58,11 +65,6 @@
                 <p>For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be translated as "🍕 🍕".</p>
             </div>
         </section>
-        
-
-
-
-
     </main>
 </body>
 </html>

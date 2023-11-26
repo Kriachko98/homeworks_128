@@ -4,6 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: black;
 }
 
 body {
@@ -11,6 +17,7 @@ body {
     line-height: 3rem;
     font-weight: 400;
     font-family: PT Sans;
+    color: black;
 }
 
 .container {
@@ -18,21 +25,79 @@ body {
     margin-inline: auto;
 }
 
+// Header
 header {
-    height: 54px;
+    height: 80px;
+    vertical-align: top;
 }
 
 .header--wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    height: 67px;
+    padding-top: 13px;
+    .nav--wrapper {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .option {
+            padding-bottom: 8px;
+            .lang {
+                font-family: Tourney;
+                font-size: 1.375rem;
+                font-weight: 600;
+                line-height: 1.125rem;
+                letter-spacing: 0.055rem;
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+            }
+        }
+        ul {
+            display: flex;
+            gap: 10px;
+            font-family: Staatliches;
+            font-size: 1.375rem;
+            line-height: normal;
+            letter-spacing: 0.04125rem;
+        }
+        .logo {
+            img {
+                height: 54px;
+                width: 238px;
+            }
+        }
+    }
 }
 
-.lang {
-    font-family: Tourney;
-    font-size: 1.375rem;
-    font-weight: 600;
-    line-height: 1.125rem;
-    letter-spacing: 0.055rem;
+// Main
+h2 {
+    font-family: Francois One;
+    font-size: 2.25rem;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+}
+
+section {
+    margin-top: 70px;
+}
+
+p {
+    margin-top: 40px;
+    &:last-child {
+        margin-bottom: 90px;
+    }
+}
+
+.react--list {
+    li {
+        margin-top: 40px;
+        .span--bold {
+            font-weight: 700;
+        }
+        .span--bg {
+            background-color: #DADADA;
+        }
+    }
 }
