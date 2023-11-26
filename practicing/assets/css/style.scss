@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    width: 1000%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button, a {
+    transition: all .2s ease;
+}
+
+.container {
+    width: min(90%, 1400px);
+    margin-inline: auto;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #232323;
+}
+
+.page--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+    // margin-top: 100px;
+    background-color: aquamarine;
+    transform: scale(2) skew(10deg);
+}
