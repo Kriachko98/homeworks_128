@@ -21,8 +21,10 @@ body {
 }
 
 .container {
-    width: min(90%, 1200px);
-    margin-inline: auto;
+    width: min(60%, 785px);
+    position: relative;
+    top: 0;
+    right: -120px;
 }
 
 // Header
@@ -30,6 +32,11 @@ header {
     height: 80px;
     vertical-align: top;
 }
+
+.header--container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+} 
 
 .header--wrapper {
     display: flex;
@@ -69,6 +76,13 @@ header {
             }
         }
     }
+}
+
+aside {
+    font-family: Francois One;
+    font-size: 2.25rem;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
 }
 
 // Main content
