@@ -21,10 +21,7 @@ body {
 }
 
 .container {
-    width: min(60%, 785px);
-    position: relative;
-    top: 0;
-    right: -120px;
+    width: 785px;
 }
 
 // Header
@@ -78,14 +75,28 @@ header {
     }
 }
 
+// Main content
+.main--container {
+    display: flex;
+    width: min(90%, 1200px);
+    margin-inline: auto;
+    gap: 40px;
+    margin-top: 80px;
+}
+
 aside {
     font-family: Francois One;
     font-size: 2.25rem;
     letter-spacing: 0.09rem;
     text-transform: uppercase;
+    width: 385px;
+    // margin-left: 120px;
+    li {
+        margin-bottom: 70px;
+        border-bottom: 1px solid #BDBDBD;
+    }
 }
 
-// Main content
 h2 {
     font-family: Francois One;
     font-size: 2.25rem;
@@ -118,6 +129,9 @@ h2 {
 
 section {
     margin-top: 70px;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 p {
