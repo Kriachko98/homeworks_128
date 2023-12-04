@@ -18,6 +18,21 @@ body {
     font-weight: 400;
     font-family: PT Sans;
     color: black;
+    // Намагалась зробити фонове зображення без псевдоелемента, але не виходило його розташувати правильно по висоті. Це чат GPT підказав таке рішення
+    &::before {
+        content: "";
+        position: fixed;
+        top: 150px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(../image/bg-picture.png);
+        background-size: 628px 760px;
+        background-repeat: no-repeat;
+        background-position: top right;
+        z-index: -1;
+    }
+    
 }
 
 .container {
@@ -33,6 +48,10 @@ header {
 .header--container {
     width: min(90%, 1200px);
     margin-inline: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: rgba($color: #fff, $alpha: .9);
 } 
 
 .header--wrapper {
@@ -74,6 +93,21 @@ header {
         }
     }
 }
+// Sidebar
+aside {
+    font-family: Francois One;
+    font-size: 2.25rem;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+    width: 385px;
+    padding-top: 10px;
+    position: sticky;
+    top: 80px;
+    li {
+        margin-bottom: 70px;
+        border-bottom: 1px solid #BDBDBD;
+    }
+}
 
 // Main content
 .main--container {
@@ -82,19 +116,6 @@ header {
     margin-inline: auto;
     gap: 40px;
     margin-top: 80px;
-}
-
-aside {
-    font-family: Francois One;
-    font-size: 2.25rem;
-    letter-spacing: 0.09rem;
-    text-transform: uppercase;
-    width: 385px;
-    // margin-left: 120px;
-    li {
-        margin-bottom: 70px;
-        border-bottom: 1px solid #BDBDBD;
-    }
 }
 
 h2 {
@@ -134,10 +155,22 @@ section {
     }
 }
 
+.divider {
+    height: 8px;
+    line-height: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    img {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    }
+}
+
 p {
     margin-top: 40px;
     &:last-child {
-        margin-bottom: 90px;
+        margin-bottom: 70px;
     }
 }
 
