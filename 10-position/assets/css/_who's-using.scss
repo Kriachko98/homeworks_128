@@ -96,9 +96,15 @@ header {
             letter-spacing: 0.04125rem;
         }
         .logo {
-            img {
-                height: 54px;
-                width: 238px;
+            // Не працює opacity: 1; для логотипу
+            .link--logo {
+                &:hover {
+                    opacity: 1;
+                }
+                img {
+                    height: 54px;
+                    width: 238px;  
+                }
             }
         }
     }
