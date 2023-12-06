@@ -138,20 +138,92 @@ main {
 }
 
 .social--medias {
-    .front {
+    padding: 20px 15px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    .img--box {
         width: 270px;
-        // height: 180px;
-        background-color: #E6E6E6;
-        padding: 30px;
-    }
-    .back {
-        width: 270px;
-        // height: 180px;
-        // visibility: hidden;
-        background-color: #000;
-        padding: 30px;
-        img {
-            filter: invert(1);
+        height: 180px;
+        .inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: all 1s ease;
+            transform-style: preserve-3d;
+        }
+        &:hover .inner {
+            transform: rotateX(180deg);
+        }
+        .front {
+            width: 100%;
+            height: 100%;
+            background-color: #E6E6E6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            backface-visibility: hidden;
+            img {
+                width: 200px;
+            }
+        }
+        .back {
+            width: 270px;
+            height: 180px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            img {
+                filter: invert(1);
+                width: 200px;
+                transform: rotateX(180deg);
+            }
         }
     }
 }
+
+
+.img-fb {
+    height: 40px;
+}
+
+.img-inst {
+    height: 57px;
+}
+
+.img-shop {
+    height: 57px;
+}
+
+.img-skp {
+    height: 62px;
+}
+
+.img-pnt {
+    height: 48px;
+}
+
+.img-wix {
+    height: 68px;
+}
+
+.img-sale {
+    height: 140px;
+}
+
+.img-scl {
+    height: 114px;
+}
+
