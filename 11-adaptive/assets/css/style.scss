@@ -22,6 +22,7 @@ body {
 .container {
     width: min(90%, 1200px);
     margin-inline: auto;
+    height: 100%;
 }
 
 a, button {
@@ -35,6 +36,13 @@ a, button {
 /* Header */
 header {
     height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #fff;
+    opacity: 0.9;
     .wrapper--header {
         display: flex;
         justify-content: space-between;
@@ -59,6 +67,12 @@ header {
         text-decoration: none;
         &:hover {
             color: $color-orange;
+        }
+    }
+    .list--nav--option {
+        list-style: none;
+        .list--option--extra {
+            list-style: none;
         }
     }
 }
@@ -124,6 +138,7 @@ header {
 .first--section {
     padding-top: 70px;
     margin-bottom: 99px;
+    margin-top: 80px;
 }
 
 .first--wrapper {
