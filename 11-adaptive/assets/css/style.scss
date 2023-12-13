@@ -251,11 +251,10 @@ header {
     background-color: $color-orange;
     border: 1px solid $color-orange;
     padding: 13px 0;
-}
-
-.btn--start:hover {
-    color: $color-orange;
-    background-color: white;
+    &:hover {
+        color: $color-orange;
+        background-color: white;
+    }
 }
 
 .happy--people {
@@ -517,10 +516,10 @@ footer {
     height: 50px;
     border: 1px solid $color-lightblue;
     margin-bottom: 25px;
+    padding-left: 15px;
 }
 
 .input--phone::placeholder {
     color: $color-lightblue;
     font-weight: 400;
-    padding-left: 10px;
 }
