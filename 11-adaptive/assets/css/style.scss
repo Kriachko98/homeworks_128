@@ -29,6 +29,14 @@ a, button {
     transition: all .2s ease;
 }
 
+a {
+    text-decoration: none;
+    color: $color-gray;
+}
+
+li {
+    list-style: none;
+}
 
 
 
@@ -61,20 +69,89 @@ header {
     gap: 20px;
     font-weight: 400;
     padding: 26px 0;
-    a {
-        line-height: 1.75rem;
-        color: $color-black;
-        text-decoration: none;
+    > li {
+        position: relative;
+        > a {
+            display: inline-block;
+            line-height: 1.75rem;
+            color: $color-black;
+            text-decoration: none;
+            &:hover {
+                color: $color-orange;
+            }
+        }
+        > ul {
+            position: absolute;
+            left: 0;
+            top: 28px;
+            background-color: rgba(255, 153, 0, 0.7);
+            // display: none;
+            opacity: 0;
+            transform: translateY(50px);
+            visibility: hidden;
+            transition: all .4s ease;
+            min-width: 150px;
+            > li {
+                position: relative;
+                > a {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 10px;
+                    white-space: nowrap;
+                    &:hover {
+                        background-color: $color-orange;
+                        color: white;
+                    }
+                }
+                > ul {
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    background-color: rgba(255, 153, 0, 0.7);
+                    // display: none;
+                    opacity: 0;
+                    transform: translateY(50px);
+                    visibility: hidden;
+                    transition: all .4s ease;
+                    min-width: 150px;
+                    > li {
+                        > a {
+                            display: inline-block;
+                            width: 100%;
+                            padding: 10px;
+                            &:hover {
+                            background-color: $color-orange;
+                            color: white;
+                            }
+                        }
+                    }
+                }
+            &:hover {
+                > a {
+                    background-color: $color-orange;
+                    color: white;
+                }
+                > ul {
+                    // display: block;
+                    opacity: 1;
+                    transform: translateY(0);
+                    visibility: visible;
+                }
+            }
+            }
+        }
         &:hover {
-            color: $color-orange;
+            > a {
+                color: $color-orange;
+            }
+            > ul {
+                // display: block;
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
         }
-    }
-    .list--nav--option {
-        list-style: none;
-        .list--option--extra {
-            list-style: none;
-        }
-    }
+    }      
 }
 
 .buttons--wrapper {
