@@ -39,7 +39,62 @@ li {
 }
 
 
+.page--overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .7);
+    z-index: 1000;
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: all .2s ease;
+}
 
+.mobile--panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #FFE5D2;
+    z-index: 1001;
+    // transform: translateX(-100%);
+    // transition: all .4s ease;
+    .panel--top {
+        height: 50px;
+        padding-right: 20px;
+    }
+    nav {
+        overflow-y: auto;
+        height: calc(100vh - 40px);
+    }
+}
+
+.mobile--menu {
+    a {
+        display: inline-block;
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 1.375rem;
+        font-weight: 500;
+        padding: 10px 20px;
+        background-color: transparent;
+        &:hover {
+            color: white;
+            background-color: rgba(255, 153, 0, 0.7);
+        }
+    }
+    .mobile--option {
+        > li {
+            padding-left: 60px;
+            > a {
+                font-size: 1rem;
+            }
+        }
+    }
+}
 
 /* Header */
 header {
@@ -75,7 +130,6 @@ header {
             display: inline-block;
             line-height: 1.75rem;
             color: $color-black;
-            text-decoration: none;
             &:hover {
                 color: $color-orange;
             }
@@ -187,6 +241,10 @@ header {
     }
 }
 
+.hamburger--wrapper {
+    // display: none;
+}
+
 // Алаптивність
 
 @media screen and (max-width: 1024px) {
@@ -202,12 +260,43 @@ header {
             }
         }
     }
+
+    .happy--people {
+        padding-top: 100px;
+        img {
+        width: 547px;
+        height: 420px;
+        }
+    }
+    .yellow--boy {
+        padding-top: 40px;
+        padding-left: 20px;
+        img {
+        width: 486px;
+        height: 466px;
+        }
+    }
+    .red--boy {
+        padding-top: 30px;
+        img {
+        width: 429px;
+        height: 438px;
+        }
+    }
+    .blue--boy {
+        padding-right: 20px;
+        img {
+        width: 435px;
+        height: 400px;
+        }
+    }
+
 }
 
-@media screen and (max-width: 885px) {
-    .list--nav {
-        visibility: hidden;
-        width: 100px;
+@media screen and (max-width: 920px) {
+    
+    .nav--wrapper {
+        display: none;
     }
 }
 
@@ -288,6 +377,7 @@ header {
 
 .list--tools > li {
     width: 270px;
+    margin-right: 20px;
 }
 
 .list--tools > li > img {
@@ -315,11 +405,10 @@ header {
     background-color: $color-orange;
     border: 1px solid $color-orange;
     padding: 13px 0;
-}
-
-.btn--now:hover {
-    color: $color-orange;
-    background-color: white;
+    &:hover {
+        color: $color-orange;
+        background-color: white;
+    }
 }
 
 .div--btn--now {
@@ -436,6 +525,10 @@ header {
     height: 35px;
 }
 
+.blue--boy {
+    width: 570px;
+    height: 524px;
+}
 
 /* Marketers section */
 .marketers--section {
