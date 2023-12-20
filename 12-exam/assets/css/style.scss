@@ -1,1 +1,54 @@
 @import url('_fonts.scss');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button, a {
+    transition: all .2s ease;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin-inline: auto;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+.page--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+main {
+    flex-grow: 1;
+}
