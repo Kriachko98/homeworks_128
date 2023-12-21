@@ -1,5 +1,12 @@
 @import url('_fonts.scss');
 
+$text-gray-dark: #4B5D68;
+$text-black: #212353;
+$text-bg-violet-hover: #8A40EE;
+$bg-violet: #9C69E2;
+$bg-pink: #F063B8;
+$bg-pink-hover: #EB4BAB;
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -21,6 +28,10 @@ button, a {
     transition: all .2s ease;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     width: min(90%, 1170px);
     margin-inline: auto;
@@ -32,6 +43,7 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: 1.8rem;
+    color: $text-gray-dark;
 }
 
 .page--wrapper {
@@ -46,9 +58,26 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    height: 100px;
     z-index: 10;
+    .header--wrap {
+        display: flex;
+        .logo--wrap {
+            width: 45px;
+            height: 35px;
+            margin-right: 120px;
+        }
+        .nav--wrap {
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+            }
+        }
+    }
 }
 
 main {
     flex-grow: 1;
+    margin-top: 100px;
 }
