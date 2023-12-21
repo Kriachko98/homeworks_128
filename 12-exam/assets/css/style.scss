@@ -40,7 +40,6 @@ a {
 body {
     font-family: 'Montserrat';
     font-size: 1.125rem;
-    font-style: normal;
     font-weight: 500;
     line-height: 1.8rem;
     color: $text-gray-dark;
@@ -53,6 +52,7 @@ body {
     min-height: 100vh;
 }
 
+// Header
 header {
     position: fixed;
     left: 0;
@@ -66,12 +66,62 @@ header {
             width: 45px;
             height: 35px;
             margin-right: 120px;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                top: 32px;
+            }
         }
-        .nav--wrap {
-            ul {
-                display: flex;
-                align-items: center;
-                gap: 40px;
+        .nav--btn--wrap{
+            display: flex;
+            justify-content: space-between;
+            width: 1004px;
+            line-height: 100px;
+            .nav--wrap {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+                    a {
+                        color: $text-gray-dark;
+                        &:hover {
+                            color: $text-bg-violet-hover;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .button--wrap {
+                button {
+                    width: 210px;
+                    height: 60px;
+                    font-family: 'Montserrat';
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                    letter-spacing: 0.005rem;
+                    color: $text-black;
+                    text-align: center;
+                    border: 1px solid $bg-violet;
+                    border-radius: 50px;
+                    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+                    background-color: #fff;
+                    &:hover {
+                        background-color: $bg-violet;
+                        color: #fff;
+                        svg {
+                            > path {
+                                stroke: #fff;
+                            }
+                        }
+                    }
+                    svg {
+                        width: 20px;
+                        height: 14px;
+                        margin-left: 20px;
+                    }
+                }
             }
         }
     }
