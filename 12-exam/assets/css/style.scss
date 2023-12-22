@@ -1,4 +1,5 @@
 @import url('_fonts.scss');
+@import '_hamburger';
 
 $text-gray-dark: #4B5D68;
 $text-black: #212353;
@@ -45,6 +46,100 @@ body {
     color: $text-gray-dark;
 }
 
+.page--overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($text-black, $alpha: .7);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+}
+
+.mobile--panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: rgb(241, 181, 226);
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: all .4s ease;
+    .panel--top {
+        height: 50px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+    }
+    nav {
+        overflow-y: auto;
+        height: calc(100vh - 40px);
+        li {
+            text-align: center;
+        }
+    }
+}
+
+.mobile--menu {
+    a {
+        display: inline-block;
+        width: 100%;
+        font-family: Montserrat;
+        font-size: 1.375rem;
+        font-weight: 500;
+        padding: 10px 20px;
+        background-color: transparent;
+        &:hover {
+            color: white;
+            background-color: $bg-violet;
+        }
+    }
+}
+
+.hamburger {
+    margin-left: 255px;
+    margin-top: 5px;
+}
+.hamburger--wrapper {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+
+
+
+@media screen and (max-width: 920px) {
+    .nav--wrap {
+        visibility: hidden;
+        width: 50px;
+    }
+
+    .hamburger--wrapper {
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h2 {
     font-family: 'Work Sans';
     font-size: 2.5rem;
@@ -85,6 +180,16 @@ h3 {
     &:hover {
         background-color: $bg-violet;
         color: #fff;
+        svg {
+            > path {
+                stroke: #fff;
+            }
+        }
+    }
+    &:focus {
+        background-color: rgb(53, 18, 53);
+        color: #fff;
+        border: none;
         svg {
             > path {
                 stroke: #fff;
@@ -135,6 +240,11 @@ header {
                         &:hover {
                             color: $text-bg-violet-hover;
                             cursor: pointer;
+                        }
+                        &:focus {
+                            background-color: lightgrey;
+                            color: $text-bg-violet-hover;
+                            border: none;
                         }
                     }
                 }
@@ -188,6 +298,11 @@ main {
             &:hover {
                 background-color: $text-bg-violet-hover;
                 cursor: pointer;
+            }
+            &:focus {
+                background-color: rgb(53, 18, 53);
+                color: #fff;
+                border: none;
             }
         }
         .img--about--wrap {
@@ -287,6 +402,11 @@ main {
 
                             }
                         }
+                        &:focus {
+                            background-color: lightgrey;
+                            color: $bg-violet;
+                            border: none;
+                        }
                         svg {
                             width: 20px;
                             height: 14px;
@@ -369,6 +489,11 @@ main {
                         &:hover {
                             color: $bg-pink-hover;
                         }
+                        &:focus {
+                            color: $bg-pink-hover;
+                            background-color: lightgray;
+                            border: none;
+                        }
                     }
                     .text--feedback {
                         font-size: 1rem;
@@ -410,6 +535,10 @@ main {
                 margin-right: 30px;
                 &:hover {
                     background-color: $bg-pink-hover;
+                }
+                &:focus {
+                    background-color: rgb(102, 33, 78);
+                    border: none;
                 }
             }
         }
@@ -457,6 +586,11 @@ footer {
                         &:hover {
                             color: $text-bg-violet-hover;
                         }
+                        &:focus {
+                            color: $text-bg-violet-hover;
+                            background-color: lightgray;
+                            border: none;
+                        }
                     }
                 }
             }
@@ -484,6 +618,11 @@ footer {
                             color: $text-gray-dark;
                             &:hover {
                                 color: $text-bg-violet-hover;
+                            }
+                            &:focus {
+                                color: $text-bg-violet-hover;
+                                background-color: lightgrey;
+                                border: none;
                             }
                         }
                     }
@@ -513,6 +652,39 @@ footer {
                             height: 50px;
                         }
                         &:hover {
+                            .fb--svg {
+                                path {
+                                    fill: #3B5998;
+                                }
+                                circle {
+                                    fill: white;
+                                    stroke: #3B5998;
+                                    opacity: 1;
+                                }
+                            }
+                            .tw--svg {
+                                path {
+                                    fill: #00ACEE;
+                                }
+                                circle {
+                                    fill: white;
+                                    stroke: #00ACEE;
+                                    opacity: 1;
+                                }
+                            }
+                            .inst--svg {
+                                path {
+                                    fill: #C13584;
+                                }
+                                circle {
+                                    fill: white;
+                                    stroke: #C13584;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        &:focus {
+                            border: none;
                             .fb--svg {
                                 path {
                                     fill: #3B5998;
