@@ -68,6 +68,36 @@ h3 {
     min-height: 100vh;
 }
 
+.btn--request {
+    width: 210px;
+    height: 60px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.005rem;
+    color: $text-black;
+    text-align: center;
+    border: 1px solid $bg-violet;
+    border-radius: 50px;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+    background-color: #fff;
+    &:hover {
+        background-color: $bg-violet;
+        color: #fff;
+        svg {
+            > path {
+                stroke: #fff;
+            }
+        }
+    }
+    svg {
+        width: 20px;
+        height: 14px;
+        margin-left: 20px;
+    }
+}
+
 // Header
 header {
     position: fixed;
@@ -106,37 +136,6 @@ header {
                             color: $text-bg-violet-hover;
                             cursor: pointer;
                         }
-                    }
-                }
-            }
-            .button--wrap {
-                button {
-                    width: 210px;
-                    height: 60px;
-                    font-family: 'Montserrat';
-                    font-weight: 500;
-                    font-size: 1rem;
-                    line-height: 1.6rem;
-                    letter-spacing: 0.005rem;
-                    color: $text-black;
-                    text-align: center;
-                    border: 1px solid $bg-violet;
-                    border-radius: 50px;
-                    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
-                    background-color: #fff;
-                    &:hover {
-                        background-color: $bg-violet;
-                        color: #fff;
-                        svg {
-                            > path {
-                                stroke: #fff;
-                            }
-                        }
-                    }
-                    svg {
-                        width: 20px;
-                        height: 14px;
-                        margin-left: 20px;
                     }
                 }
             }
@@ -387,6 +386,30 @@ main {
                     top: 50px;
                     border-radius: 50%;
                     overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+// Try for free
+.try {
+    margin-bottom: 100px;
+    .add--flex--wrap {
+        display: flex;
+        justify-content: space-between;
+        .add--wrap {
+            .try--title {
+                margin-bottom: 20px;
+            }
+        }
+        .btn--wrap {
+            .pink--btn {
+                background-color: $bg-pink;
+                display: inline-block;
+                margin-right: 30px;
+                &:hover {
+                    background-color: $bg-pink-hover;
                 }
             }
         }
