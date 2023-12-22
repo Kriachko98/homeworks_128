@@ -153,6 +153,7 @@ main {
     width: 210px;
     height: 60px;
     border-radius: 50px;
+    box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
     a {
         display: inline-block;
         width: 100%;
@@ -323,3 +324,71 @@ main {
     }
 }
 
+// Testimonials
+.testimonials {
+    margin-bottom: 120px;
+    .testimonials--wrap {
+        background-color: #CCDDFF;
+        padding-bottom: 80px;
+        border-radius: 50px;
+        width: 100%;
+        // background-image: url(../images/testimonials-left-bg.svg) left/46%, 
+        //                 url(../images/testimonials-right-bg.svg) right/49%;
+        // background-repeat: no-repeat;
+        // background-size: 46%;
+        .testimonials--title {
+            padding-top: 80px;
+            margin-bottom: 80px;
+            color: $text-gray-dark;
+            text-align: center;
+        }
+        .feedback--wrap {
+            display: flex;
+            justify-content: space-between;
+            width: 1030px;
+            margin-inline: auto;
+            gap: 100px;
+            .feedback {
+                background-color: #fff;
+                border-radius: 50px;
+                position: relative;
+                .div--wrapper {
+                    width: 300px;
+                    margin: 50px 30px 50px 135px;
+                    .name--feedback {
+                        font-size: 1rem;
+                        line-height: 1.6rem;
+                        color: $text-black;
+                    }
+                    .link--feedback {
+                        font-size: 0.875rem;
+                        line-height: 1.4rem;
+                        letter-spacing: 0.00875rem;
+                        color: $bg-violet;
+                        margin-bottom: 19px;
+                        display: inline-block;
+                        &:hover {
+                            color: $bg-pink-hover;
+                        }
+                    }
+                    .text--feedback {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.6rem;
+                        width: 300px;
+                        display: block;
+                    }
+                }
+                .img--frame {
+                    width: 90px;
+                    height: 90px;
+                    position: absolute;
+                    left: 30px;
+                    top: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
