@@ -53,6 +53,14 @@ h2 {
     color: $text-black;
 }
 
+h3 {
+    font-family: 'Work Sans';
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.95rem;
+    color: $text-black;
+}
+
 .page--wrapper {
     display: flex;
     flex-direction: column;
@@ -198,11 +206,12 @@ main {
     .high-level--wrap {
         width: 100%;
         display: flex;
+        justify-content: space-between;
         background-color: #FDE8F5;
         border-radius: 50px;
         .pic--wrap {
-            width: 34%;
-            margin: 75px 130px 75px 70px;
+            width: 400px;
+            margin: 75px 0 75px 70px;
         }
         .info--wrap {
             width: 500px;
@@ -213,3 +222,104 @@ main {
         }
     }
 }
+
+// Features
+.features {
+    margin-bottom: 120px;
+    .features--title {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .features--info {
+        width: 638px;
+        margin: 0 auto 80px;
+        text-align: center;
+    }
+    .features--flex--wrap {
+        display: flex;
+        margin-left: 170px;
+        flex-wrap: wrap;
+        gap: 50px 200px;
+        .flex--item {
+            width: 400px;
+            border-radius: 50px;
+            position: relative;
+            .loupe--img {
+                width: 230px;
+            }
+            .laptop--img {
+                width: 241px;
+            }
+            .printer--img {
+                width: 245px;
+            }
+            .key--img {
+                width: 230px;
+            }
+            .position--img {
+                position: absolute;
+                left: -170px;
+                top: 110px;
+            }
+            .flex--card--wrap {
+                display: flex;
+                flex-direction: column;
+                margin: 62px 0 62px 100px;
+                gap: 20px;
+                > p {
+                    width: 230px;
+                    height: 180px;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.6rem;
+                }
+                > div {
+                    a {
+                        font-size: 1rem;
+                        font-weight: 700;
+                        line-height: 1.6rem;
+                        letter-spacing: 0.005rem;
+                        color: $text-black;
+                        &:hover {
+                            color: $bg-violet;
+                            svg {
+                                animation: runArrow 1s linear 1;
+
+                            }
+                        }
+                        svg {
+                            width: 20px;
+                            height: 14px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .green {
+            background-color: #F0FAF9;
+        }
+        .violet {
+            background-color: #F6F0FD;
+        }
+        .rose {
+            background-color: #FEF0F8;
+        }
+        .blue {
+            background-color: #EAF6FC;
+        }
+    }
+}
+// Animation
+@keyframes runArrow {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    50% {
+        transform: scale(1.25) translateX(20px);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
