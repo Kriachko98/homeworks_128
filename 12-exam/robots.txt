@@ -3,3 +3,6 @@ Allow: /
 Disallow: /temp/
 Disallow: /log/
 Disallow: /admin/
+Sitemap: https://Kriachko98.github.io/homeworks_128/12-exam/sitemap.xml
+
+Host: Kriachko98.github.io
