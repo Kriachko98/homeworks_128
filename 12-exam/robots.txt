@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /temp/
+Disallow: /log/
+Disallow: /admin/
