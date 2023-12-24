@@ -293,7 +293,7 @@ main {
             }
         }
         .img--about--wrap {
-            width: 66%;
+            width: min(66%, 770px);
             position: absolute;
             left: 401px;
             top: 82px;
@@ -306,7 +306,6 @@ main {
 .high-level {
     margin-bottom: 120px;
     .cont--rose {
-        width: min(90%, 1170px);
         background-color: #FDE8F5;
         border-radius: 50px;
         .high-level--wrap {
@@ -347,11 +346,11 @@ main {
     }
     .features--flex--wrap {
         display: flex;
-        margin-left: 14.5%;
+        margin-left: 170px;
         flex-wrap: wrap;
         gap: 50px 200px;
         .flex--item {
-            width: 40%;
+            width: min(34%, 400px);
             border-radius: 50px;
             position: relative;
             .loupe--img {
@@ -498,13 +497,8 @@ main {
         background-color: #CCDDFF;
         padding-bottom: 80px;
         border-radius: 50px;
-        width: 100%;
         position: relative;
         z-index: -2;
-        // background-image: url(../images/testimonials-left-bg.svg) left/46%, 
-        //                 url(../images/testimonials-right-bg.svg) right/49%;
-        // background-repeat: no-repeat;
-        // background-size: 46%;
         .bg--left--pic {
             position: absolute;
             left: 0;
@@ -530,7 +524,7 @@ main {
         .feedback--wrap {
             display: flex;
             justify-content: space-between;
-            width: 88%;
+            width: min(88%, 1130px);
             margin-inline: auto;
             gap: 10px;
             .feedback {
@@ -665,7 +659,7 @@ footer {
                 
         }
         .footer--nav--wrap {
-            width: 57%;
+            width: min(57%, 670px);
             display: flex;
             justify-content: space-between;
             > nav {
@@ -802,9 +796,8 @@ footer {
     }
 }
 
-// Недороблено
+// Адаптив
 @media screen and (max-width: 1300px) {
-    // Я не знаю, чому обгортки не реагують на задані розміри
     .features--flex--wrap {
         display: flex;
         flex-direction: column;
