@@ -216,7 +216,7 @@
                                     <q class="text--feedback">Suspendisse ultrices at diam lectus nullam. <br> Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</q>
                                 </div>
                                 <div class="img--frame">
-                                    <img src="assets/images/John-Fang.jpg" alt="John Fang photo">
+                                    <img class="lazy" src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" data-src="assets/images/John-Fang-min.jpg" alt="profile photo">
                                 </div>
                             </div>
                             <div class="feedback">
@@ -226,7 +226,7 @@
                                     <q class="text--feedback">Suspendisse ultrices at diam lectus nullam. <br> Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam laoreet nulla.</q>
                                 </div>
                                 <div class="img--frame">
-                                    <img src="assets/images/Hanna-Wilson.jpg" alt="Hanna Wilson photo">
+                                    <img class="lazy" src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs=" data-src="assets/images/Hanna-Wilson-min.jpg" alt="profile photo">
                                 </div>
                             </div>
                         </div>
@@ -340,8 +340,9 @@
     <script>
         new WOW().init();
     </script>
-    <!-- <script 
-        async src="assets/js/lazyload.min.js">
-    </script> -->
+    <script src="assets/js/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad()
+    </script>
 </body>
 </html>
