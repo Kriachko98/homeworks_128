@@ -396,7 +396,7 @@ main {
                     word-wrap: break-word;
                 }
                 > div {
-                    a {
+                    > a {
                         font-size: 1rem;
                         font-weight: 700;
                         line-height: 1.6rem;
@@ -480,7 +480,7 @@ main {
 
 // Animation
 // Анімація працювала, але в якийсь момент перестала це робити, бо ховер також перестав працювати. Скоріш за все після автопрефіксера
-// АААААААААААААААААААААААААААААААААААААААААААА
+
 @-webkit-keyframes runArrow {
     0% {
         transform: scale(1) translateX(0);
