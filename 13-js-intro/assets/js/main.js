@@ -22,20 +22,20 @@ function task1() {
 
 
 function task2() {
-    const userBirthYear = parseInt(prompt('Напишіть рік вашого народження'));
+    const userBirthYear = parseInt(prompt('Напишіть рік вашого народження'), 10);
     const currentYear = new Date().getFullYear();
     const userAge = currentYear - userBirthYear;
     alert(`Вам ${userAge} років`);
 }
 
 function task3() {
-    const squareSide = parseInt(prompt('Напишіть довжину сторони квадрата'));
+    const squareSide = parseFloat(prompt('Напишіть довжину сторони квадрата'));
     const perimeter = squareSide * 4;
     alert(`Периметр квадрата дорівнює ${perimeter}`);
 }
 
 function task4() {
-    const rollRadius = parseInt(prompt('Напишіть радіус кола'));
+    const rollRadius = parseFloat(prompt('Напишіть радіус кола'));
     const rollYardage = Math.PI * rollRadius * rollRadius;
     alert(`Площа окружності дорівнює ${rollYardage}`);
 }
@@ -48,7 +48,7 @@ function task5() {
 }
 
 function task6() {
-    const dollar = parseInt(prompt('Напишіть суму долларів для обміну'));
+    const dollar = parseInt(prompt('Напишіть суму долларів для обміну'), 10);
     const dollar_to_euro = 0.91009;
     const euro = dollar * dollar_to_euro;
     alert(`Ви отримуєте ${euro} евро за ${dollar} долларів`);
