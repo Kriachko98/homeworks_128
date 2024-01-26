@@ -1,48 +1,72 @@
 function task1() {
-    let a = 0.1;
-    let b = 0.2;
-    alert(+a.toFixed(1) + +b.toFixed(1));
+    let age = prompt('Скільки Вам років?');
+    if (age < 0) {
+        alert ('Невірне значення');
+    } else if (age <= 11) {
+        alert ('Ви дитина');
+    } else if (age <= 17) {
+        alert ('Ви підліток');
+    } else if (age <= 59) {
+        alert ('Ви дорослий');
+    } else if (age > 59) {
+        alert ('Ви пенсіонер');
+    } else {
+        alert ('Невірне значення');
+    }
 }
 
 function task2() {
-    let strNum = '1';
-    let numNum = 2;
-    alert(Number(strNum) + numNum);
+    let numb = prompt ('Напишіть цифру');
+    numb = Number(numb);
+
+    switch (numb) {
+        case 0:
+            alert (')');
+            break;
+        case 1:
+            alert ('!');
+            break;
+        case 2:
+            alert ('@');
+            break;
+        case 3:
+            alert ('#');
+            break;
+        case 4:
+            alert ('$');
+            break;
+        case 5:
+            alert ('%');
+            break;
+        case 6:
+            alert ('^');
+            break;
+        case 7:
+            alert ('&');
+            break;
+        case 8:
+            alert ('*');
+            break;
+        case 9:
+            alert ('(');
+            break;
+        default:
+            alert ('Це не цифра')
+    }
 }
 
 function task3() {
-    const files_820mb = 820 / 1024;
-    const userDiskMemory = prompt('Який обсяг пам\'яті на вашій флешці?');
-    const quantityOfFiles = userDiskMemory / files_820mb;
-    alert(`На вашу флешку вміститься ${parseInt(quantityOfFiles)} файлів`);
+    
 }
 
 function task4() {
-    const moneyInWallet = prompt('Скільки грошей в вашому гаманці?');
-    const priceOfChocolate = prompt('Скільки коштує шоколадка?');
-    const quantityOfChocolate = moneyInWallet / priceOfChocolate;
-    const change = moneyInWallet - priceOfChocolate * parseInt(quantityOfChocolate);
-    alert(`Ви зможете купити ${parseInt(quantityOfChocolate)} шоколадок`);
-    alert(`Залишиться решта в розмірі ${change.toFixed(2)} грн`);
 }
 
 function task5() {
-    const randomNumber = prompt('Напишіть тризначне число');
-    const firstNumber = parseInt(Number(randomNumber) / 100);
-    const thirdNumber = randomNumber % 10;
-    const secondNumber = parseInt((randomNumber / 10) % 10);
-    const NumberMirrow = thirdNumber.toString(10) + secondNumber.toString(10) + firstNumber.toString(10);
-    alert(`Перегорнуте число ${NumberMirrow}`);
 }
 
 function task6() {
-    const deposit = prompt('Введіть суму вкладу');
-    const period = prompt('Введіть кількість місяців депозитного вкладу');
-    const persentPerMounth = 5 / 12;
-    const persentBenefit = period * persentPerMounth / 100 * deposit;
-    alert(`За вказаний вами термін ви отримаєте ${persentBenefit.toFixed(2)} грн накопичених відсотків`);
 }
 
 function task7() {
-    alert('Перший вираз повертає 0, другий - 2, а третій - 3')
 }
