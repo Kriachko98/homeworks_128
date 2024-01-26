@@ -51,7 +51,7 @@ function task2() {
             alert ('(');
             break;
         default:
-            alert ('Це не цифра')
+            alert ('Це не цифра');
     }
 }
 
