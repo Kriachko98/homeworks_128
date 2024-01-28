@@ -1,62 +1,72 @@
 function task1() {
-    let age = prompt('Скільки Вам років?');
+    const age = document.getElementById('age').valueAsNumber;
+    let ageRez = '';
     if (age < 0) {
-        alert ('Невірне значення');
+        ageRez = 'Невірне значення';
     } else if (age <= 11) {
-        alert ('Ви дитина');
+        ageRez = 'Ви дитина';
     } else if (age <= 17) {
-        alert ('Ви підліток');
+        ageRez = 'Ви підліток';
     } else if (age <= 59) {
-        alert ('Ви дорослий');
+        ageRez = 'Ви дорослий';
     } else if (age > 59) {
-        alert ('Ви пенсіонер');
+        ageRez = 'Ви пенсіонер';
     } else {
-        alert ('Невірне значення');
+        ageRez = 'Невірне значення';
     }
+    document.getElementById('age_result').innerHTML = ageRez;
 }
 
 function task2() {
-    let numb = prompt ('Напишіть цифру');
-    numb = Number(numb);
-
+    const numb = document.getElementById('numb').valueAsNumber;
+    let sign = '';
     switch (numb) {
         case 0:
-            alert (')');
+            sign = ')';
             break;
         case 1:
-            alert ('!');
+            sign = '!';
             break;
         case 2:
-            alert ('@');
+            sign = '@';
             break;
         case 3:
-            alert ('#');
+            sign = '#';
             break;
         case 4:
-            alert ('$');
+            sign = '$';
             break;
         case 5:
-            alert ('%');
+            sign = '%';
             break;
         case 6:
-            alert ('^');
+            sign = '^';
             break;
         case 7:
-            alert ('&');
+            sign = '&';
             break;
         case 8:
-            alert ('*');
+            sign = '*';
             break;
         case 9:
-            alert ('(');
+            sign = '(';
             break;
         default:
-            alert ('Це не цифра');
+            sign = 'Це не цифра';
     }
+    document.getElementById('numb_sign').innerHTML = sign;
 }
 
 function task3() {
-    
+    let numb_1 = document.getElementById('numb_1').valueAsNumber;
+    let numb_2 = document.getElementById('numb_2').valueAsNumber;
+    let sum = 0;
+    while (numb_1 <= numb_2) {
+        sum += numb_1;
+        numb_1++;
+    }
+
+    document.getElementById('sum_result').innerHTML = `Сума чисел в вашому диапазоні дорівнює ${sum}`;
 }
 
 function task4() {
@@ -81,13 +91,15 @@ function task10() {
 }
 
 function task11() {
-    alert(`Дивись консоль`);
+    let multy = '';
     for(let i = 2; i <= 9; i++){
+        multy += '<ul>';
         for(let y = 1; y <= 10; y++){
-            console.log(`${i} * ${y} = ${i*y}`);
+            multy += `<li>${i} * ${y} = ${i*y}</li>`;
         }
-        console.log('========');
+        multy += '</ul>';
     }
+    document.getElementById('multy_table').innerHTML = multy;
 }
 
 function task12() {

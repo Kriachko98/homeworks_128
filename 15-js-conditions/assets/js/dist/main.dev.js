@@ -1,74 +1,90 @@
 "use strict";
 
 function task1() {
-  var age = prompt('Скільки Вам років?');
+  var age = document.getElementById('age').valueAsNumber;
+  var ageRez = '';
 
   if (age < 0) {
-    alert('Невірне значення');
+    ageRez = 'Невірне значення';
   } else if (age <= 11) {
-    alert('Ви дитина');
+    ageRez = 'Ви дитина';
   } else if (age <= 17) {
-    alert('Ви підліток');
+    ageRez = 'Ви підліток';
   } else if (age <= 59) {
-    alert('Ви дорослий');
+    ageRez = 'Ви дорослий';
   } else if (age > 59) {
-    alert('Ви пенсіонер');
+    ageRez = 'Ви пенсіонер';
   } else {
-    alert('Невірне значення');
+    ageRez = 'Невірне значення';
   }
+
+  document.getElementById('age_result').innerHTML = ageRez;
 }
 
 function task2() {
-  var numb = prompt('Напишіть цифру');
-  numb = Number(numb);
+  var numb = document.getElementById('numb').valueAsNumber;
+  var sign = '';
 
   switch (numb) {
     case 0:
-      alert(')');
+      sign = ')';
       break;
 
     case 1:
-      alert('!');
+      sign = '!';
       break;
 
     case 2:
-      alert('@');
+      sign = '@';
       break;
 
     case 3:
-      alert('#');
+      sign = '#';
       break;
 
     case 4:
-      alert('$');
+      sign = '$';
       break;
 
     case 5:
-      alert('%');
+      sign = '%';
       break;
 
     case 6:
-      alert('^');
+      sign = '^';
       break;
 
     case 7:
-      alert('&');
+      sign = '&';
       break;
 
     case 8:
-      alert('*');
+      sign = '*';
       break;
 
     case 9:
-      alert('(');
+      sign = '(';
       break;
 
     default:
-      alert('Це не цифра');
+      sign = 'Це не цифра';
   }
+
+  document.getElementById('numb_sign').innerHTML = sign;
 }
 
-function task3() {}
+function task3() {
+  var numb_1 = document.getElementById('numb_1').valueAsNumber;
+  var numb_2 = document.getElementById('numb_2').valueAsNumber;
+  var sum = 0;
+
+  while (numb_1 <= numb_2) {
+    sum += numb_1;
+    numb_1++;
+  }
+
+  document.getElementById('sum_result').innerHTML = "\u0421\u0443\u043C\u0430 \u0447\u0438\u0441\u0435\u043B \u0432 \u0432\u0430\u0448\u043E\u043C\u0443 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D\u0456 \u0434\u043E\u0440\u0456\u0432\u043D\u044E\u0454 ".concat(sum);
+}
 
 function task4() {}
 
@@ -85,15 +101,19 @@ function task9() {}
 function task10() {}
 
 function task11() {
-  alert("\u0414\u0438\u0432\u0438\u0441\u044C \u043A\u043E\u043D\u0441\u043E\u043B\u044C");
+  var multy = '';
 
   for (var i = 2; i <= 9; i++) {
+    multy += '<ul>';
+
     for (var y = 1; y <= 10; y++) {
-      console.log("".concat(i, " * ").concat(y, " = ").concat(i * y));
+      multy += "<li>".concat(i, " * ").concat(y, " = ").concat(i * y, "</li>");
     }
 
-    console.log('========');
+    multy += '</ul>';
   }
+
+  document.getElementById('multy_table').innerHTML = multy;
 }
 
 function task12() {}

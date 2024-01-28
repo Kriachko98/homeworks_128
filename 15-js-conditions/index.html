@@ -13,7 +13,14 @@
                 Task 1
             </h5>
             <div class="card-body">
-                Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
+                <div>
+                    Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
+                </div>
+                <div>
+                    <label for="age">Скільки Вам років?</label>
+                    <input class="form-control" id="age" name="age" type="number">
+                </div>
+                <div id="age_result"></div>
             </div>
             <div class="card-footer">
                 <button class="btn btn-info" type="button" onclick="task1()">Run</button>
@@ -26,7 +33,15 @@
                 Task 2
             </h5>
             <div class="card-body">
-                Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).            </div>
+                <div>
+                    Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
+                </div>
+                <div>
+                    <label for="numb">Напишіть цифру</label>
+                    <input class="form-control" id="numb" name="numb" type="number">
+                </div>
+                <div id="numb_sign"></div>
+            </div>
             <div class="card-footer">
                 <button class="btn btn-info" type="button" onclick="task2()">Run</button>
             </div>
@@ -38,7 +53,18 @@
                 Task 3
             </h5>
             <div class="card-body">
-                Підрахуй суму всіх чисел в заданому користувачем діапазоні.            </div>
+                <div>
+                    Підрахуй суму всіх чисел в заданому користувачем діапазоні.
+                </div>
+                <div>
+                    <label for="numb_1">Від</label>
+                    <input class="form-control" id="numb_1" name="numb_1" type="number">
+                    <br>
+                    <label for="numb_2">До</label>
+                    <input class="form-control" id="numb_2" name="numb_2" type="number">
+                </div>
+                <div id="sum_result"></div>
+            </div>
             <div class="card-footer">
                 <button class="btn btn-info" type="button" onclick="task3()">Run</button>
             </div>
@@ -141,7 +167,7 @@
             </h5>
             <div class="card-body">
                 Виведи таблицю множення для всіх чисел від 2 до 9. Кожне число необхідно помножити на числа від 1 до 10. </div>          
-            <div class="card-footer">
+            <div id="multy_table" class="card-footer d-flex">
                 <button class="btn btn-info" type="button" onclick="task11()">Run</button>
             </div>
         </div>
