@@ -1,6 +1,7 @@
 function task1() {
     const age = document.getElementById('age').valueAsNumber;
     let ageRez = '';
+
     if (age < 0) {
         ageRez = 'Невірне значення';
     } else if (age <= 11) {
@@ -20,6 +21,7 @@ function task1() {
 function task2() {
     const numb = document.getElementById('numb').valueAsNumber;
     let sign = '';
+
     switch (numb) {
         case 0:
             sign = ')';
@@ -58,12 +60,24 @@ function task2() {
 }
 
 function task3() {
-    let numb_1 = document.getElementById('numb_1').valueAsNumber;
-    let numb_2 = document.getElementById('numb_2').valueAsNumber;
+    const numb_1 = document.getElementById('numb_1').valueAsNumber;
+    const numb_2 = document.getElementById('numb_2').valueAsNumber;
     let sum = 0;
-    while (numb_1 <= numb_2) {
-        sum += numb_1;
-        numb_1++;
+    let from = numb_1;
+    let to = numb_2;
+
+    if(isNaN(numb_1)){
+        document.getElementById('sum_result').innerHTML = '<span style="color:red">Incorrect value. Enter first number</span>';
+    } else if (numb_1 > numb_2){
+        from = numb_2;
+        to = numb_1;
+    }
+    if(isNaN(numb_2)){
+        document.getElementById('sum_result').innerHTML = '<span style="color:red">Incorrect value. Enter second number</span>';
+    }
+
+    for(let i = from; i <= to; i++){
+        sum += i;
     }
 
     document.getElementById('sum_result').innerHTML = `Сума чисел в вашому диапазоні дорівнює ${sum}`;
