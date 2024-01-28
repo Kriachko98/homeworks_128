@@ -77,3 +77,23 @@ function task5() {}
 function task6() {}
 
 function task7() {}
+
+function task8() {}
+
+function task9() {}
+
+function task10() {}
+
+function task11() {
+  alert("\u0414\u0438\u0432\u0438\u0441\u044C \u043A\u043E\u043D\u0441\u043E\u043B\u044C");
+
+  for (var i = 2; i <= 9; i++) {
+    for (var y = 1; y <= 10; y++) {
+      console.log("".concat(i, " * ").concat(y, " = ").concat(i * y));
+    }
+
+    console.log('========');
+  }
+}
+
+function task12() {}
