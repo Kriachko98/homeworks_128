@@ -70,3 +70,25 @@ function task6() {
 
 function task7() {
 }
+
+function task8() {
+}
+
+function task9() {
+}
+
+function task10() {
+}
+
+function task11() {
+    alert(`Дивись консоль`);
+    for(let i = 2; i <= 9; i++){
+        for(let y = 1; y <= 10; y++){
+            console.log(`${i} * ${y} = ${i*y}`);
+        }
+        console.log('========');
+    }
+}
+
+function task12() {
+}
