@@ -1,7 +1,8 @@
 function task1() {
     let a = 0.1;
     let b = 0.2;
-    alert(+a.toFixed(1) + +b.toFixed(1));
+    let sum = a + b;
+    alert(sum.toFixed(1));
 }
 
 function task2() {

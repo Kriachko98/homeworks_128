@@ -3,7 +3,8 @@
 function task1() {
   var a = 0.1;
   var b = 0.2;
-  alert(+a.toFixed(1) + +b.toFixed(1));
+  var sum = a + b;
+  alert(sum.toFixed(1));
 }
 
 function task2() {
