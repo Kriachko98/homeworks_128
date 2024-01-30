@@ -84,9 +84,35 @@ function task3() {
 }
 
 function task4() {
+    if(isNaN(numb_1)){
+        document.getElementById('dev_result').innerHTML = '<span style="color:red">Incorrect value</span>';
+    }
+
+    const n1 = document.getElementById('n1').valueAsNumber;
+    const n2 = document.getElementById('n2').valueAsNumber;
+    const min = n1 < n2 ? n1 : n2;
+    let devRez = 1;
+
+    for(let i = 1; i <= min; i++){
+        if(n1 % i === 0 && n2 % i === 0){
+            devRez = i;
+        }
+    }
+
+    document.getElementById('dev_result').innerHTML = `Спільний дільник ваших чисел є ${devRez}`;
 }
 
 function task5() {
+    const anyNum = document.getElementById('anyNum').value;
+    let allDevRez = '';
+
+    for (let i = 1; i <= anyNum; i++) {
+        if (anyNum % i === 0) {
+            allDevRez += i + ' ';
+        }
+    }
+
+    document.getElementById('all_dev_result').innerHTML = `Всі дільники вашого числа: ${allDevRez}`;
 }
 
 function task6() {

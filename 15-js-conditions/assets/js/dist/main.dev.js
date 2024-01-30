@@ -98,9 +98,37 @@ function task3() {
   document.getElementById('sum_result').innerHTML = "\u0421\u0443\u043C\u0430 \u0447\u0438\u0441\u0435\u043B \u0432 \u0432\u0430\u0448\u043E\u043C\u0443 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D\u0456 \u0434\u043E\u0440\u0456\u0432\u043D\u044E\u0454 ".concat(sum);
 }
 
-function task4() {}
+function task4() {
+  if (isNaN(numb_1)) {
+    document.getElementById('dev_result').innerHTML = '<span style="color:red">Incorrect value</span>';
+  }
 
-function task5() {}
+  var n1 = document.getElementById('n1').valueAsNumber;
+  var n2 = document.getElementById('n2').valueAsNumber;
+  var min = n1 < n2 ? n1 : n2;
+  var devRez = 1;
+
+  for (var i = 1; i <= min; i++) {
+    if (n1 % i === 0 && n2 % i === 0) {
+      devRez = i;
+    }
+  }
+
+  document.getElementById('dev_result').innerHTML = "\u0421\u043F\u0456\u043B\u044C\u043D\u0438\u0439 \u0434\u0456\u043B\u044C\u043D\u0438\u043A \u0432\u0430\u0448\u0438\u0445 \u0447\u0438\u0441\u0435\u043B \u0454 ".concat(devRez);
+}
+
+function task5() {
+  var anyNum = document.getElementById('anyNum').value;
+  var allDevRez = '';
+
+  for (var i = 1; i <= anyNum; i++) {
+    if (anyNum % i === 0) {
+      allDevRez += i + ' ';
+    }
+  }
+
+  document.getElementById('all_dev_result').innerHTML = "\u0412\u0441\u0456 \u0434\u0456\u043B\u044C\u043D\u0438\u043A\u0438 \u0432\u0430\u0448\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430: ".concat(allDevRez);
+}
 
 function task6() {}
 
