@@ -167,9 +167,83 @@ function task7() {
   document.getElementById('total').innerHTML = "\u0421\u0443\u043C\u0430 \u0434\u043E \u0441\u043F\u043B\u0430\u0442\u0438 \u0437\u0456 \u0437\u043D\u0438\u0436\u043A\u043E\u044E: ".concat(total.toFixed(2), "\u0433\u0440\u043D");
 }
 
-function task8() {}
+function task8() {
+  var userInput;
+  var positiveCount = 0;
+  var negativeCount = 0;
+  var zeroCount = 0;
+  var evenCount = 0;
+  var oddCount = 0;
 
-function task9() {}
+  for (var i = 0; i < 10; i++) {
+    userInput = parseInt(prompt("\u0412\u0432\u0435\u0434\u0456\u0442\u044C \u0447\u0438\u0441\u043B\u043E ".concat(i + 1, ":")));
+
+    if (isNaN(userInput)) {
+      alert('Будь ласка, введіть число.');
+      i--;
+      continue;
+    }
+
+    if (userInput > 0) {
+      positiveCount++;
+    } else if (userInput < 0) {
+      negativeCount++;
+    } else {
+      zeroCount++;
+    }
+
+    if (userInput % 2 === 0) {
+      evenCount++;
+    } else {
+      oddCount++;
+    }
+  }
+
+  alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 ".concat(positiveCount, " \u0434\u043E\u0434\u0430\u0442\u043D\u0438\u0445 \u0447\u0438\u0441\u0435\u043B, ").concat(negativeCount, " \u0432\u0456\u0434'\u0454\u043C\u043D\u0438\u0445 \u0447\u0438\u0441\u0435\u043B, ").concat(evenCount, " \u043F\u0430\u0440\u043D\u0438\u0445 \u0456 ").concat(oddCount, " \u043D\u0435\u043F\u0430\u0440\u043D\u0438\u0445, \u0430 \u0442\u0430\u043A\u043E\u0436 ").concat(zeroCount, " \u043D\u0443\u043B\u0456\u0432"));
+} // function task9() {
+//     let today = new Date();
+//     let dayOfWeek = today.getDay();
+//     let currentDay;
+//     switch (dayOfWeek){
+//         case 0:
+//             currentDay = "Неділя";
+//             break;
+//         case 1:
+//             currentDay = "Понеділок";
+//             break;
+//         case 2:
+//             currentDay = "Вівторок";
+//             break;
+//         case 3:
+//             currentDay = "Середа";
+//             break;
+//         case 4:
+//             currentDay = "Четвер";
+//             break;
+//         case 5:
+//             currentDay = "П'ятниця";
+//             break;
+//         case 6:
+//             currentDay = "Субота";
+//             break;
+//     }
+//     while (confirm(`Сьогодні ${currentDay}. Хочеш побачити наступний день?`)) {
+//         currentDay = (currentDay + 1) % 7
+//     }
+// }
+
+
+function task9() {
+  var today = new Date();
+  var dayOfWeek = today.getDay();
+  var daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+  var currentDay = daysOfWeek[dayOfWeek];
+
+  while (confirm("".concat(currentDay, ". \u0425\u043E\u0447\u0435\u0448 \u043F\u043E\u0431\u0430\u0447\u0438\u0442\u0438 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 \u0434\u0435\u043D\u044C?"))) {
+    dayOfWeek = (dayOfWeek + 1) % 7;
+    currentDay = daysOfWeek[dayOfWeek];
+  }
+}
 
 function task10() {}
 

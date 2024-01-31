@@ -154,10 +154,87 @@ function task7() {
 }
 
 function task8() {
+    let userInput;
+    let positiveCount = 0;
+    let negativeCount = 0;
+    let zeroCount = 0;
+    let evenCount = 0;
+    let oddCount = 0;
+
+    for (let i = 0; i < 10; i++) {
+        userInput = parseInt(prompt(`Введіть число ${i + 1}:`));
+
+        if (isNaN(userInput)) {
+            alert('Будь ласка, введіть число.');
+            i--;
+            continue;
+        }
+
+        if (userInput > 0) {
+            positiveCount++;
+        } else if (userInput < 0) {
+            negativeCount++;
+        } else {
+            zeroCount++;
+        }
+
+        if (userInput % 2 === 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
+    }
+
+    alert (`Ви ввели ${positiveCount} додатних чисел, ${negativeCount} від'ємних чисел, ${evenCount} парних і ${oddCount} непарних, а також ${zeroCount} нулів`);
 }
 
+// function task9() {
+//     let today = new Date();
+//     let dayOfWeek = today.getDay();
+//     let currentDay;
+
+//     switch (dayOfWeek){
+//         case 0:
+//             currentDay = "Неділя";
+//             break;
+//         case 1:
+//             currentDay = "Понеділок";
+//             break;
+//         case 2:
+//             currentDay = "Вівторок";
+//             break;
+//         case 3:
+//             currentDay = "Середа";
+//             break;
+//         case 4:
+//             currentDay = "Четвер";
+//             break;
+//         case 5:
+//             currentDay = "П'ятниця";
+//             break;
+//         case 6:
+//             currentDay = "Субота";
+//             break;
+//     }
+    
+//     while (confirm(`Сьогодні ${currentDay}. Хочеш побачити наступний день?`)) {
+//         currentDay = (currentDay + 1) % 7
+//     }
+  
+// }
+
 function task9() {
+    let today = new Date();
+    let dayOfWeek = today.getDay();
+    let daysOfWeek = ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"];
+    let currentDay = daysOfWeek[dayOfWeek];
+
+    while (confirm(`${currentDay}. Хочеш побачити наступний день?`)) {
+        dayOfWeek = (dayOfWeek + 1) % 7;
+        currentDay = daysOfWeek[dayOfWeek];
+    }
 }
+
 
 function task10() {
 }
