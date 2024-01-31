@@ -99,7 +99,7 @@ function task3() {
 }
 
 function task4() {
-  if (isNaN(numb_1)) {
+  if (isNaN(n1)) {
     document.getElementById('dev_result').innerHTML = '<span style="color:red">Incorrect value</span>';
   }
 
@@ -130,7 +130,25 @@ function task5() {
   document.getElementById('all_dev_result').innerHTML = "\u0412\u0441\u0456 \u0434\u0456\u043B\u044C\u043D\u0438\u043A\u0438 \u0432\u0430\u0448\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430: ".concat(allDevRez);
 }
 
-function task6() {}
+function task6() {
+  var randomNumber = document.getElementById('randomNumber').value;
+
+  if (isNaN(randomNumber) || randomNumber.length !== 5) {
+    document.getElementById('polindrom_result').innerHTML = '<span style="color:red">Incorrect value</span>';
+    return;
+  }
+
+  var firstNumber = Math.floor(randomNumber / 10000);
+  var secondNumber = Math.floor(randomNumber % 10000 / 1000);
+  var beforLastNumber = Math.floor(randomNumber / 10 % 10);
+  var lastNumber = randomNumber % 10;
+
+  if (firstNumber === lastNumber && secondNumber === beforLastNumber) {
+    document.getElementById('polindrom_result').innerHTML = "\u0412\u0430\u0448\u0435 \u0447\u0438\u0441\u043B\u043E \u0454 \u043F\u0430\u043B\u0456\u043D\u0434\u0440\u043E\u043C\u043E\u043C";
+  } else {
+    document.getElementById('polindrom_result').innerHTML = "\u0412\u0430\u0448\u0435 \u0447\u0438\u0441\u043B\u043E \u041D\u0415 \u0454 \u043F\u0430\u043B\u0456\u043D\u0434\u0440\u043E\u043C\u043E\u043C";
+  }
+}
 
 function task7() {}
 

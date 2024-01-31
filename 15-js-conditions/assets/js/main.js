@@ -84,7 +84,7 @@ function task3() {
 }
 
 function task4() {
-    if(isNaN(numb_1)){
+    if(isNaN(n1)){
         document.getElementById('dev_result').innerHTML = '<span style="color:red">Incorrect value</span>';
     }
 
@@ -116,9 +116,28 @@ function task5() {
 }
 
 function task6() {
+    const randomNumber = document.getElementById('randomNumber').value;
+
+    if (isNaN(randomNumber) || randomNumber.length !== 5) {
+        document.getElementById('polindrom_result').innerHTML = '<span style="color:red">Incorrect value</span>';
+        return;
+    }
+
+    const firstNumber = Math.floor(randomNumber / 10000);
+    const secondNumber = Math.floor((randomNumber % 10000) / 1000);
+    const beforLastNumber = Math.floor((randomNumber / 10) % 10);
+    const lastNumber = randomNumber % 10;
+
+    if (firstNumber === lastNumber && secondNumber === beforLastNumber) {
+        document.getElementById('polindrom_result').innerHTML = `Ваше число є паліндромом`;
+    } else {
+        document.getElementById('polindrom_result').innerHTML = `Ваше число НЕ є паліндромом`;
+    }
 }
 
+
 function task7() {
+    
 }
 
 function task8() {
