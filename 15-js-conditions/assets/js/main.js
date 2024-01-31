@@ -137,7 +137,20 @@ function task6() {
 
 
 function task7() {
-    
+    const amount = document.getElementById('amount').valueAsNumber;
+    let total = 0;
+
+    if(200 <= amount && amount < 300){
+        total = amount - (amount * 0.03);
+    } else if (300 <= amount && amount < 500){
+        total = amount - (amount * 0.05);
+    } else if(amount >= 500){
+        total = amount - (amount * 0.07);
+    } else {
+        total = amount;
+    }
+
+    document.getElementById('total').innerHTML = `Сума до сплати зі знижкою: ${total.toFixed(2)}грн`;
 }
 
 function task8() {

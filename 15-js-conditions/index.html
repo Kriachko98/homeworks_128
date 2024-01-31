@@ -139,12 +139,19 @@
                 Task 7
             </h5>
             <div class="card-body">
-                Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
-                <ol>
-                    <li>від 200 до 300 - знижка буде 3%;</li> 
-                    <li>від 300 до 500 - 5%;</li>
-                    <li>від 500 і вище - 7%.</li>
-                </ol>
+                <div>
+                    Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
+                    <ol>
+                        <li>від 200 до 300 - знижка буде 3%;</li> 
+                        <li>від 300 до 500 - 5%;</li>
+                        <li>від 500 і вище - 7%.</li>
+                    </ol>
+                </div>
+                <div>
+                    <label for="amount">Напишіть суму покупки у грн</label>
+                    <input class="form-control" id="amount" name="amount" type="number">
+                </div>
+                <div id="total"></div>
             </div>
             <div class="card-footer">
                 <button class="btn btn-info" type="button" onclick="task7()">Run</button>

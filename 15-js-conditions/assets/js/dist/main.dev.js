@@ -150,7 +150,22 @@ function task6() {
   }
 }
 
-function task7() {}
+function task7() {
+  var amount = document.getElementById('amount').valueAsNumber;
+  var total = 0;
+
+  if (200 <= amount && amount < 300) {
+    total = amount - amount * 0.03;
+  } else if (300 <= amount && amount < 500) {
+    total = amount - amount * 0.05;
+  } else if (amount >= 500) {
+    total = amount - amount * 0.07;
+  } else {
+    total = amount;
+  }
+
+  document.getElementById('total').innerHTML = "\u0421\u0443\u043C\u0430 \u0434\u043E \u0441\u043F\u043B\u0430\u0442\u0438 \u0437\u0456 \u0437\u043D\u0438\u0436\u043A\u043E\u044E: ".concat(total.toFixed(2), "\u0433\u0440\u043D");
+}
 
 function task8() {}
 
