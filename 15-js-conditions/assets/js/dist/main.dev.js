@@ -292,4 +292,34 @@ function task11() {
   document.getElementById('multy_table').innerHTML = multy;
 }
 
-function task12() {}
+function task12() {
+  var day = parseInt(prompt("Введіть день:"));
+  var month = parseInt(prompt("Введіть місяць:"));
+  var year = parseInt(prompt("Введіть рік:"));
+
+  if (isNaN(day) || isNaN(month) || isNaN(year) || day < 1 || month < 1 || month > 12) {
+    alert("Введіть коректну дату.");
+    return;
+  }
+
+  var daysInMonth = new Date(year, month, 0).getDate();
+
+  if (day > daysInMonth) {
+    alert("Введіть коректний день для обраного місяця.");
+    return;
+  }
+
+  day++;
+
+  if (day > daysInMonth) {
+    day = 1;
+    month++;
+  }
+
+  if (month > 12) {
+    month = 1;
+    year++;
+  }
+
+  alert("\u041D\u0430\u0441\u0442\u0443\u043F\u043D\u0430 \u0434\u0430\u0442\u0430: ".concat(day, ".").concat(month, ".").concat(year));
+}

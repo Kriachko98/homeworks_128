@@ -279,4 +279,31 @@ function task11() {
 }
 
 function task12() {
+    let day = parseInt(prompt("Введіть день:"));
+    let month = parseInt(prompt("Введіть місяць:"));
+    let year = parseInt(prompt("Введіть рік:"));
+
+    if (isNaN(day) || isNaN(month) || isNaN(year) || day < 1 || month < 1 || month > 12) {
+        alert("Введіть коректну дату.");
+        return;
+    }
+
+    let daysInMonth = new Date(year, month, 0).getDate();
+
+    if (day > daysInMonth) {
+        alert("Введіть коректний день для обраного місяця.");
+        return;
+    }
+
+    day++;
+    if (day > daysInMonth) {
+        day = 1;
+        month++;
+    }
+    if (month > 12) {
+        month = 1;
+        year++;
+    }
+
+    alert(`Наступна дата: ${day}.${month}.${year}`);
 }
