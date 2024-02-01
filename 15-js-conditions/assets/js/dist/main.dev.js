@@ -245,7 +245,36 @@ function task9() {
   }
 }
 
-function task10() {}
+function task10() {
+  alert("Загадайте будь-яке ціле число від 0 до 100");
+  var minNum = 0;
+  var maxNum = 100;
+  var userNum = '';
+
+  while (userNum !== '==') {
+    var gessNum = parseInt((minNum + maxNum) / 2);
+    userNum = prompt("\u0412\u0430\u0448\u0435 \u0447\u0438\u0441\u043B\u043E > ".concat(gessNum, ", < ").concat(gessNum, ", \u0430\u0431\u043E == ").concat(gessNum, "?"));
+
+    if (userNum === '>') {
+      minNum = gessNum + 1;
+    } else if (userNum === '<') {
+      maxNum = gessNum - 1;
+    } else if (userNum !== '==' && userNum !== '<' && userNum !== '>') {
+      alert('Ви ввели невірне значення');
+    }
+
+    ;
+
+    if (minNum > maxNum) {
+      alert("Ви ввели неправильні відповіді. Завершення гри.");
+      break;
+    }
+  }
+
+  if (userNum = '==') {
+    alert("\u0412\u0430\u0448\u0435 \u0447\u0438\u0441\u043B\u043E ".concat(parseInt((minNum + maxNum) / 2), "!"));
+  }
+}
 
 function task11() {
   var multy = '';

@@ -237,6 +237,33 @@ function task9() {
 
 
 function task10() {
+    alert ("Загадайте будь-яке ціле число від 0 до 100");
+
+    let minNum = 0;
+    let maxNum = 100;
+    let userNum = '';
+
+    while (userNum !== '=='){
+        let gessNum = parseInt((minNum + maxNum) / 2);
+        userNum = prompt(`Ваше число > ${gessNum}, < ${gessNum}, або == ${gessNum}?`);
+
+        if (userNum === '>'){
+            minNum = gessNum + 1;
+        } else if (userNum === '<'){
+            maxNum = gessNum - 1;
+        } else if (userNum !== '==' && userNum !== '<' && userNum !== '>'){
+            alert ('Ви ввели невірне значення');
+        };
+
+        if (minNum > maxNum) {
+            alert("Ви ввели неправильні відповіді. Завершення гри.");
+            break;
+        }
+    }
+
+    if (userNum = '=='){
+        alert (`Ваше число ${parseInt((minNum + maxNum) / 2)}!`)
+    }   
 }
 
 function task11() {
