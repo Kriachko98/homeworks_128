@@ -17,7 +17,7 @@
                     Напиши всі можливі варіанти створення функцій.
                 </div>
                 <div style="color: blue;">
-                    Оголошені функції, стрілкові, асинхронні, функціональні вирази, самовикликанні
+                    Оголошені функції, стрілкові, асинхронні, функціональні вирази, самовикликанні, функції зворотнього виклику
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 <div>
                     Створи функцію, яка буде виводити кількість переданих їй аргументів.                </div>
                 <div>
-                    <label for="arg">Введіть аргументи</label>
+                    <label for="arg">Введіть аргументи через кому</label>
                     <input class="form-control" id="arg" name="arg" type="text">
                 </div>
                 <div id="sum_arg"></div>
@@ -97,13 +97,19 @@
                     Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
                 </div>
                 <div>
-                    <label for="anyNum">Напишіть цифру або число</label>
-                    <input class="form-control" id="anyNum" name="anyNum" type="number">
+                    <label for="a1">Напишіть першу цифру</label>
+                    <input class="form-control" id="a1" name="a1" type="number">
+                    <br>
+                    <label for="b2">Напишіть другу цифру</label>
+                    <input class="form-control" id="b2" name="b2" type="number">
+                    <br>
+                    <label for="c3">Напишіть третю цифру</label>
+                    <input class="form-control" id="c3" name="c3" type="number">
                 </div>
-                <div id="all_dev_result"></div>
+                <div id="fullNumb"></div>
             </div>
             <div class="card-footer">
-                <button class="btn btn-info" type="button" onclick="task5()">Run</button>
+                <button class="btn btn-info" type="button" onclick="concRez()">Run</button>
             </div>
         </div>
     </div>

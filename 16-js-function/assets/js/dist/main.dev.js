@@ -5,7 +5,15 @@
 //     const arg = document.getElementById('arg').value;
 //     document.getElementById('sum_arg').innerHTML = arg.length;
 // }
-// Task 3
+function countArguments() {
+  var inputVal = document.getElementById('arg').value;
+  var numOfArguments = inputVal.split(',').filter(function (arg) {
+    return arg.trim() !== '';
+  }).length;
+  document.getElementById('sum_arg').innerHTML = numOfArguments;
+} // Task 3
+
+
 function getValue(a, b) {
   var value = '';
 
@@ -58,12 +66,33 @@ function calcFactorial() {
   }
 
   document.getElementById('fact_result').innerHTML = result;
+} // Task 5
+
+
+function concRez() {
+  var a1 = document.getElementById('a1').value;
+  var b2 = document.getElementById('b2').value;
+  var c3 = document.getElementById('c3').value;
+  var result = '';
+
+  if (a1 !== '' && b2 !== '' && c3 !== '') {
+    result = concatination(a1, b2, c3);
+  } else {
+    result = '<span style="color:red">Заповніть всі поля</span>';
+  }
+
+  document.getElementById('fullNumb').innerHTML = result;
 }
 
-function task5() {}
+var concatination = function concatination(a1, b2, c3) {
+  return a1 + b2 + c3;
+}; // Task 6
 
-function task6() {}
 
-function task7() {}
+function task6() {} // Task 7
+
+
+function task7() {} // Task 8
+
 
 function task8() {}
