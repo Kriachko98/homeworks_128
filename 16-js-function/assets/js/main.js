@@ -84,8 +84,25 @@ let concatination = (a1, b2, c3) => a1 + b2 + c3;
 
 // Task 6
 function task6() {
+    let height = document.getElementById('height').valueAsNumber;
+    let width = document.getElementById('width').valueAsNumber;
+    let square = calcSquare (height, width);
 
+    document.getElementById('square_result').innerHTML = `Площа прямокутника дорівнює: ${square}`;
 }
+
+function calcSquare (height, width){
+    if(isNaN(height)){
+       return width * width;
+    } else if (isNaN(width)){
+        return height * height;
+    } else {
+        return height * width;
+    }
+}
+
+
+
 
 // Task 7
 function task7() {

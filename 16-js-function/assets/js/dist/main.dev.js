@@ -89,7 +89,22 @@ var concatination = function concatination(a1, b2, c3) {
 }; // Task 6
 
 
-function task6() {} // Task 7
+function task6() {
+  var height = document.getElementById('height').valueAsNumber;
+  var width = document.getElementById('width').valueAsNumber;
+  var square = calcSquare(height, width);
+  document.getElementById('square_result').innerHTML = "\u041F\u043B\u043E\u0449\u0430 \u043F\u0440\u044F\u043C\u043E\u043A\u0443\u0442\u043D\u0438\u043A\u0430 \u0434\u043E\u0440\u0456\u0432\u043D\u044E\u0454: ".concat(square);
+}
+
+function calcSquare(height, width) {
+  if (isNaN(height)) {
+    return width * width;
+  } else if (isNaN(width)) {
+    return height * height;
+  } else {
+    return height * width;
+  }
+} // Task 7
 
 
 function task7() {} // Task 8
