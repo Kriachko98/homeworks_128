@@ -133,9 +133,66 @@ function calcPerfectNum (anyNum){
 
 
 
-
-
 // Task 8
-function task8() {
+// function task8() {
+//     const min = document.getElementById('firstNum').valueAsNumber;
+//     const max = document.getElementById('secondNum').valueAsNumber;
+//     let from = min;
+//     let to = max;
 
+//     if (min > max){
+//         from = max;
+//         to = min;
+//     }
+
+
+// }
+
+// function calcPerfectRange (from, to){
+//     let sum = 0;
+//     for (let i = from; i < to; i++){
+//         for (let k = 1; k < i; k++){
+//             if (i % k == 0){
+//                 sum += k;
+//             }
+//         }
+//         if(sum === i){
+//             return sum;
+//         }
+//     }
+// }
+
+function task8() {
+    const min = document.getElementById('firstNum').valueAsNumber;
+    const max = document.getElementById('secondNum').valueAsNumber;
+    let from = min;
+    let to = max;
+
+    if (min > max) {
+        from = max;
+        to = min;
+    }
+
+    const perfectNumbersInRange = calcPerfectRange(from, to);
+    document.getElementById('perfectNums').innerHTML = `В вашому диапазоні такі досконалі числа: ${perfectNumbersInRange}`;
+}
+
+function calcPerfectRange(from, to) {
+    const perfectNumbers = [];
+
+    for (let i = from; i <= to; i++) {
+        let sum = 0;
+
+        for (let k = 1; k < i; k++) {
+            if (i % k === 0) {
+                sum += k;
+            }
+        }
+
+        if (sum === i) {
+            perfectNumbers.push(i);
+        }
+    }
+
+    return perfectNumbers;
 }

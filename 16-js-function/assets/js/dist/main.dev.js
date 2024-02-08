@@ -133,6 +133,62 @@ function calcPerfectNum(anyNum) {
     return false;
   }
 } // Task 8
+// function task8() {
+//     const min = document.getElementById('firstNum').valueAsNumber;
+//     const max = document.getElementById('secondNum').valueAsNumber;
+//     let from = min;
+//     let to = max;
+//     if (min > max){
+//         from = max;
+//         to = min;
+//     }
+// }
+// function calcPerfectRange (from, to){
+//     let sum = 0;
+//     for (let i = from; i < to; i++){
+//         for (let k = 1; k < i; k++){
+//             if (i % k == 0){
+//                 sum += k;
+//             }
+//         }
+//         if(sum === i){
+//             return sum;
+//         }
+//     }
+// }
 
 
-function task8() {}
+function task8() {
+  var min = document.getElementById('firstNum').valueAsNumber;
+  var max = document.getElementById('secondNum').valueAsNumber;
+  var from = min;
+  var to = max;
+
+  if (min > max) {
+    from = max;
+    to = min;
+  }
+
+  var perfectNumbersInRange = calcPerfectRange(from, to);
+  document.getElementById('perfectNums').innerHTML = "\u0412 \u0432\u0430\u0448\u043E\u043C\u0443 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D\u0456 \u0442\u0430\u043A\u0456 \u0434\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0456 \u0447\u0438\u0441\u043B\u0430: ".concat(perfectNumbersInRange);
+}
+
+function calcPerfectRange(from, to) {
+  var perfectNumbers = [];
+
+  for (var i = from; i <= to; i++) {
+    var sum = 0;
+
+    for (var k = 1; k < i; k++) {
+      if (i % k === 0) {
+        sum += k;
+      }
+    }
+
+    if (sum === i) {
+      perfectNumbers.push(i);
+    }
+  }
+
+  return perfectNumbers;
+}
