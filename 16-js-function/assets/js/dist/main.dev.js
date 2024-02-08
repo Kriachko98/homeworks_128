@@ -107,7 +107,32 @@ function calcSquare(height, width) {
 } // Task 7
 
 
-function task7() {} // Task 8
+function task7() {
+  var anyNum = document.getElementById('perfect').valueAsNumber;
+  var result = calcPerfectNum(anyNum);
+
+  if (result === true) {
+    document.getElementById('isPerfect').innerHTML = "\u0427\u0438\u0441\u043B\u043E ".concat(anyNum, " \u0454 \u0434\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0438\u043C!");
+  } else {
+    document.getElementById('isPerfect').innerHTML = "\u0427\u0438\u0441\u043B\u043E ".concat(anyNum, " \u041D\u0415 \u0454 \u0434\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0438\u043C!");
+  }
+}
+
+function calcPerfectNum(anyNum) {
+  var sum = 0;
+
+  for (var i = 1; i < anyNum; i++) {
+    if (anyNum % i == 0) {
+      sum += i;
+    }
+  }
+
+  if (sum === anyNum) {
+    return true;
+  } else {
+    return false;
+  }
+} // Task 8
 
 
 function task8() {}

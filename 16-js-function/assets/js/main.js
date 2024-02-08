@@ -106,8 +106,34 @@ function calcSquare (height, width){
 
 // Task 7
 function task7() {
+    const anyNum = document.getElementById('perfect').valueAsNumber;
+    let result = calcPerfectNum (anyNum);
 
+    if (result === true){
+        document.getElementById('isPerfect').innerHTML = `Число ${anyNum} є досконалим!`;
+    } else {
+        document.getElementById('isPerfect').innerHTML = `Число ${anyNum} НЕ є досконалим!`;
+    }
 }
+
+function calcPerfectNum (anyNum){
+    let sum = 0;
+    for (let i = 1; i < anyNum; i++){
+        if (anyNum % i == 0){
+            sum += i;
+        }
+    }
+    if (sum === anyNum){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
+
+
 
 // Task 8
 function task8() {
