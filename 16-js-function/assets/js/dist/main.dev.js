@@ -3,7 +3,7 @@
 // Task 2
 // function countArguments () {
 //     const arg = document.getElementById('arg').value;
-//     document.getElementById('sum_arg').innerHTML = arg.length;
+//     document.getElementById('sum_arg').innerHTML = arg.value.length;
 // }
 function countArguments() {
   var inputVal = document.getElementById('arg').value;
