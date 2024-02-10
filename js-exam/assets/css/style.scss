@@ -33,10 +33,10 @@ button, a {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat';
     font-size: 1rem;
     line-height: 1.5;
-    color: #232323;
+    color: $dark-gray-color;
 }
 
 .page--wrapper {
