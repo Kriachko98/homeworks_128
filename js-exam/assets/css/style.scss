@@ -39,8 +39,8 @@ a {
 
 body {
     font-family: 'Montserrat';
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.125rem;
+    font-weight: 400;
     color: $dark-gray-color;
 }
 
@@ -57,7 +57,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
-    background-color: lightgrey;
+    // background-color: lightgrey;
     height: 160px;
     text-align: center;
 }
@@ -66,21 +66,79 @@ main {
     flex-grow: 1;
 }
 
+
+
 // Header
-.logo--wrap {
-    width: 251px;
-    height: 54px;
-    .logo--link {
-        width: 100%;
-        display: block;
+
+.header--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    .logo--wrap {
+        width: 241px;
+        height: 54px;
+        .logo--link {
+            width: 100%;
+            display: block;
+        }
+    }
+    nav {
+        .main--menu {
+            display: flex;
+            justify-content: center;
+            gap: 93px;
+            list-style: circle;
+            li {
+                color: white;
+                a {
+                    color: $white-color;
+                    font-family: "Source Sans Pro";
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+    .sm--wrap {
+        width: 160px;
+        .social--media {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
-.main--menu {
-    display: flex;
-    justify-content: center;
-    gap: 93px;
-    a {
+// First screen slider
+.first--screen {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/bg-first-screen-color-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -5;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/bg-first-screen-paint-min.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -4;
+    }
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
         color: $white-color;
+        padding-top: 330px;
+        text-align: center;
+    }
+    p {
+        letter-spacing: 0.3375rem;
+        color: $white-color;
+        text-align: center;
     }
 }
