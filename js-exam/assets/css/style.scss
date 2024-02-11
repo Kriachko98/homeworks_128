@@ -27,8 +27,13 @@ button, a {
     transition: all .2s ease;
 }
 
+a {
+    text-decoration: none;
+    color: $dark-gray-color;
+}
+
 .container {
-    width: min(90%, 1400px);
+    width: min(90%, 1170px);
     margin-inline: auto;
 }
 
@@ -52,8 +57,30 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
+    background-color: lightgrey;
+    height: 160px;
+    text-align: center;
 }
 
 main {
     flex-grow: 1;
+}
+
+// Header
+.logo--wrap {
+    width: 251px;
+    height: 54px;
+    .logo--link {
+        width: 100%;
+        display: block;
+    }
+}
+
+.main--menu {
+    display: flex;
+    justify-content: center;
+    gap: 93px;
+    a {
+        color: $white-color;
+    }
 }
