@@ -66,6 +66,10 @@ main {
     flex-grow: 1;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 
 
 // Header
@@ -140,5 +144,84 @@ main {
         letter-spacing: 0.3375rem;
         color: $white-color;
         text-align: center;
+    }
+}
+
+
+
+// What we do
+.what--we--do--section {
+    h2 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        margin-top: 130px;
+        margin-bottom: 147px;
+        position: relative;
+        text-align: center;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 535px;
+            top: -30px;
+            border-top: 1px solid black;
+            border-left: 100px solid #000;
+        }
+    }
+    .center--photo {
+        width: 630px;
+        height: 470px;
+    }
+    .text--center {
+        width: 470px;
+        .prename {
+            font-size: 1.375rem;
+            padding-top: 94px;
+        }
+        h3 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 19px;
+            text-wrap: nowrap;
+        }
+        p {
+            font-family: "Open Sans";
+            line-height: 1.875rem;
+            margin-bottom: 40px;
+        }
+        .btn--details {
+            width: 190px;
+            border: 1px solid black;
+            margin-bottom: 60px;
+            height: 50px;
+            text-align: center;
+            a {
+                display: block;
+                font-size: 0.875rem;
+                color: $black-color;
+                line-height: 50px;
+                width: 100%;
+            }
+        }
+        .address--center {
+            color: $black-color;
+            font-family: "Open Sans";
+            font-size: 0.9375rem;
+            font-style: italic;
+        }
+    }
+    .trade--wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 177px;
+        .blue--shadow {
+            box-shadow: -100px -10px 10px #55B7FF;
+        }
+    }
+    .commerce--wrap {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 150px;
     }
 }
