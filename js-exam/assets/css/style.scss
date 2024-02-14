@@ -215,7 +215,7 @@ main {
         justify-content: space-between;
         margin-bottom: 177px;
         .blue--shadow {
-            box-shadow: -100px -10px 10px #55B7FF;
+            box-shadow: -260px -57px 0 $sky-blue-color;
         }
     }
     .commerce--wrap {
@@ -223,5 +223,8 @@ main {
         flex-direction: row-reverse;
         justify-content: space-between;
         margin-bottom: 150px;
+        .violet--shadow {
+            box-shadow: 260px -57px 0 $violet-color;
+        }
     }
 }
