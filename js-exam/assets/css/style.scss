@@ -1,4 +1,5 @@
  @import url('_fonts.scss');
+ @import url('../fonts/icon/css/all.min.css'); 
 
  $black-color: #000000;
  $white-color: #ffffff;
@@ -95,10 +96,10 @@ main {
             list-style: circle;
             li {
                 color: white;
+                font-family: "Source Sans Pro";
+                font-size: 0.875rem;
                 a {
                     color: $white-color;
-                    font-family: "Source Sans Pro";
-                    font-size: 0.875rem;
                 }
             }
         }
@@ -114,6 +115,9 @@ main {
 
 // First screen slider
 .first--screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 100vh;
     background-image: url(../images/bg-first-screen-color-min.jpg);
@@ -137,13 +141,38 @@ main {
         font-weight: 700;
         letter-spacing: 0.5rem;
         color: $white-color;
-        padding-top: 330px;
         text-align: center;
+
     }
     p {
         letter-spacing: 0.3375rem;
         color: $white-color;
         text-align: center;
+    }
+    .arrow--down {
+        position: absolute;
+        left: 49%;
+        bottom: 50px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+        &:hover {
+                background-color: lightgray;
+        }
+        a {
+            display: block;
+            width: 100%;
+            color: white;
+            .fa-chevron-down {
+                // color: white;
+                font-size: 15px;
+                letter-spacing: 4.5px;
+                line-height: 40px;
+                margin-left: 11px;
+                color: inherit;
+            }
+        }
     }
 }
 
@@ -207,6 +236,9 @@ main {
             font-family: "Open Sans";
             font-size: 0.9375rem;
             font-style: italic;
+            .fa-location-dot {
+                margin-right: 10px;
+            }
         }
     }
     .trade--wrap {
