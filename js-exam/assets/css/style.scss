@@ -72,9 +72,7 @@ main {
 }
 
 
-
 // Header
-
 .header--wrap {
     display: flex;
     justify-content: space-between;
@@ -126,7 +124,7 @@ main {
         letter-spacing: 0.5rem;
         color: $white-color;
         text-align: center;
-        margin-top: 330px;
+        padding-top: 330px;
     }
     p {
         letter-spacing: 0.3375rem;
@@ -144,20 +142,16 @@ main {
         a {
             display: block;
             width: 100%;
-            color: white;
             .fa-chevron-down {
-                // color: white;
+                color: white;
                 font-size: 15px;
                 letter-spacing: 4.5px;
                 line-height: 40px;
                 margin-left: 11px;
-                color: inherit;
             }
         }
     }
 }
-
-
 
 // What we do
 .what--we--do--section {
@@ -238,6 +232,60 @@ main {
         margin-bottom: 150px;
         .violet--shadow {
             box-shadow: 260px -57px 0 $violet-color;
+        }
+    }
+}
+
+// News
+.latest--news--section {
+    background-color: lightgrey;
+    padding-top: 150px;
+    h2 {
+        font-size: 2.75rem;
+        font-weight: 700;
+        color: $white-color;
+        text-align: center;
+        margin-bottom: 90px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 535px;
+            top: -30px;
+            border-top: 1px solid #fff;
+            border-left: 100px solid #fff;
+        }
+    }
+    .article--wrap {
+        display: flex;
+        justify-content: space-between;
+        article {
+            width: 370px;
+            .news--img {
+                margin-bottom: 30px;
+            }
+            h4 {
+                font-size: 1.375rem;
+                font-weight: 700;
+                width: 330px;
+                margin-inline: auto;
+                margin-bottom: 15px;
+            }
+            p {
+                font-family: "Open Sans";
+                width: 330px;
+                margin-inline: auto;
+                margin-bottom: 39px;
+            }
+            .news--autor {
+                display: flex;
+                flex-direction: row;
+                .photo--autor {
+                    width: 60px;
+                    aspect-ratio: 1;
+                    // border-radius: 50%;
+                }
+            }
         }
     }
 }
