@@ -71,6 +71,11 @@ main {
     text-transform: uppercase;
 }
 
+#map {
+    aspect-ratio: 16 / 5;
+    background-color: lightgray;
+}
+
 
 // Header
 .header--wrap {
@@ -352,6 +357,7 @@ main {
         width: 190px;
         border: 1px solid black;
         margin-inline: auto;
+        margin-bottom: 150px;
         a {
             display: block;
             width: 100%;
