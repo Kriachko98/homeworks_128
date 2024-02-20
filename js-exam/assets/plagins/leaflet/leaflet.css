@@ -106,7 +106,10 @@
 
 .leaflet-pane         { z-index: 400; }
 
-.leaflet-tile-pane    { z-index: 200; }
+.leaflet-tile-pane    { 
+	z-index: 200;
+	filter: grayscale(1);
+}
 .leaflet-overlay-pane { z-index: 400; }
 .leaflet-shadow-pane  { z-index: 500; }
 .leaflet-marker-pane  { z-index: 600; }
