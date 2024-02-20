@@ -6,6 +6,7 @@
  $dark-gray-color: #2C4058;
  $violet-color: #7E5AFF;
  $sky-blue-color: #55B7FF;
+ $hover-dark-purple: rgb(45, 5, 45);
 
  *, *::before, *::after {
     margin: 0;
@@ -58,7 +59,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 10;
-    // background-color: lightgrey;
     height: 160px;
     text-align: center;
 }
@@ -82,6 +82,31 @@ main {
     .social--media {
         display: flex;
         justify-content: space-between;
+        li {
+            border: 1px solid $white-color;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            &:hover {
+                border: 1px solid $hover-dark-purple;
+                .fa--icon--sm {
+                    color: $hover-dark-purple;
+                }
+            }
+            &:focus-within {
+                background-color: $hover-dark-purple;
+            }
+            a {
+                display: block;
+                width: 100%;
+                .fa--icon--sm{
+                    font-size: 1rem;
+                    color: $white-color;
+                    line-height: 40px;
+
+                }
+            }
+        }
     }
 }
 
@@ -111,6 +136,19 @@ main {
                 color: white;
                 font-family: "Source Sans Pro";
                 font-size: 0.875rem;
+                &:hover {
+                    color: $hover-dark-purple;
+                    list-style: disc;
+                    a {
+                        color: $hover-dark-purple;
+                    }
+                }
+                &:focus-within {
+                    border: 1px solid $hover-dark-purple;
+                    a {
+                        color: $hover-dark-purple;
+                    }
+                }
                 a {
                     color: $white-color;
                 }
@@ -147,6 +185,15 @@ main {
         height: 40px;
         border: 1px solid white;
         border-radius: 50%;
+        &:hover {
+            border: 1px solid rgb(45, 5, 45);
+            .fa-chevron-down {
+                color: rgb(45, 5, 45);
+            }
+        }
+        &:focus-within {
+            background-color: $hover-dark-purple;
+        }
         a {
             display: block;
             width: 100%;
@@ -206,6 +253,16 @@ main {
             margin-bottom: 60px;
             height: 50px;
             text-align: center;
+            &:hover {
+                background-color: $hover-dark-purple;
+                border: 1px solid $hover-dark-purple;
+                a {
+                    color: $white-color;
+                }
+            }
+            &:focus-within {
+                background-color: lightgray;
+            }
             a {
                 display: block;
                 font-size: 0.875rem;
@@ -361,6 +418,16 @@ main {
         border: 1px solid black;
         margin-inline: auto;
         margin-bottom: 150px;
+        &:hover {
+            background-color: $hover-dark-purple;
+            border: 1px solid $hover-dark-purple;
+            a {
+                color: $white-color;
+            }
+        }
+        &:focus-within {
+            background-color: lightgray;
+        }
         a {
             display: block;
             width: 100%;
