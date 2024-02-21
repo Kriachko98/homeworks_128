@@ -2,11 +2,12 @@ function initMap (link) {
     link.remove();
     const map = L.map('map').setView([40.662017, -73.880101], 13);
     const ownIcon = L.icon({
-        iconUrl: '../images/Pin-min.png',
+        iconUrl: '//images/pin-min.png',
     
         iconSize:     [106, 106], // size of the icon
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     });
+
 
     L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
@@ -16,3 +17,4 @@ function initMap (link) {
         // .bindPopup('A pretty CSS popup.<br> Easily customizable.')
         // .openPopup();
 }
+

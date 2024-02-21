@@ -4,7 +4,7 @@ function initMap(link) {
   link.remove();
   var map = L.map('map').setView([40.662017, -73.880101], 13);
   var ownIcon = L.icon({
-    iconUrl: '../images/Pin-min.png',
+    iconUrl: '//images/pin-min.png',
     iconSize: [106, 106],
     // size of the icon
     iconAnchor: [22, 94] // point of the icon which will correspond to marker's location

@@ -300,8 +300,16 @@ main {
             font-family: "Open Sans";
             font-size: 0.9375rem;
             font-style: italic;
-            .fa-location-dot {
-                margin-right: 10px;
+            a {
+                &:hover {
+                    opacity: .7;
+                }
+                &:focus-within {
+                    background-color: lightgray;
+                }
+                .fa-location-dot {
+                    margin-right: 10px;
+                }
             }
         }
     }
