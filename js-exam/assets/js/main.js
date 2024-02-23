@@ -47,4 +47,14 @@ $(function(){
         // adaptiveHeight: true,
         verticalHeight: 700,
     })
-})
+});
+
+// Scroll to Gallery
+function scrollToGal (selector){
+    const top = document.querySelector(selector).offsetTop
+
+    window.scrollTo({
+        top: top,
+        behavior: 'smooth'
+    })
+};
