@@ -181,53 +181,86 @@ main {
     }
 }
 
-// First screen slider
+// MAIN SLIDER
 .first--screen {
     position: relative;
     height: 100vh;
     background-image: url(../images/full-1screen-bg-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    h1 {
-        font-size: 5rem;
-        font-weight: 700;
-        letter-spacing: 0.5rem;
-        color: $white-color;
-        text-align: center;
-        padding-top: 330px;
-    }
-    p {
-        letter-spacing: 0.3375rem;
-        color: $white-color;
-        text-align: center;
-    }
-    .arrow--down {
-        position: absolute;
-        left: 49%;
-        bottom: 50px;
-        width: 40px;
-        height: 40px;
-        border: 1px solid white;
-        border-radius: 50%;
-        &:hover {
-            border: 1px solid rgb(45, 5, 45);
-            .fa-chevron-down {
-                color: rgb(45, 5, 45);
-            }
+}
+.second--screen {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/second-slider-bg-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.third--screen {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/third-slider-bg-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fourth--screen {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/fourth-slider-bg-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fifth--screen {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/fifth-slider-bg-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.title--slider {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    color: $white-color;
+    text-align: center;
+    padding-top: 330px;
+}
+.text--slider {
+    letter-spacing: 0.3375rem;
+    color: $white-color;
+    text-align: center;
+}
+.arrow--down {
+    position: absolute;
+    left: 49%;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    &:hover {
+        border: 1px solid rgb(45, 5, 45);
+        .fa-chevron-down {
+            color: rgb(45, 5, 45);
         }
-        &:focus-within {
-            background-color: $hover-dark-purple;
-        }
-        a {
-            display: block;
-            width: 100%;
-            .fa-chevron-down {
-                color: white;
-                font-size: 15px;
-                letter-spacing: 4.5px;
-                line-height: 40px;
-                margin-left: 11px;
-            }
+    }
+    &:focus-within {
+        background-color: $hover-dark-purple;
+    }
+    a {
+        display: block;
+        width: 100%;
+        .fa-chevron-down {
+            color: white;
+            font-size: 15px;
+            letter-spacing: 4.5px;
+            line-height: 40px;
+            margin-left: 11px;
         }
     }
 }
