@@ -1,5 +1,6 @@
 "use strict";
 
+// Map
 function initMap(link) {
   link.remove();
   var map = L.map('map').setView([40.662017, -73.880101], 13);
@@ -15,6 +16,32 @@ function initMap(link) {
   }).addTo(map);
   L.marker([40.678930, -73.906647], {
     icon: ownIcon
-  }).addTo(map); // .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-  // .openPopup();
-}
+  }).addTo(map);
+} // Main slider
+// document.addEventListener('DOMContentLoaded', function() {
+//     const sections = document.querySelectorAll('.first--screen, .second--screen, .third--screen, .fourth--screen, .fifth--screen');
+//     let currentSection = 0;
+//     document.querySelector('.arrow--down a').addEventListener('click', function(event) {
+//       event.preventDefault();
+//       sections[currentSection].classList.remove('active');
+//       currentSection = (currentSection + 1) % sections.length;
+//       sections[currentSection].classList.add('active');
+//     });
+//     // Додайте подібний код для кнопки вгору, якщо потрібно
+//   });
+// Main Slider
+
+
+$(function () {
+  $("#mainSlider").lightSlider({
+    item: 1,
+    // autoWidth: true,
+    slideMargin: 0,
+    auto: true,
+    loop: true,
+    pause: 4000,
+    vertical: true,
+    // adaptiveHeight: true,
+    verticalHeight: 700
+  });
+});

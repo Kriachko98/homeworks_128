@@ -182,6 +182,14 @@ main {
 }
 
 // MAIN SLIDER
+#mainSlider {
+    height: 100vh;
+}
+
+.slide-container {
+    height: 100%;
+}
+
 .first--screen {
     position: relative;
     height: 100vh;
@@ -220,6 +228,16 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+
+// .first--screen, .second--screen, .third--screen, .fourth--screen, .fifth--screen {
+//     display: none;
+// }
+
+// .active {
+//     display: block;
+// }
 
 
 .title--slider {

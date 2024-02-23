@@ -12,6 +12,7 @@
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/plagins/leaflet/leaflet.css">
+    <link rel="stylesheet" href="assets/plagins/lightslider/lightslider.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
@@ -26,9 +27,9 @@
                 </div>
                 <nav>
                     <ul class="main--menu uppercase">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">News</a></li>
+                        <li><a href="#wwd--sec">About us</a></li>
+                        <li><a href="#gal--sec">Projects</a></li>
+                        <li><a href="#news--sec">News</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -44,49 +45,50 @@
     </header>
     <main>
         <!-- MAIN SLIDER -->
-        <!-- First screen section -->
-        <section class="first--screen">
-            <div class="container">
-                <h1 class="uppercase title--slider">Simple & Modern</h1>
-                <p class="uppercase text--slider">We make the beautiful everyday</p>
-                <div class="arrow--down"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-            </div>
-        </section>
-        <!-- Second slider screen -->
-        <section class="second--screen">
-            <div class="container">
-                <h1 class="uppercase title--slider">Simple & Modern</h1>
-                <p class="uppercase text--slider">We make the beautiful everyday</p>
-                <div class="arrow--down"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-            </div>
-        </section>
-        <!-- Third slider screen -->
-        <section class="third--screen">
-            <div class="container">
-                <h1 class="uppercase title--slider">Simple & Modern</h1>
-                <p class="uppercase text--slider">We make the beautiful everyday</p>
-                <div class="arrow--down"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-            </div>
-        </section>
-        <!-- Fourth slider screen -->
-        <section class="fourth--screen">
-            <div class="container">
-                <h1 class="uppercase title--slider">Simple & Modern</h1>
-                <p class="uppercase text--slider">We make the beautiful everyday</p>
-                <div class="arrow--down"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-            </div>
-        </section>
-        <!-- Fifth slider screen -->
-        <section class="fifth--screen">
-            <div class="container">
-                <h1 class="uppercase title--slider">Simple & Modern</h1>
-                <p class="uppercase text--slider">We make the beautiful everyday</p>
-                <div class="arrow--down"><a href="#"><i class="fa-solid fa-chevron-down"></i></a></div>
-            </div>
-        </section>
-
+        <ul id="mainSlider">
+            <!-- First screen section -->
+            <li class="first--screen active">
+                <div class="container">
+                    <h1 class="uppercase title--slider">Simple & Modern</h1>
+                    <p class="uppercase text--slider">We make the beautiful everyday</p>
+                    <div class="arrow--down"><a href="#gal--sec" onclick="scrollToGal('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></a></div>
+                </div>
+            </li>
+            <!-- Second slider screen -->
+            <li class="second--screen">
+                <div class="container">
+                    <h1 class="uppercase title--slider">Simple & Modern</h1>
+                    <p class="uppercase text--slider">We make the beautiful everyday</p>
+                    <div class="arrow--down"><a href="#gal--sec" onclick="scrollToGal('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></a></div>
+                </div>
+            </li>
+            <!-- Third slider screen -->
+            <li class="third--screen">
+                <div class="container">
+                    <h1 class="uppercase title--slider">Simple & Modern</h1>
+                    <p class="uppercase text--slider">We make the beautiful everyday</p>
+                    <div class="arrow--down"><a href="#gal--sec" onclick="scrollToGal('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></a></div>
+                </div>
+            </li>
+            <!-- Fourth slider screen -->
+            <li class="fourth--screen">
+                <div class="container">
+                    <h1 class="uppercase title--slider">Simple & Modern</h1>
+                    <p class="uppercase text--slider">We make the beautiful everyday</p>
+                    <div class="arrow--down"><a href="#gal--sec" onclick="scrollToGal('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></a></div>
+                </div>
+            </li>
+            <!-- Fifth slider screen -->
+            <li class="fifth--screen">
+                <div class="container">
+                    <h1 class="uppercase title--slider">Simple & Modern</h1>
+                    <p class="uppercase text--slider">We make the beautiful everyday</p>
+                    <div class="arrow--down"><a href="#gal--sec" onclick="scrollToGal('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></a></div>
+                </div>
+            </li>
+        </ul>
         <!-- What we do -->
-        <section class="what--we--do--section">
+        <section id="wwd--sec" class="what--we--do--section">
             <div class="container">
                 <h2 class="uppercase">What we do</h2>
                 <div class="trade--wrap">
@@ -116,7 +118,7 @@
             </div>
         </section>
         <!-- News -->
-        <section class="latest--news--section">
+        <section id="news--sec" class="latest--news--section">
             <div class="container">
                 <h2 class="uppercase">Latest news</h2>
                 <div class="article--wrap">
@@ -172,7 +174,7 @@
             </div>
         </section>
         <!-- Gallery -->
-        <section class="gallery--section">
+        <section id="gal--sec" class="gallery--section">
             <div class="container">
                 <h2 class="uppercase">Gallery</h2>
                 <div class="grid--wrap">
@@ -220,7 +222,11 @@
         </div>
     </footer>
 
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/plagins/lightslider/lightslider.min.js"></script>
     <script src="assets/plagins/leaflet/leaflet.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
