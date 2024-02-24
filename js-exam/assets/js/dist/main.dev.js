@@ -44,7 +44,7 @@ $(function () {
     // adaptiveHeight: true,
     verticalHeight: 700
   });
-}); // Smooth scroll
+}); // Smooth scroll main button
 
 function scrollToElem(selector) {
   var top = document.querySelector(selector).offsetTop;
@@ -55,4 +55,21 @@ function scrollToElem(selector) {
   });
 }
 
-;
+; // Smooth scroll navigation
+
+document.addEventListener('DOMContentLoaded', function () {
+  var navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', scrollToSection);
+  });
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    var targetId = event.currentTarget.getAttribute('href').substring(1);
+    var targetSection = document.getElementById(targetId);
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+});
