@@ -81,4 +81,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 
+// Chandes headers height
+window.addEventListener('scroll', function (){
+    const header = document.getElementById('header');
+    const targetSection = document.getElementById('wwd--sec');
+
+    if(window.scrollY >= targetSection.offsetTop){
+    if(!header.classList.contains('scrolled')){
+        header.classList.add('scrolled')
+    }
+   }else{
+    if(header.classList.contains('scrolled')){
+        header.classList.remove('scrolled')
+    }
+   }
+})
 

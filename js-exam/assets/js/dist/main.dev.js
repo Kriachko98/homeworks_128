@@ -72,4 +72,19 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth'
     });
   }
+}); // Chandes headers height
+
+window.addEventListener('scroll', function () {
+  var header = document.getElementById('header');
+  var targetSection = document.getElementById('wwd--sec');
+
+  if (window.scrollY >= targetSection.offsetTop) {
+    if (!header.classList.contains('scrolled')) {
+      header.classList.add('scrolled');
+    }
+  } else {
+    if (header.classList.contains('scrolled')) {
+      header.classList.remove('scrolled');
+    }
+  }
 });
