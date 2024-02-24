@@ -44,10 +44,11 @@ $(function () {
     // adaptiveHeight: true,
     verticalHeight: 700
   });
-}); // Scroll to Gallery
+}); // Smooth scroll
 
-function scrollToGal(selector) {
+function scrollToElem(selector) {
   var top = document.querySelector(selector).offsetTop;
+  console.log(top);
   window.scrollTo({
     top: top,
     behavior: 'smooth'

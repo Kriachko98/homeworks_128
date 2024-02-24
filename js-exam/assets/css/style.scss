@@ -253,6 +253,8 @@ main {
     color: $white-color;
     text-align: center;
 }
+
+
 .arrow--down {
     position: absolute;
     left: 49%;
@@ -261,6 +263,7 @@ main {
     height: 40px;
     border: 1px solid white;
     border-radius: 50%;
+    background-color: transparent;
     &:hover {
         border: 1px solid rgb(45, 5, 45);
         .fa-chevron-down {
@@ -270,16 +273,12 @@ main {
     &:focus-within {
         background-color: $hover-dark-purple;
     }
-    a {
-        display: block;
-        width: 100%;
-        .fa-chevron-down {
-            color: white;
-            font-size: 15px;
-            letter-spacing: 4.5px;
-            line-height: 40px;
-            margin-left: 11px;
-        }
+    .fa-chevron-down {
+        color: white;
+        font-size: 15px;
+        letter-spacing: 4.5px;
+        line-height: 40px;
+        margin-left: 5px;
     }
 }
 

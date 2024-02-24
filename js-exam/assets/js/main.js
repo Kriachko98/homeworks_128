@@ -49,12 +49,12 @@ $(function(){
     })
 });
 
-// Scroll to Gallery
-function scrollToGal (selector){
+// Smooth scroll
+function scrollToElem (selector){
     const top = document.querySelector(selector).offsetTop
-
+    console.log(top);
     window.scrollTo({
         top: top,
-        behavior: 'smooth'
+        behavior: 'smooth',
     })
 };
