@@ -554,6 +554,7 @@ footer {
     background-image: url(../images/bg-footer-min.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    position: relative;
     .footer--wrap {
         display: flex;
         justify-content: space-between;
@@ -565,6 +566,106 @@ footer {
             font-size: 0.875rem;
             color: $white-color;
             margin-bottom: 234px;
+        }
+    }
+    // Form
+    .form {
+        width: min(90%, 770px);
+        margin-inline: auto;
+        background-image: url(../images/form-bg-min.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -301px;
+        left: 25%;
+        z-index: 1;
+        h2 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            padding-top: 90px;
+            margin-bottom: 42px;
+            position: relative;
+            text-align: center;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 335px;
+                top: 60px;
+                border-top: 1px solid black;
+                border-left: 100px solid #000;
+            }
+        }
+        .form--flex--wrap {
+            width: min(90%, 650px);
+            margin-inline: auto;
+            display: flex;
+            justify-content: space-between;
+            .contacts--info {
+                width: 290px;
+                ul {
+                    height: 196px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-bottom: 68px;
+                    li {
+                        line-height: 1.75rem;
+                        i {
+                            color: $violet-color;
+                            margin-right: 10px;
+                        }
+                        a {
+                            color: $black-color;
+                            &:hover{
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+            }
+            .input--wrap {
+                width: 310px;
+                .input--container {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        border-bottom: 1px solid black;
+                        line-height: 1.6875rem;
+                        font-family: Montserrat;
+                        font-size: 1.125rem;
+                        color: black;
+                        padding-bottom: 10px;
+                        // &:focus {
+                        //     label {
+                        //       display: none !important;
+                        //     }
+                        // }
+                    }
+                    label {
+                        position: absolute;
+                        left: 0;
+                        top: 20px;
+                        line-height: 1.6875rem;
+                        color: #4B5562;
+                    }
+                }
+            }
+            .btn--sub--wrap{
+                text-align: right;
+                .btn--submit {
+                    line-height: 1.6875rem;
+                    font-family: Montserrat;
+                    font-size: 1.125rem;
+                    width: 140px;
+                    text-align: center;
+                    height: 50px;
+                    background-color: transparent;
+                    border: 1px solid black;
+                    margin-top: 30px;
+                }
+            }
         }
     }
 }

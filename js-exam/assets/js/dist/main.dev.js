@@ -81,4 +81,8 @@ lightGallery(document.getElementById('static-thumbnails'), {
   zoomFromOrigin: false,
   allowMediaOverlap: true,
   toggleThumb: true
+}); // Hidden label
+
+$('input').focus(function () {
+  $(this).siblings('label').hide();
 });

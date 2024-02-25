@@ -87,3 +87,8 @@ lightGallery(document.getElementById('static-thumbnails'), {
     allowMediaOverlap: true,
     toggleThumb: true,
 });
+
+// Hidden label
+$('input').focus(function(){
+    $(this).siblings('label').hide();
+});
