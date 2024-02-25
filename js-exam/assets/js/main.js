@@ -18,6 +18,7 @@ function initMap (link) {
 }
 
 
+
 // Main Slider
 $(function(){
     $("#mainSlider").lightSlider({
@@ -32,6 +33,8 @@ $(function(){
     })
 });
 
+
+
 // Smooth scroll main button
 function scrollToElem (selector){
     const top = document.querySelector(selector).offsetTop
@@ -41,6 +44,8 @@ function scrollToElem (selector){
         behavior: 'smooth',
     })
 };
+
+
 
 // Smooth scroll navigation
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,10 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
       window.scrollTo({
         top: targetSection.offsetTop,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   });
+  
   
 
 // Chandes headers height
@@ -71,14 +77,16 @@ window.addEventListener('scroll', function (){
 
     if(window.scrollY >= targetSection.offsetTop){
     if(!header.classList.contains('scrolled')){
-        header.classList.add('scrolled')
+        header.classList.add('scrolled');
     }
    }else{
     if(header.classList.contains('scrolled')){
-        header.classList.remove('scrolled')
+        header.classList.remove('scrolled');
     }
    }
-})
+});
+
+
 
 // Gallery
 lightGallery(document.getElementById('static-thumbnails'), {
@@ -88,7 +96,63 @@ lightGallery(document.getElementById('static-thumbnails'), {
     toggleThumb: true,
 });
 
+
+
 // Hidden label
 $('input').focus(function(){
     $(this).siblings('label').hide();
+});
+
+
+
+// Form validation
+const form = document.getElementById('feedback_form');
+
+function isValidEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+};
+
+document.querySelectorAll('input').forEach(elem =>{
+    elem.onfocus = function(){
+        if(this.classList.contains('is-invalid')){
+            this.classList.remove('is-invalid');
+        }
+    }
+});
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const errors = [];
+    const nameFld = document.getElementById('name');
+    const emailFld = document.getElementById('email');
+    const name = nameFld.value.trim();
+    const email = emailFld.value.trim();
+
+    if (name === ''){
+        errors.push('Enter your name, please');
+        nameFld.classList.add('is-invalid');
+    } else {
+        if (name.length < 2){
+            errors.push('Enter your name and surname, please');
+            nameFld.classList.add('is-invalid');
+        }
+    };
+
+    if (email === ''){
+        errors.push('Enter your email, please');
+        emailFld.classList.add('is-invalid');
+    } else {
+        if (!isValidEmail(email.value)){
+            errors.push('Incorrect email');
+            emailFld.classList.add('is-invalid');
+        }
+    };
+
+    if (errors.length){
+        alert(errors.join('. '));
+        return
+    };
+
+    return false
 });

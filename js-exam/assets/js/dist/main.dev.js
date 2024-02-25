@@ -85,4 +85,60 @@ lightGallery(document.getElementById('static-thumbnails'), {
 
 $('input').focus(function () {
   $(this).siblings('label').hide();
+}); // Form validation
+
+var form = document.getElementById('feedback_form');
+
+function isValidEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
+;
+document.querySelectorAll('input').forEach(function (elem) {
+  elem.onfocus = function () {
+    if (this.classList.contains('is-invalid')) {
+      this.classList.remove('is-invalid');
+    }
+  };
+});
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var errors = [];
+  var nameFld = document.getElementById('name');
+  var emailFld = document.getElementById('email');
+  var name = nameFld.value.trim();
+  var email = emailFld.value.trim();
+
+  if (name === '') {
+    errors.push('Enter your name, please');
+    nameFld.classList.add('is-invalid');
+  } else {
+    if (name.length < 2) {
+      errors.push('Enter your name and surname, please');
+      nameFld.classList.add('is-invalid');
+    }
+  }
+
+  ;
+
+  if (email === '') {
+    errors.push('Enter your email, please');
+    emailFld.classList.add('is-invalid');
+  } else {
+    if (!isValidEmail(email.value)) {
+      errors.push('Incorrect email');
+      emailFld.classList.add('is-invalid');
+    }
+  }
+
+  ;
+
+  if (errors.length) {
+    alert(errors.join('. '));
+    return;
+  }
+
+  ;
+  return false;
 });
