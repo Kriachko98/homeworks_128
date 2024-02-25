@@ -13,6 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/plagins/leaflet/leaflet.css">
     <link rel="stylesheet" href="assets/plagins/lightslider/lightslider.css">
+    <link rel="stylesheet" href="assets/plagins/lightgallery/lightgallery.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
@@ -51,7 +52,6 @@
                 <div class="container">
                     <h1 class="uppercase title--slider">Simple & Modern</h1>
                     <p class="uppercase text--slider">We make the beautiful everyday</p>
-                    <!-- <div class="arrow--down"><a href="#gal--sec" onclick="scrollToElem('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></a></div> -->
                     <button class="arrow--down" type="button" onclick="scrollToElem('#gal--sec')"><i class="fa-solid fa-chevron-down"></i></button>
                 </div>
             </li>
@@ -178,12 +178,12 @@
         <section id="gal--sec" class="gallery--section">
             <div class="container">
                 <h2 class="uppercase">Gallery</h2>
-                <div class="grid--wrap">
-                    <div class="item item-1"><img src="assets/images/gallery-big-min.jpg" alt="office center"></div>
-                    <div class="item item-2"><img src="assets/images/gallery-left-top-min.jpg" alt="white building"></div>
-                    <div class="item item-3"><img src="assets/images/gallery-right-top-min.jpg" alt="orange building"></div>
-                    <div class="item item-4"><img src="assets/images/gallery-left-bottom-min.jpg" alt="office center"></div>
-                    <div class="item item-5"><img src="assets/images/gallery-right-bottom-min.jpg" alt="hub"></div>
+                <div id="static-thumbnails" class="grid--wrap">
+                    <a href="assets/images/gallery-big-min.jpg" class="item item-1"><img src="assets/images/gallery-big-min.jpg" alt="office center"></a>
+                    <a href="assets/images/gallery-left-top-min.jpg" class="item item-2"><img src="assets/images/gallery-left-top-min.jpg" alt="white building"></a>
+                    <a href="assets/images/gallery-right-top-min.jpg" class="item item-3"><img src="assets/images/gallery-right-top-min.jpg" alt="orange building"></a>
+                    <a href="assets/images/gallery-left-bottom-min.jpg" class="item item-4"><img src="assets/images/gallery-left-bottom-min.jpg" alt="office center"></a>
+                    <a href="assets/images/gallery-right-bottom-min.jpg" class="item item-5"><img src="assets/images/gallery-right-bottom-min.jpg" alt="hub"></a>
                 </div>
                 <div class="btn--gallery">
                     <a class="uppercase" href="#">See more</a>
@@ -191,14 +191,12 @@
             </div>
         </section>
         <!-- Map -->
-        <section class="map--section">
-            <div id="map">
-                <a href="#map" class="map--link" onclick="initMap(this)">
-                    <img src="assets/images/Map-min.png" alt="Map">
-                    <span>Click to interractive map</span>
-                </a>
-            </div>
-        </section>
+        <div id="map">
+            <a href="#map" class="map--link" onclick="initMap(this)">
+                <img src="assets/images/Map-min.png" alt="Map">
+                <span>Click to interractive map</span>
+            </a>
+        </div>
     </main>
     <!-- Footer -->
     <footer>
@@ -225,6 +223,8 @@
 
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/plagins/lightslider/lightslider.min.js"></script>
+    <script src="assets/plagins/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/plagins/lightgallery/lg-thumbnail.min.js"></script>
     <script src="assets/plagins/leaflet/leaflet.js"></script>
     <script src="assets/js/main.js"></script>
 </body>

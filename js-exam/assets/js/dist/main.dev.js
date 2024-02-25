@@ -17,32 +17,19 @@ function initMap(link) {
   L.marker([40.678930, -73.906647], {
     icon: ownIcon
   }).addTo(map);
-} // Main slider
-// document.addEventListener('DOMContentLoaded', function() {
-//     const sections = document.querySelectorAll('.first--screen, .second--screen, .third--screen, .fourth--screen, .fifth--screen');
-//     let currentSection = 0;
-//     document.querySelector('.arrow--down a').addEventListener('click', function(event) {
-//       event.preventDefault();
-//       sections[currentSection].classList.remove('active');
-//       currentSection = (currentSection + 1) % sections.length;
-//       sections[currentSection].classList.add('active');
-//     });
-//     // Додайте подібний код для кнопки вгору, якщо потрібно
-//   });
-// Main Slider
+} // Main Slider
 
 
 $(function () {
   $("#mainSlider").lightSlider({
     item: 1,
-    // autoWidth: true,
     slideMargin: 0,
     auto: true,
     loop: true,
     pause: 4000,
     vertical: true,
-    // adaptiveHeight: true,
-    verticalHeight: 700
+    verticalHeight: 700,
+    controls: false
   });
 }); // Smooth scroll main button
 
@@ -87,4 +74,11 @@ window.addEventListener('scroll', function () {
       header.classList.remove('scrolled');
     }
   }
+}); // Gallery
+
+lightGallery(document.getElementById('static-thumbnails'), {
+  animateThumb: false,
+  zoomFromOrigin: false,
+  allowMediaOverlap: true,
+  toggleThumb: true
 });
