@@ -3,7 +3,7 @@ function initMap (link) {
     link.remove();
     const map = L.map('map').setView([40.662017, -73.880101], 13);
     const ownIcon = L.icon({
-        iconUrl: '//images/pin-min.png',
+        iconUrl: '../images/pin.svg',
     
         iconSize:     [106, 106], // size of the icon
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location

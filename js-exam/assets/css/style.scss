@@ -496,6 +496,32 @@ main {
         .item-5 {
             grid-area: 2 / -2 / 3 / -1;
         }
+        .item {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                .overlay {
+                    opacity: 1;
+                }
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: all .2s ease;
+                .zoom--icon {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }        
     }
     .btn--gallery {
         width: 190px;
