@@ -106,53 +106,51 @@ $('input').focus(function(){
 
 
 // Form validation
-const form = document.getElementById('feedback_form');
+$(document).ready(function() {
+    $('input').focus(function() {
+        if ($(this).hasClass('is-invalid')) {
+            $(this).removeClass('is-invalid');
+        }
+    });
+
+    $('#feedback_form').submit(function(e) {
+        e.preventDefault();
+        const errors = [];
+        const nameFld = $('#name');
+        const emailFld = $('#email');
+        const name = nameFld.val().trim();
+        const email = emailFld.val().trim();
+
+        if (name === '') {
+            errors.push('Enter your name, please');
+            nameFld.addClass('is-invalid');
+        } else {
+            if (name.length < 2) {
+                errors.push('Enter your name and surname, please');
+                nameFld.addClass('is-invalid');
+            }
+        }
+
+        if (email === '') {
+            errors.push('Enter your email, please');
+            emailFld.addClass('is-invalid');
+        } else {
+            if (!isValidEmail(email)) {
+                errors.push('Incorrect email');
+                emailFld.addClass('is-invalid');
+            }
+        }
+
+        if (errors.length) {
+            alert(errors.join('. '));
+            return false;
+        }
+
+        return false;
+    });
+});
 
 function isValidEmail(email) {
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    const regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
-};
-
-document.querySelectorAll('input').forEach(elem =>{
-    elem.onfocus = function(){
-        if(this.classList.contains('is-invalid')){
-            this.classList.remove('is-invalid');
-        }
-    }
-});
-
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const errors = [];
-    const nameFld = document.getElementById('name');
-    const emailFld = document.getElementById('email');
-    const name = nameFld.value.trim();
-    const email = emailFld.value.trim();
-
-    if (name === ''){
-        errors.push('Enter your name, please');
-        nameFld.classList.add('is-invalid');
-    } else {
-        if (name.length < 2){
-            errors.push('Enter your name and surname, please');
-            nameFld.classList.add('is-invalid');
-        }
-    };
-
-    if (email === ''){
-        errors.push('Enter your email, please');
-        emailFld.classList.add('is-invalid');
-    } else {
-        if (!isValidEmail(email.value)){
-            errors.push('Incorrect email');
-            emailFld.classList.add('is-invalid');
-        }
-    };
-
-    if (errors.length){
-        alert(errors.join('. '));
-        return
-    };
-
-    return false
-});
+}
