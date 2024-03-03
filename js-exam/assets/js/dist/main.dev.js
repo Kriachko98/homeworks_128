@@ -87,6 +87,8 @@ $('input').focus(function () {
   $(this).siblings('label').hide();
 }); // Form validation
 
+var name = '';
+var email = '';
 $(document).ready(function () {
   $('input').focus(function () {
     if ($(this).hasClass('is-invalid')) {
@@ -98,8 +100,8 @@ $(document).ready(function () {
     var errors = [];
     var nameFld = $('#name');
     var emailFld = $('#email');
-    var name = nameFld.val().trim();
-    var email = emailFld.val().trim();
+    name = nameFld.val().trim();
+    email = emailFld.val().trim();
 
     if (name === '') {
       errors.push('Enter your name, please');
@@ -124,13 +126,63 @@ $(document).ready(function () {
     if (errors.length) {
       alert(errors.join('. '));
       return false;
-    }
+    } // Form result
 
+
+    var CHAT_ID = '-1002006271390';
+    var BOT_TOKEN = '7073477143:AAHlVk3vsuHDf7zcEVK-4debms0tEoyCscs';
+    var message = "<b>Name: </b>".concat(name, "\r\n<b>Email: </b>").concat(email);
+    var url = "https://api.telegram.org/bot".concat(BOT_TOKEN, "/sendMessage?chat_id=").concat(CHAT_ID, "&text=").concat(encodeURI(message), "&parse_mode=HTML");
+    $.ajax({
+      url: url,
+      type: 'post',
+      dataType: 'json',
+      success: function success(resp) {
+        if (resp.ok) {
+          nameFld.val('');
+          emailFld.val('');
+          toast.success('Your message successfully sent.');
+        } else {
+          toast.error('Some error occurred.');
+        }
+      },
+      error: function error(err) {
+        toast.error(err);
+      }
+    });
     return false;
   });
-});
 
-function isValidEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
-}
+  function isValidEmail(email) {
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+  }
+}); // const options = {
+//     method: 'POST',
+//     url: 'https://api.telegram.org/bottoken/sendMessage',
+//     headers: {
+//       accept: 'application/json',
+//       'User-Agent': 'Telegram Bot SDK - (https://github.com/irazasyed/telegram-bot-sdk)',
+//       'content-type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       text: 'Required',
+//       parse_mode: 'Optional',
+//       disable_web_page_preview: false,
+//       disable_notification: false,
+//       reply_to_message_id: null
+//     })
+// };
+// fetch(url, {
+//     method: 'post'
+// })
+//     .then(resp => resp.json())
+//     .then(resp => {
+//         if(resp.ok){
+//             nameFld.value = '';
+//             emailFld.value = '';
+//             toast.success('Your massage successfully sent.')
+//         }else{
+//             toast.error('Some error occured.')
+//         }
+//     })
