@@ -1,5 +1,12 @@
  @import url('_fonts.scss');
 
+ $primary-text-color: #1D2130;
+ $secondary-text-color: #525560;
+ $yellow-bg-color: #F2C94C;
+ $yellow-light-bg-color: #FCEDC6;
+ $black-bg-color: #0B0706;
+
+
  *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -19,6 +26,11 @@ img {
 
 button, a {
     transition: all .2s ease;
+    border: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -28,9 +40,9 @@ button, a {
 
 body {
     font-family: 'Roboto';
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #232323;
+    font-size: 16px;
+    color: $secondary-text-color;
+    font-weight: 400;
 }
 
 .page--wrapper {
@@ -50,4 +62,130 @@ header {
 
 main {
     flex-grow: 1;
+}
+
+// @import url('_header.scss'); 
+// Header
+header {
+    height: 87px;
+    background: #fff;
+    .header--wrap {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo--wrap {
+            width: 125px;
+            height: 44px;
+        }
+        .nav--header {
+            width: 497px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: $secondary-text-color;
+                &:hover {
+                    color: $primary-text-color;
+                    font-weight: 700;
+                }
+            }
+        }
+        .btn--donate {
+            width: 115px;
+            height: 43px;
+            background-color: $black-bg-color;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 500;
+            &:hover {
+                border: 1px solid black;
+                background-color: #fff;
+                color: $primary-text-color;
+            }
+        }
+    }
+}
+
+// First screen
+.first--screen--section {
+    background-image: url(../images/home-main-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // height: 715px;
+    .main--title {
+        width: min(90%, 640px);
+        padding-top: 87px;
+        margin-top: 87px;
+        margin-bottom: 48px;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 76.8px;
+        color: #fff;
+    }
+    .fs--btn--wrap {
+        display: flex;
+        justify-content: start;
+        gap: 24px;
+        margin-bottom: 192px;
+        .wwd--link {
+            width: 148px;
+            padding: 16px 0;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 4px;
+            &:hover {
+                background-color: rgba($color: #fff, $alpha: .4);
+                border: 1px solid white;
+                a {
+                    color: #fff;
+                    transition: none;
+                    font-weight: 700;
+                }
+            }
+            a {
+                font-weight: 500;
+                color: $primary-text-color;
+            }
+        }
+        .play--link {
+            margin-top: 12px;
+            a {
+                line-height: 25.6px;
+                font-weight: 500;
+                color: #fff;
+                &:hover {
+                    font-weight: 700;
+                    color: grey;
+                    font-size: 18px;
+                }
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .qnt--donation--wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 64px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px; /* Товщина лінії */
+            background-color: #fff; /* Колір лінії */
+            transform: translateY(-50%);
+        }
+        div {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
 }
