@@ -1,5 +1,14 @@
  @import url('_fonts.scss');
 
+//  @import url('_mixins.scss'); 
+@mixin fz($px){
+    font-size: ($px / 16) * 1rem;
+ };
+
+ @mixin lh($lh){
+    line-height: ($lh / 16) * 1rem;
+ };
+
  $primary-text-color: #1D2130;
  $secondary-text-color: #525560;
  $yellow-bg-color: #F2C94C;
@@ -10,7 +19,7 @@
  *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 ul, ol {
@@ -40,9 +49,9 @@ a {
 
 body {
     font-family: 'Roboto';
-    font-size: 16px;
     color: $secondary-text-color;
     font-weight: 400;
+    @include fz(16);
 }
 
 .page--wrapper {
@@ -64,48 +73,9 @@ main {
     flex-grow: 1;
 }
 
-// @import url('_header.scss'); 
 // Header
-header {
-    height: 87px;
-    background: #fff;
-    .header--wrap {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .logo--wrap {
-            width: 125px;
-            height: 44px;
-        }
-        .nav--header {
-            width: 497px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            a {
-                color: $secondary-text-color;
-                &:hover {
-                    color: $primary-text-color;
-                    font-weight: 700;
-                }
-            }
-        }
-        .btn--donate {
-            width: 115px;
-            height: 43px;
-            background-color: $black-bg-color;
-            color: #fff;
-            border-radius: 4px;
-            font-weight: 500;
-            &:hover {
-                border: 1px solid black;
-                background-color: #fff;
-                color: $primary-text-color;
-            }
-        }
-    }
-}
+@import url('_header'); 
+
 
 // First screen
 .first--screen--section {
@@ -118,9 +88,9 @@ header {
         padding-top: 87px;
         margin-top: 87px;
         margin-bottom: 48px;
-        font-size: 64px;
+        @include fz(64);
         font-weight: 700;
-        line-height: 76.8px;
+        @include lh(76.8);
         color: #fff;
     }
     .fs--btn--wrap {
@@ -151,13 +121,13 @@ header {
         .play--link {
             margin-top: 12px;
             a {
-                line-height: 25.6px;
+                @include lh(25.6);
                 font-weight: 500;
                 color: #fff;
                 &:hover {
                     font-weight: 700;
                     color: grey;
-                    font-size: 18px;
+                    @include fz(18);
                     img {
                         width: 25px;
                         height: 25px;
@@ -187,9 +157,11 @@ header {
             transform: translateY(-50%);
         }
         div {
-            font-size: 18px;
+            @include fz(18);
             font-weight: 500;
             color: #fff;
         }
     }
 }
+
+// About us

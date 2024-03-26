@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url("_fonts.scss");
+@import url("_header");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button, a {
+  transition: all 0.2s ease;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(90%, 1280px);
+  margin-inline: auto;
+}
+
+body {
+  font-family: "Roboto";
+  color: #525560;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.page--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.first--screen--section {
+  background-image: url(../images/home-main-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.first--screen--section .main--title {
+  width: min(90%, 640px);
+  padding-top: 87px;
+  margin-top: 87px;
+  margin-bottom: 48px;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  color: #fff;
+}
+.first--screen--section .fs--btn--wrap {
+  display: flex;
+  justify-content: start;
+  gap: 24px;
+  margin-bottom: 192px;
+}
+.first--screen--section .fs--btn--wrap .wwd--link {
+  width: 148px;
+  padding: 16px 0;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.first--screen--section .fs--btn--wrap .wwd--link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+}
+.first--screen--section .fs--btn--wrap .wwd--link:hover a {
+  color: #fff;
+  transition: none;
+  font-weight: 700;
+}
+.first--screen--section .fs--btn--wrap .wwd--link a {
+  font-weight: 500;
+  color: #1D2130;
+}
+.first--screen--section .fs--btn--wrap .play--link {
+  margin-top: 12px;
+}
+.first--screen--section .fs--btn--wrap .play--link a {
+  line-height: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+.first--screen--section .fs--btn--wrap .play--link a:hover {
+  font-weight: 700;
+  color: grey;
+  font-size: 1.125rem;
+}
+.first--screen--section .fs--btn--wrap .play--link a:hover img {
+  width: 25px;
+  height: 25px;
+}
+.first--screen--section .fs--btn--wrap .play--link a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.first--screen--section .qnt--donation--wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 64px;
+  position: relative;
+}
+.first--screen--section .qnt--donation--wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  /* Товщина лінії */
+  background-color: #fff;
+  /* Колір лінії */
+  transform: translateY(-50%);
+}
+.first--screen--section .qnt--donation--wrap div {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+}
