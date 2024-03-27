@@ -19,7 +19,7 @@
  *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 ul, ol {
@@ -73,8 +73,12 @@ main {
     flex-grow: 1;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 // Header
-@import url('_header'); 
+@import url('_header');
 
 
 // First screen
@@ -165,3 +169,12 @@ main {
 }
 
 // About us
+.about--content--wrap {
+    margin-top: 86px;
+    display: flex;
+    justify-content: space-between;
+    .about--text--content {
+        margin-left: 106px;
+        margin-top: 94px;
+    }
+}
