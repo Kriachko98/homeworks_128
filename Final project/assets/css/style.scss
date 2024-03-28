@@ -1,10 +1,5 @@
  @import 'fonts';
-
- $primary-text-color: #1D2130;
- $secondary-text-color: #525560;
- $yellow-bg-color: #F2C94C;
- $yellow-light-bg-color: #FCEDC6;
- $black-bg-color: #0B0706;
+ @import 'vars';
 
 
  *, *::before, *::after {
@@ -27,6 +22,7 @@ img {
 button, a {
     transition: all .2s ease;
     border: none;
+    box-sizing: border-box;
 }
 
 a {
@@ -43,6 +39,7 @@ body {
     color: $secondary-text-color;
     font-weight: 400;
     font-size: 1rem;
+    // box-sizing: border-box;
 }
 
 .page--wrapper {
@@ -66,105 +63,4 @@ main {
 
 .uppercase {
     text-transform: uppercase;
-}
-
-// Header
-@import 'header';
-
-// First screen
-.first--screen--section {
-    background-image: url(../images/home-main-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    // height: 715px;
-    .main--title {
-        width: min(90%, 640px);
-        padding-top: 87px;
-        margin-top: 87px;
-        margin-bottom: 48px;
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 4.8rem;
-        color: #fff;
-    }
-    .fs--btn--wrap {
-        display: flex;
-        justify-content: start;
-        gap: 24px;
-        margin-bottom: 192px;
-        .wwd--link {
-            width: 148px;
-            padding: 16px 0;
-            text-align: center;
-            background-color: #fff;
-            border-radius: 4px;
-            &:hover {
-                background-color: rgba($color: #fff, $alpha: .4);
-                border: 1px solid white;
-                a {
-                    color: #fff;
-                    transition: none;
-                    font-weight: 700;
-                }
-            }
-            a {
-                font-weight: 500;
-                color: $primary-text-color;
-            }
-        }
-        .play--link {
-            margin-top: 12px;
-            a {
-                line-height: 1.6rem;
-                font-weight: 500;
-                color: #fff;
-                &:hover {
-                    font-weight: 700;
-                    color: grey;
-                    font-size: 1.125rem;
-                    img {
-                        width: 25px;
-                        height: 25px;
-                    }
-                }
-                img {
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 8px;
-                }
-            }
-        }
-    }
-    .qnt--donation--wrap {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 64px;
-        position: relative;
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px; /* Товщина лінії */
-            background-color: #fff; /* Колір лінії */
-            transform: translateY(-50%);
-        }
-        div {
-            font-size: 1.125rem;
-            font-weight: 500;
-            color: #fff;
-        }
-    }
-}
-
-// About us
-.about--content--wrap {
-    margin-top: 86px;
-    display: flex;
-    justify-content: space-between;
-    .about--text--content {
-        margin-left: 106px;
-        margin-top: 94px;
-    }
 }
