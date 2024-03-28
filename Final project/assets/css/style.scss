@@ -1,13 +1,4 @@
- @import url('_fonts.scss');
-
-//  @import url('_mixins.scss'); 
-@mixin fz($px){
-    font-size: ($px / 16) * 1rem;
- };
-
- @mixin lh($lh){
-    line-height: ($lh / 16) * 1rem;
- };
+ @import 'fonts';
 
  $primary-text-color: #1D2130;
  $secondary-text-color: #525560;
@@ -51,7 +42,7 @@ body {
     font-family: 'Roboto';
     color: $secondary-text-color;
     font-weight: 400;
-    @include fz(16);
+    font-size: 1rem;
 }
 
 .page--wrapper {
@@ -78,8 +69,7 @@ main {
 }
 
 // Header
-@import url('_header');
-
+@import 'header';
 
 // First screen
 .first--screen--section {
@@ -92,9 +82,9 @@ main {
         padding-top: 87px;
         margin-top: 87px;
         margin-bottom: 48px;
-        @include fz(64);
+        font-size: 4rem;
         font-weight: 700;
-        @include lh(76.8);
+        line-height: 4.8rem;
         color: #fff;
     }
     .fs--btn--wrap {
@@ -125,13 +115,13 @@ main {
         .play--link {
             margin-top: 12px;
             a {
-                @include lh(25.6);
+                line-height: 1.6rem;
                 font-weight: 500;
                 color: #fff;
                 &:hover {
                     font-weight: 700;
                     color: grey;
-                    @include fz(18);
+                    font-size: 1.125rem;
                     img {
                         width: 25px;
                         height: 25px;
@@ -161,7 +151,7 @@ main {
             transform: translateY(-50%);
         }
         div {
-            @include fz(18);
+            font-size: 1.125rem;
             font-weight: 500;
             color: #fff;
         }
