@@ -37,8 +37,10 @@
                 background-color: $yellow-bg-color;
                 color: black;
                 border-radius: 4px;
-                font-weight: 600;
+                font-weight: 500;
                 margin-right: 32px;
+                font-family: 'Roboto';
+                font-size: 1rem;
                 &:hover {
                     background-color: $yellow-light-bg-color;
                     border: 1px solid $yellow-bg-color;
@@ -51,7 +53,9 @@
                 background-color: #fff;
                 color: black;
                 border-radius: 4px;
-                font-weight: 600;
+                font-weight: 500;
+                font-family: 'Roboto';
+                font-size: 1rem;
                 &:hover {
                     border: 1px solid white;
                     background-color: rgba($color: #fff, $alpha: .6);
