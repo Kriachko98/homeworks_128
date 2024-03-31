@@ -202,7 +202,8 @@ h2 {
         justify-content: space-between;
         padding-bottom: 96px;
         .wwd--text--wrap {
-            width: min(50%, 608px);
+            width: min(40%, 608px);
+            margin-left: 95px;
             h3 {
                 margin-bottom: 32px;
             }
@@ -238,7 +239,15 @@ h2 {
         }
         .wwd--img--wrap {
             width: min(45%, 480px);
-            aspect-ratio: 2/3;
+            margin-top: 52px;
+            img {
+                border-radius: 20px;
+                height: auto;
+
+            }
         }
     }    
 }
+
+
+@import 'contribution';
