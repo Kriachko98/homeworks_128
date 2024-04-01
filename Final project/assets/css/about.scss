@@ -1,0 +1,35 @@
+@import 'style';
+@import 'header';
+
+// About us
+.about--us--section {
+    margin-top: 87px;
+    padding-top: 76px;
+    .about--wrap {
+        margin-left: 96px;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 4.2rem;
+            color: $primary-text-color;
+            float: left;
+            margin-right: 15px;
+            width: min(90%, 718px);
+        }
+        .primary--text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.875rem;
+            color: $primary-text-color;
+            margin-bottom: 8px;
+            margin-top: 48px;
+        }
+        .secondary--text {
+            line-height: 1.6rem;
+            margin-bottom: 294px;
+        }
+    }
+}
+
+// Mission and vission
+ 
