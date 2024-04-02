@@ -208,4 +208,62 @@
     }
 }
 
- 
+// Team
+.team--section {
+    h2 {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    p {
+        line-height: 1.6rem;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+    .team--grid--wrap {
+        display: grid;
+        margin-bottom: 40px;
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: 1fr 1fr;
+        gap: 0 33px;
+        .grid--item {
+            width: min(100%, 296px);
+            font-weight: 500;
+            color: $primary-text-color;
+            text-align: center;
+            margin-bottom: 48px;
+            .staff--photo {
+                margin-bottom: 16px;
+                width: 296px;
+                aspect-ratio: 1;
+                img {
+                    border-radius: 20px;
+                }
+            }
+            .staff--name {
+                font-size: 1.25rem;
+                line-height: 2rem;
+                margin-bottom: 8px;
+            }
+            .staff--possition {
+                font-size: 0.75rem;
+                line-height: 1.2rem;
+                margin-bottom: 16px;
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                li {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+// Contribution
+@import 'contribution';
+
+
+// Footer
+@import 'footer';
