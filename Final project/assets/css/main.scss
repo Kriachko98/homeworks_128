@@ -176,21 +176,9 @@ h2 {
         
     }
 }
-.supporters {
-    font-weight: 500;
-    letter-spacing: 0.125rem;
-    color: $primary-text-color;
-    margin-bottom: 34px;
-}
+@import 'supporters';
 .supporters--list {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    flex-wrap: wrap;
     margin-bottom: 74px;
-    li {
-        font-weight: 500;
-    }
 }
 
 // What we do
