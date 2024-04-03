@@ -69,3 +69,23 @@
         }
     }
 }
+
+// Our project
+.project--section {
+    h3 {
+        margin-top: 56px;
+        margin-left: 96px;
+    }
+    h2 {
+        width: min(90%, 640px);
+        margin-bottom: 65px;
+        margin-left: 96px;
+    }
+}
+
+// Contribution
+@import 'contribution';
+
+
+// Footer
+@import 'footer';
