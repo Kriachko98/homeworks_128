@@ -9,7 +9,9 @@
     .relative--for--video {
         position: relative;
         .about--wrap {
-            margin-left: 96px;
+            h3 {
+                margin-left: 96px;
+            }
             h1 {
                 font-size: 3.5rem;
                 font-weight: 700;
@@ -19,6 +21,7 @@
                 margin-right: 15px;
                 width: min(90%, 718px);
                 margin-bottom: 30px;
+                margin-left: 96px;
             }
             .primary--text {
                 font-size: 1.25rem;
@@ -249,7 +252,7 @@
                 line-height: 1.2rem;
                 margin-bottom: 16px;
             }
-            ul {
+            .social--media {
                 display: flex;
                 justify-content: center;
                 gap: 20px;

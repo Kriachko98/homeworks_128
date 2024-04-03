@@ -57,10 +57,24 @@ footer {
                     border-radius: 4px;
                     border: 1px solid rgba(235, 240, 249, 0.30);
                     &::placeholder {
-                        padding-left: 24px;
+                        // padding-left: 24px;
                         font-family: 'Roboto';
                         font-size: 1rem;
                         font-weight: 400;
+                    }
+                    &:focus {
+                        outline: none;
+                        border: 1px solid gray;
+                        &::placeholder {
+                            visibility: hidden;
+                        }
+                    }
+                    &[type="email"] {
+                        color: white;
+                        line-height: 1.6rem;
+                        font-weight: 400;
+                        font-size: 1rem;
+                        padding-left: 24px;
                     }
                 }
                 .btn--subscribe {
@@ -74,6 +88,10 @@ footer {
                     color: $primary-text-color;
                     font-family: 'Roboto';
                     font-size: 1rem;
+                    &:hover {
+                        background-color: lightgrey;
+                        border: 3px solid white;
+                    }
                 }
             } 
         }
