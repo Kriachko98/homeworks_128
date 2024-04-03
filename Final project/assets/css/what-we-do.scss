@@ -1,0 +1,71 @@
+@import 'style';
+@import 'header';
+
+// What we do
+.wwd--section {
+    margin-top: 87px;
+    .wwd--flex--wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 76px 0 0 96px;
+        margin-bottom: 96px;
+        gap: 16px;
+        .wwd--text--wrap {
+            width: min(50%, 584px);
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 700;
+                line-height: 4.2rem;
+                color: $primary-text-color;
+                width: 80%;
+                margin-bottom: 34px;
+            }
+            p {
+                line-height: 1.6rem;
+            }
+        }
+        .wwwd--photo--wrap {
+            width: 476px;
+            height: 384px;
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+// Categories of assistance
+.assistance--section {
+    padding-top: 96px;
+    h2 {
+        margin-bottom: 64px;
+    }
+    .categories--wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 48px 116px;
+        margin-left: 48px;
+        padding-bottom: 104px;
+        ul {
+            width: 332px;
+            position: relative;
+            color: $primary-text-color;
+            .categories--name {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            .categories--description {
+                font-size: 0.875rem;
+                line-height: 1.4rem;
+            }
+            .categories--icon {
+                width: 28px;
+                position: absolute;
+                top: 0;
+                left: -48px;
+            }
+        }
+    }
+}

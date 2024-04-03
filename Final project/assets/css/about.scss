@@ -1,6 +1,7 @@
 @import 'style';
 @import 'header';
 
+
 // About us
 .about--us--section {
     margin-top: 87px;
@@ -60,7 +61,6 @@
                     content: url(../images/play-icon-video.svg);
                     width: 64px;
                     aspect-ratio: 1;
-                    // height: 64px;
                     position: absolute;
                     left: calc(50% - 32px);
                     top: calc(50% - 32px);
