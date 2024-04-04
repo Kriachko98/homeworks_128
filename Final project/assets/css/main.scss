@@ -234,6 +234,16 @@ h2 {
     }    
 } 
 
+// How we spend donation
+.chart--section {
+    padding-top: 142px;
+    background-color: black;
+    h2 {
+        color: white;
+        margin-bottom: 16px;
+    }
+}
+
 // Contribution
 @import 'contribution';
 
