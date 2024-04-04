@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>largerthan</title>
     <link rel="stylesheet" href="assets/css/contact.min.css">
+    <link rel="stylesheet" href="assets/plagins/leaflet/leaflet.css">
 </head>
 <body>
     <!-- Header -->
@@ -88,8 +89,11 @@
             </form>
         </div>
         <!-- Map -->
-        <div>
-        
+        <div id="map">
+            <a href="#map" class="map--link" onclick="initMap(this)">
+                <img src="assets/images/map-screen.png" alt="map">
+                <span>Click to interactive map</span>
+            </a>
         </div>
     </main>
     <!-- Footer -->
@@ -135,5 +139,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/plagins/leaflet/leaflet.js"></script>
+    <script src="assets/js/contact.js"></script>
 </body>
 </html>
