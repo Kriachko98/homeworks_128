@@ -238,9 +238,77 @@ h2 {
 .chart--section {
     padding-top: 142px;
     background-color: black;
-    h2 {
-        color: white;
-        margin-bottom: 16px;
+    padding: 96px 0;
+    margin-bottom: 96px;
+    .chart--flex--wrap {
+        display: flex;
+        justify-content: space-between;
+        .donation--info {
+            width: min(100%, 626px);
+            margin-bottom: 45px;
+            h2 {
+                color: white;
+                margin-bottom: 16px;
+            }
+            p {
+                line-height: 1.6rem;
+                color: rgba(255, 255, 255, .6);
+                margin-bottom: 32px;
+            }
+            .spending--statistic {
+                display: grid;
+                padding-left: 24px;
+                grid-template-columns: repeat(3, auto);
+                grid-template-rows: 1fr 1fr;
+                gap: 16px 25px;
+                li {
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                    color: #fff;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        position: absolute;
+                        left: -24px;
+                        top: calc(50% - 8px);
+                        border-radius: 4px;
+                    }
+                }
+                .green {
+                    &::before {
+                        background-color: #BEF3C0;
+                    }
+                }
+                .purple {
+                    &::before {
+                        background-color: #AC94F1;
+                    }
+                }
+                .light--yellow {
+                    &::before {
+                        background-color: #FFF0CA;
+                    }
+                }
+                .yellow {
+                    &::before {
+                        background-color: #F9CF64;
+                    }
+                }
+                .rose {
+                    &::before {
+                        background-color: #F38FBF;
+                    }
+                }
+            }
+        }
+        .donation--chart {
+            width: min(80%, 375px);
+            img {
+                aspect-ratio: 1;
+            }
+        }
     }
 }
 
