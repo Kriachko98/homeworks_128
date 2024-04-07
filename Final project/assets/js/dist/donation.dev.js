@@ -1,6 +1,6 @@
 "use strict";
 
-// Tab
+// Tabs
 $(function () {
   $(".tabs--buttons button").on('click', function () {
     if (!$(this).hasClass('active')) {

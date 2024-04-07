@@ -1,41 +1,124 @@
 @import 'style';
 @import 'header';
 
-// Tab
-.tab {
-    display: none;
-    &.active {
-        display: block;
-    }
-}
-
-.tabs--container {
-    width: min(100%, 592px);
-    .tabs--buttons {
+// Donate
+.donate--section {
+    margin-top: 87px;
+    padding-bottom: 96px;
+    .donate--flex--wrap {
         display: flex;
-        margin-bottom: 24px;
-        li {
+        justify-content: space-between;
+        padding: 76px 0 0 96px;
+        gap: 16px;
+        .donate--text--wrap {
+            width: min(50%, 584px);
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 700;
+                line-height: 4.2rem;
+                color: $primary-text-color;
+                width: 80%;
+                margin-bottom: 34px;
+            }
+            p {
+                line-height: 1.6rem;
+                margin-bottom: 32px;
+            }
             button {
-                // width: 114px;
-                padding: 8px 24px;
-                background-color: #fff;
+                width: 149px;
+                height: 51px;
                 font-family: 'Roboto';
                 font-size: 1rem;
                 font-weight: 500;
-                line-height: 1.6rem;
-                color: $secondary-text-color;
-                &:hover {
-                    // background-color: lightgray;
-                    color: $yellow-bg-color;
-                }
+                color: #000;
+                background-color: $yellow-bg-color;
             }
         }
-        button.active {
-            border-bottom: 2px solid $yellow-bg-color;
-            color: $primary-text-color;
+        .donate--photo--wrap {
+            width: 476px;
+            height: 384px;
+            img {
+                border-radius: 20px;
+            }
         }
     }
-    .tabs--content {
+}
+
+
+// How you can contribute
+.text--tabs--wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 96px;
+    margin-bottom: 96px;
+    .text--container {
+        width: min(100%, 592px);
+        h2 {
+            margin-bottom: 24px;
+        }
+        p {
+            line-height: 1.6rem;
+        }
+    }
+    .tabs--container {
+        width: min(100%, 592px);
+        margin-top: 11px;
+        .tabs--buttons {
+            display: flex;
+            margin-bottom: 24px;
+            li {
+                button {
+                    padding: 8px 24px;
+                    background-color: #fff;
+                    font-family: 'Roboto';
+                    font-size: 1rem;
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                    color: $secondary-text-color;
+                    &:hover {
+                        color: $yellow-bg-color;
+                    }
+                }
+            }
+            button.active {
+                border-bottom: 2px solid $yellow-bg-color;
+                color: $primary-text-color;
+            }
+        }
+        .tab {
+            line-height: 1.6rem;
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+
+// How we use donation
+.usage--donation--wrap {
+    padding-top: 96px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 111px;
+    h2 {
+        margin-bottom: 24px;
+        width: min(100%, 374px);
+    }
+    p {
+        margin-bottom: 24px;
+        width: min(100%, 374px);
         line-height: 1.6rem;
     }
 }
+
+
+// Contribution
+@import 'contribution';
+.contribution--wrap {
+    margin-bottom: 81px;
+}
+
+// Footer
+@import 'footer';
