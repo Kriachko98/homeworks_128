@@ -13,6 +13,7 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/css/donation.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -55,8 +56,23 @@
                     <h2>How you can contribute to caring for our kids</h2>
                     <p>You can contribute to caring for our kids by volunteering your time, skills, or resources to support our programs and initiatives aimed at providing inclusive care for children with special needs. Your involvement not only enriches the lives of these children but also strengthens our collective efforts towards building a more inclusive and compassionate community for all.</p>
                 </div>
-                <div>
-                    <!-- Тут мають бути таби -->
+                <div class="tabs--container">
+                    <ul class="tabs--buttons">
+                        <li><button data-tab="tab-1" class="active" type="button">Overview</button></li>
+                        <li><button data-tab="tab-2" type="button">Impact</button></li>
+                        <li><button data-tab="tab-3" type="button">What You get</button></li>
+                    </ul>
+                    <div class="tabs--content">
+                        <div id="tab-1" class="tab active">
+                            <p>By becoming a part of our volunteer network, you join a community dedicated to making a tangible difference in the lives of children with special needs, fostering an environment of acceptance and support.</p>
+                        </div>
+                        <div id="tab-2" class="tab">
+                            <p>Your contributions directly impact the well-being and development of these children, fostering their independence, confidence, and sense of belonging in society, leaving a lasting and meaningful impact on their lives and futures.</p>
+                        </div>
+                        <div id="tab-3" class="tab">
+                            <p>You gain the opportunity to witness firsthand the transformative power of your efforts, experiencing the joy and fulfillment of making a positive difference in the lives of others while being a catalyst for positive change in your community.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -85,46 +101,49 @@
     </main>
    <!-- Footer -->
    <footer>
-    <div class="container footer--wrap">
-        <div class="logo--wrap">
-            <a href="#"><img src="assets/images/logo-white.svg" alt="logo"></a>
+        <div class="container footer--wrap">
+            <div class="logo--wrap">
+                <a href="#"><img src="assets/images/logo-white.svg" alt="logo"></a>
+            </div>
+            <div class="footer--nav--wrap">
+                <ul class="footer--nav">
+                    <li class="main--block--nav">Home
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">What we do</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="main--block--nav">More
+                        <ul>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Donate</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="main--block--nav">Connect
+                        <ul>
+                            <li><a target="_blank" href="https://www.facebook.com/?locale=uk_UA">Facebook</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
+                            <li><a target="_blank" href="https://twitter.com/?lang=uk">Twitter</a></li>
+                            <li><a target="_blank" href="https://ua.linkedin.com/">Linkdin</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="form--wrap">
+                <div>Subscribe to get latest updates</div>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <button class="btn--subscribe" type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
-        <div class="footer--nav--wrap">
-            <ul class="footer--nav">
-                <li class="main--block--nav">Home
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">What we do</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </li>
-                <li class="main--block--nav">More
-                    <ul>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Donate</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </li>
-                <li class="main--block--nav">Connect
-                    <ul>
-                        <li><a target="_blank" href="https://www.facebook.com/?locale=uk_UA">Facebook</a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
-                        <li><a target="_blank" href="https://twitter.com/?lang=uk">Twitter</a></li>
-                        <li><a target="_blank" href="https://ua.linkedin.com/">Linkdin</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="form--wrap">
-            <div>Subscribe to get latest updates</div>
-            <form action="#" method="get">
-                <input type="email" name="email" placeholder="Your email" required>
-                <button class="btn--subscribe" type="submit">Subscribe</button>
-            </form>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/donation.js"></script>
 </body>
 </html>

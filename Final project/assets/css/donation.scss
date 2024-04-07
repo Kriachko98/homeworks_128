@@ -1,0 +1,41 @@
+@import 'style';
+@import 'header';
+
+// Tab
+.tab {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.tabs--container {
+    width: min(100%, 592px);
+    .tabs--buttons {
+        display: flex;
+        margin-bottom: 24px;
+        li {
+            button {
+                // width: 114px;
+                padding: 8px 24px;
+                background-color: #fff;
+                font-family: 'Roboto';
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.6rem;
+                color: $secondary-text-color;
+                &:hover {
+                    // background-color: lightgray;
+                    color: $yellow-bg-color;
+                }
+            }
+        }
+        button.active {
+            border-bottom: 2px solid $yellow-bg-color;
+            color: $primary-text-color;
+        }
+    }
+    .tabs--content {
+        line-height: 1.6rem;
+    }
+}
