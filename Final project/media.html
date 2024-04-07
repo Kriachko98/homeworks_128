@@ -16,101 +16,126 @@
     <link rel="stylesheet" href="assets/css/media.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header--wrap">
-            <div class="logo--wrap">
-                <a href="#"><img src="assets/images/logo.svg" alt="logo"></a>
+    <div class="page--overlay">
+        <div class="mobile--panel">
+            <div class="panel--top">
+                <div class="hamburger">
+                    <button id="hamb--btn--mobile" class="hamburger--wrapper hamburger--squeeze is-active" type="button">
+                        <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
             </div>
             <nav>
-                <ul class="nav--header">
+                <ul class="mobile--menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-us.html">About us</a></li>
                     <li><a href="what-we-do.html">What We Do</a></li>
-                    <li><a href="#">Media</a></li>
+                    <li><a href="media.html">Media</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <button class="btn--donate" type="button">Donate</button>
         </div>
-    </header>
-    <main>
-        <!-- Top news -->
-        <section class="light--yellow--bg news--section">
-            <div class="container news--flex--wrap">
-                <div class="news--text">
-                    <h3 class="uppercase">Top news</h3>
-                    <h1>Our goal is to provide inclusive care for children with special needs</h1>
-                    <p>We strive to create a supportive environment that develops the individual strengths of inclusive children, promotes their independence and improves their quality of life.</p>
-                    <div class="btn--read--more"><a href="#">Read more</a></div>
+    </div>
+    <div class="page--wrapper">
+        <!-- Header -->
+        <header>
+            <div class="container header--wrap">
+                <div class="logo--wrap">
+                    <a href="#"><img src="assets/images/logo.svg" alt="logo"></a>
                 </div>
-                <div class="news--list">
-                    <!-- news -->
-                </div>
+                <nav>
+                    <ul class="nav--header">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="what-we-do.html">What We Do</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="btn--donate" type="button">Donate</button>
             </div>
-        </section>
-        <!-- Contribution -->
-        <section>
-            <div class="container contribution--wrap">
-                <div class="contribution--content">
-                    <h2>You can contribute to provide a place for children with special needs!</h2>
-                    <div class="contribution--btn--wrap">
-                        <button class="btn--volonteer" type="button">Join as a volunteer</button>
-                        <button class="btn--donate--white" type="button">Donate</button>
+        </header>
+        <main>
+            <!-- Top news -->
+            <section class="light--yellow--bg news--section">
+                <div class="container news--flex--wrap">
+                    <div class="news--text">
+                        <h3 class="uppercase">Top news</h3>
+                        <h1>Our goal is to provide inclusive care for children with special needs</h1>
+                        <p>We strive to create a supportive environment that develops the individual strengths of inclusive children, promotes their independence and improves their quality of life.</p>
+                        <div class="btn--read--more"><a href="#">Read more</a></div>
+                    </div>
+                    <div class="news--list">
+                        <!-- news -->
                     </div>
                 </div>
+            </section>
+            <!-- Contribution -->
+            <section>
+                <div class="container contribution--wrap">
+                    <div class="contribution--content">
+                        <h2>You can contribute to provide a place for children with special needs!</h2>
+                        <div class="contribution--btn--wrap">
+                            <button class="btn--volonteer" type="button">Join as a volunteer</button>
+                            <button class="btn--donate--white" type="button">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Events -->
+            <section>
+                <div class="container">
+                    <h2>Our Events</h2>
+                    <!-- Add news with API -->
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div class="container footer--wrap">
+                <div class="logo--wrap">
+                    <a href="#"><img src="assets/images/logo-white.svg" alt="logo"></a>
+                </div>
+                <div class="footer--nav--wrap">
+                    <ul class="footer--nav">
+                        <li class="main--block--nav">Home
+                            <ul>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">What we do</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="main--block--nav">More
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="main--block--nav">Connect
+                            <ul>
+                                <li><a target="_blank" href="https://www.facebook.com/?locale=uk_UA">Facebook</a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
+                                <li><a target="_blank" href="https://twitter.com/?lang=uk">Twitter</a></li>
+                                <li><a target="_blank" href="https://ua.linkedin.com/">Linkdin</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form--wrap">
+                    <div>Subscribe to get latest updates</div>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <button class="btn--subscribe" type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
-        </section>
-        <!-- Events -->
-        <section>
-            <div class="container">
-                <h2>Our Events</h2>
-                <!-- Add news with API -->
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer>
-        <div class="container footer--wrap">
-            <div class="logo--wrap">
-                <a href="#"><img src="assets/images/logo-white.svg" alt="logo"></a>
-            </div>
-            <div class="footer--nav--wrap">
-                <ul class="footer--nav">
-                    <li class="main--block--nav">Home
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">What we do</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </li>
-                    <li class="main--block--nav">More
-                        <ul>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Donate</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </li>
-                    <li class="main--block--nav">Connect
-                        <ul>
-                            <li><a target="_blank" href="https://www.facebook.com/?locale=uk_UA">Facebook</a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
-                            <li><a target="_blank" href="https://twitter.com/?lang=uk">Twitter</a></li>
-                            <li><a target="_blank" href="https://ua.linkedin.com/">Linkdin</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="form--wrap">
-                <div>Subscribe to get latest updates</div>
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <button class="btn--subscribe" type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
