@@ -31,13 +31,23 @@ header {
             width: 115px;
             height: 43px;
             background-color: $black-bg-color;
-            color: #fff;
             border-radius: 4px;
-            font-weight: 500;
+            a {
+                display: block;
+                width: 100%;
+                font-family: 'Roboto';
+                text-align: center;
+                font-weight: 500;
+                color: #fff;
+                line-height: 43px;
+            }
             &:hover {
                 border: 1px solid black;
                 background-color: #fff;
                 color: $primary-text-color;
+                a {
+                    color: #000;
+                }
             }
         }
     }

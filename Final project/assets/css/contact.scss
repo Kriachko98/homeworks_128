@@ -1,7 +1,7 @@
 @import 'style';
 @import 'header';
 
-// Contact us
+// Contact us 
 .contact--section {
     padding-top: 87px;
     .contact--flex--wrap {
@@ -121,6 +121,9 @@
                         font-weight: 400;
                         font-size: 1rem;
                     }
+                }
+                .is-invalid {
+                    border: 1px solid red;
                 }
             }
         }
