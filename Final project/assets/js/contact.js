@@ -23,6 +23,63 @@ function initMap(link) {
         // .openPopup();
 }
 
+
+// Toast
+const toast = {
+    timeoutID:null,
+    styles: {
+        position: 'fixed',
+        left: '120px',
+        top: '80px',
+        'border-radius': '10px',
+        padding: '15px',
+        color:'#fff',
+        'z-index': 1
+    },
+    success: function(text){
+        this.show(text, 'success')
+    },
+    error: function(text){
+        this.show(text, 'error')
+    },
+    info: function(text){
+        this.show(text, 'info')
+    },
+    show: function(text,type='info'){
+        const myToast = document.getElementById('my-toast')
+        if(myToast){
+            clearTimeout(this.timeoutID);
+            myToast.remove();
+        }
+        let style = '';
+        Object.entries(this.styles).forEach(([key,value])=> {
+            style += `${key}: ${value};`
+        })
+        switch(type){
+            case 'success':
+                style += 'background-color: #198754;'
+                break;
+            case 'error':
+                style += 'background-color: #dc3445;'
+        }
+        const html = `<div id="my-toast" class="my-toast ${type}" style="${style}">
+        <p class="mb-0">${text}</p>
+      </div>`;
+      document.body.insertAdjacentHTML('afterbegin',html);
+      this.hide(3000);
+    },
+    hide: function(timeout){
+        this.timeoutID = setTimeout(function(){
+                const myToast = document.getElementById('my-toast')
+            if(myToast!==null){
+                myToast.remove();
+            }
+        },timeout);
+        
+    }
+}
+
+
 // Form validation
 var firstName = '';
 var lastName = '';
@@ -51,23 +108,29 @@ $(document).ready(function () {
 
     if (firstName === '') {
       errors.push('Enter your first name, please');
-      nameFld.addClass('is-invalid');
+      firstNameFld.addClass('is-invalid');
     } else {
-      if (firstName.length < 2) {
-        errors.push('Enter only your first name, please');
-        firstNameFld.addClass('is-invalid');
-      }
+        if (!/^\S+$/.test(lastName)) {
+            errors.push('Last name must be one word');
+            firstNameFld.addClass('is-invalid');
+        } else if (/\d/.test(lastName)) {
+            errors.push('Last name should not contain digits');
+            firstNameFld.addClass('is-invalid');
+        }
     }
 
     if (lastName === '') {
         errors.push('Enter your last name, please');
-        nameFld.addClass('is-invalid');
+        lastNameFld.addClass('is-invalid');
       } else {
-        if (lastName.length < 2) {
-          errors.push('Enter only your last name, please');
-          lastNameFld.addClass('is-invalid');
+        if (!/^\S+$/.test(lastName)) {
+            errors.push('Last name must be one word');
+            lastNameFld.addClass('is-invalid');
+        } else if (/\d/.test(lastName)) {
+            errors.push('Last name should not contain digits');
+            lastNameFld.addClass('is-invalid');
         }
-      }
+    }
 
     if (email === '') {
       errors.push('Enter your email, please');

@@ -12,23 +12,23 @@ document.getElementById('hamb--btn--mobile').addEventListener('click', function(
 })
 
 // Video
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
  
-    const videoLink = document.querySelector('.about--video--content .video');
+//     const videoLink = document.querySelector('.about--video--content .video');
         
-    videoLink.addEventListener('click', function(event) {
-        event.preventDefault();
+//     videoLink.addEventListener('click', function(event) {
+//         event.preventDefault();
             
-        const videoContainer = document.createElement('div');
-        videoContainer.classList.add('video-container');
+//         const videoContainer = document.createElement('div');
+//         videoContainer.classList.add('video-container');
             
-        videoContainer.innerHTML = `
-            <div class="video-responsive">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3VMz06iVzqs?si=bpLP8CbA6kSiOgnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-            </div>
-        `;
+//         videoContainer.innerHTML = `
+//             <div class="video-responsive">
+//             <iframe width="560" height="315" src="https://www.youtube.com/embed/3VMz06iVzqs?si=bpLP8CbA6kSiOgnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
+//             </div>
+//         `;
             
-            // Додати контейнер в кінець body
-            document.body.appendChild(videoContainer);
-        });
-    });
+//             // Додати контейнер в кінець body
+//             document.body.appendChild(videoContainer);
+//         });
+//     });
