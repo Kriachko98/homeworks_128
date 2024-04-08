@@ -55,6 +55,11 @@
                     </ul>
                 </nav>
                 <button class="btn--donate" type="button">Donate</button>
+                <button id="hamb--btn" class="hamburger--wrapper ham--btn--header hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
         </header>
         <main>
@@ -109,7 +114,7 @@
             </section>
             <!-- Contribution -->
             <section>
-                <div class="container contribution--wrap">
+                <div class="lazy container contribution--wrap" data-bg="assets/images/home-our-events-bg.jpg">
                     <div class="contribution--content">
                         <h2>You can contribute to provide a place for children with special needs!</h2>
                         <div class="contribution--btn--wrap">
@@ -164,6 +169,7 @@
             </div>
         </footer>
     </div>
+    <script src="assets/js/lazyload.min.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/donation.js"></script>
     <script src="assets/js/main.js"></script>

@@ -4,7 +4,7 @@
 @import 'header';
 
 body {
-    border: 1px solid red;
+    // border: 1px solid red; 
 }
 
 h2 {
@@ -227,12 +227,11 @@ h2 {
             }
         }
         .wwd--img--wrap {
-            width: min(45%, 480px);
+            width: min(100%, 480px);
+            aspect-ratio: 48/66;
             margin-top: 52px;
             img {
                 border-radius: 20px;
-                height: auto;
-
             }
         }
     }    
