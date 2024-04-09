@@ -137,65 +137,28 @@ header {
     min-height: 100vh;
 }
 
-// Burger
-// .burger-menu {
-//     position: relative;
-//     .burger-btn {
-//         background: none;
-//         border: none;
-//         font-size: 24px;
-//         cursor: pointer;
-//     }
-//     .menu {
-//         display: none;
-//         position: absolute;
-//         top: 100%;
-//         left: 0;
-//         background-color: #fff;
-//         padding: 10px;
-//         border: 1px solid #ccc;
-//         li {
-//             list-style: none;
-//             a {
-//                 text-decoration: none;
-//                 color: #333;
-//             }
-//         }
-//     }
-// }
-
 @media screen and (max-width: 935px) {
-    .header--wrap {
-        display: flex;
-        justify-content: space-between;
-        nav {
-            .nav--header {
-                display: none;
-                width: 50px;
+    header {
+        .header--wrap {
+            display: flex;
+            justify-content: space-between;
+            nav {
+                .nav--header {
+                    display: none;
+                    width: 50px;
+                }
+                .btn--donate {
+                    margin-right: 30px;
+                    display: none;
+                }
+            }
+            .hamburger--wrapper {
+                display: inline-block;
+                margin-top: 5px;
             }
             .btn--donate {
-                margin-right: 30px;
                 display: none;
             }
         }
-        .hamburger--wrapper {
-            display: inline-block;
-            margin-top: 5px;
-        }
-        .btn--donate {
-            display: none;
-        }
     }
-}
-
-@media screen and (max-width: 640px) {
-    // .header--wrap {
-    //     .nav--header {
-    //         font-size: 0.2rem;
-    //         li {
-    //             width: 5px;
-    //             margin: 0;
-    //         }
-    //     }
-    // }
 }
