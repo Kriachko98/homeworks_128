@@ -230,7 +230,6 @@ h2 {
 
 // How we spend donation
 .chart--section {
-    padding-top: 142px;
     background-color: black;
     padding: 96px 0;
     margin-bottom: 96px;
@@ -238,7 +237,7 @@ h2 {
         display: flex;
         justify-content: space-between;
         .donation--info {
-            width: min(100%, 626px);
+            width: min(60%, 626px);
             margin-bottom: 45px;
             h2 {
                 color: white;
@@ -298,10 +297,8 @@ h2 {
             }
         }
         .donation--chart {
-            width: min(80%, 375px);
-            img {
-                aspect-ratio: 1;
-            }
+            width: 375px;
+            height: 375px;
         }
     }
 } 
@@ -356,6 +353,28 @@ h2 {
     }
 }
 
+@media screen and (max-width: 1115px){
+    // How we spend donation
+    .chart--section {
+        .chart--flex--wrap {
+            .donation--info {
+                .spending--statistic {
+                    display: grid;
+                    padding-left: 24px;
+                    grid-template-columns: repeat(2, auto);
+                    grid-template-rows: 1fr 1fr 1fr;
+                    gap: 16px 25px;
+                }
+            }
+            .donation--chart {
+                width: 285px;
+                height: 285px;
+                margin-top: auto;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 925px) {
     // About us
     .about--section {
@@ -376,7 +395,42 @@ h2 {
     }
 }
 
+@media screen and (max-width: 800px){
+    // How we spend donation
+    .chart--section {
+        padding: 48px 0;
+        position: relative;
+        .chart--flex--wrap {
+            display: block;
+            .donation--info {
+                width: min(100%, 620px);
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 2.6rem;
+                }
+                .spending--statistic {
+                    display: block;
+                    li {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+            .donation--chart {
+                position: absolute;
+                right: 28px;
+                bottom: 0;
+                width: 185px;
+                height: 185px;
+                margin-top: auto;
+                margin-bottom: 48px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 530px) {
+    // About us
     .about--section {
         .about--content--wrap {
             display: flex;
@@ -400,7 +454,39 @@ h2 {
             }
         }
     }
-} 
+}
+
+@media screen and (max-width: 435px){
+    // How we spend donation
+    .chart--section {
+        padding: 40px 0 ;
+        .chart--flex--wrap {
+            display: block;
+            .donation--info {
+                width: min(100%, 620px);
+                margin-bottom: 0;
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+                .spending--statistic {
+                    li {
+                        margin-bottom: 8px;
+                        font-weight: 400;
+                        font-size: 0.825rem;
+                    }
+                }
+            }
+            .donation--chart {
+                position: static;
+                width: 125px;
+                height: 125px;
+                margin-left: auto;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
 
 // @media screen and (max-width: 1024px) {
 //     // What we do
