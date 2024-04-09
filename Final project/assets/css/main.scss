@@ -180,9 +180,10 @@ h2 {
     .wwd--flex--wrap {
         display: flex;
         justify-content: space-between;
+        gap: 30px;
         padding-bottom: 96px;
         .wwd--text--wrap {
-            width: min(100%, 608px);
+            width: min(50%, 608px);
             margin-left: 95px;
             h3 {
                 margin-bottom: 32px;
@@ -219,7 +220,8 @@ h2 {
         }
         .wwd--img--wrap {
             width: min(100%, 480px);
-            aspect-ratio: 48/66;
+            height: 658px;
+            // aspect-ratio: 48/66;
             margin-top: 52px;
             img {
                 border-radius: 20px;
@@ -373,6 +375,18 @@ h2 {
             }
         }
     }
+    // What we do
+    .wwd--section {
+        .wwd--flex--wrap {
+            .wwd--text--wrap {
+                width: min(70%, 700px);
+            }
+            .wwd--img--wrap {
+                width: min(100%, 350px);
+                height: 480px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 925px) {
@@ -424,6 +438,23 @@ h2 {
                 height: 185px;
                 margin-top: auto;
                 margin-bottom: 48px;
+            }
+        }
+    }
+    // What we do
+    .wwd--section {
+        .wwd--flex--wrap {
+            display: block;
+            position: relative;
+            .wwd--text--wrap {
+                width: min(100%, 800px);
+            }
+            .wwd--img--wrap {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 274px;
             }
         }
     }
@@ -487,32 +518,3 @@ h2 {
         }
     }
 }
-
-// @media screen and (max-width: 1024px) {
-//     // What we do
-//     .wwd--flex--wrap {
-//         display: flex;
-//         flex-direction: column;
-//         gap: 40px;
-//         align-items: center;
-//         padding-bottom: 96px;
-//         .wwd--text--wrap {
-//             width: 100%;
-//             margin-left: 0;
-//             .list--of--deals {
-//                 display: flex;
-//                 justify-content: start;
-//                 gap: 30px;
-//                 flex-wrap: wrap;
-//             }
-//         }
-//         .wwd--img--wrap {
-//             width: min(100%, 350px);
-//             // aspect-ratio: 1;
-//             margin-top: 0px;
-//             img {
-//                 border-radius: 20px;
-//             }
-//         }
-//     }
-// }  
