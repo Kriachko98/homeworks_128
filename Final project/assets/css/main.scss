@@ -4,7 +4,7 @@
 @import 'header';
 
 body {
-    // border: 1px solid red; 
+    border: 1px solid red; 
 }
 
 h2 {
@@ -89,6 +89,7 @@ h2 {
             color: #fff;
         }
         .qnt--child {
+            margin-right: 16px;
             &::after {
                 content: '';
                 position: absolute;
@@ -110,11 +111,13 @@ h2 {
         margin-top: 86px;
         display: flex;
         justify-content: space-between;
+        // flex-wrap: wrap;
         margin-bottom: 94px;
         .about--text--content {
+            margin: 94px 20px 32px 106px;
             margin-left: 106px;
             margin-top: 94px;
-            width: min(60%, 608px);
+            width: min(100%, 608px);
             h2 {
                 margin-bottom: 32px;
             }
@@ -143,24 +146,13 @@ h2 {
             }
         }
         .about--video--content {
-            width: min(40%, 480px);
-            aspect-ratio: 5/6;
+            width: min(45%, 480px);
+            aspect-ratio: 48/59;
             position: relative;
-            // &::before {
-            //     content: '';
-            //     width: 100%;
-            //     height: 100%;
-            //     background-color: rgba(0, 0, 0, 0.40);
-            //     position: absolute;
-            //     left: 0;
-            //     top: 0;
-            //     z-index: 1;
-            //     border-radius: 20px;
-            // }
             &::after {
                 content: url(../images/play-icon-video.svg);
-                width: 64px;
-                height: 64px;
+                width: 13%;
+                // height: 13%;
                 position: absolute;
                 left: calc(50% - 32px);
                 top: calc(50% - 32px);
@@ -179,37 +171,6 @@ h2 {
             }
             
         }
-        /* CSS */
-        // .video-container {
-        //     position: fixed;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-color: rgba(0, 0, 0, 0.8);
-        //     z-index: 9999;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        // }
-
-        // .video-responsive {
-        //     overflow: hidden;
-        //     /* Забезпечити відео розміром 16:9 */
-        //     padding-top: 56.25%;
-        //     position: relative;
-        //     width: 70%;
-        // }
-
-        // .video-responsive iframe {
-        //     border: none;
-        //     height: 100%;
-        //     left: 0;
-        //     position: absolute;
-        //     top: 0;
-        //     width: 100%;
-        // }
-
     }
     @import 'supporters';
 }
@@ -222,7 +183,7 @@ h2 {
         justify-content: space-between;
         padding-bottom: 96px;
         .wwd--text--wrap {
-            width: min(40%, 608px);
+            width: min(100%, 608px);
             margin-left: 95px;
             h3 {
                 margin-bottom: 32px;
@@ -348,7 +309,69 @@ h2 {
 
 // Contribution
 @import 'contribution';
-
+.contribution--wrap {
+    margin-bottom: 86px;
+}     
+                      
 
 // Footer
 @import 'footer';
+
+
+
+// Adaptive
+@media screen and (max-width: 1350px) {
+    // About us
+    .about--video--content {
+        width: min(45%, 350px);
+        aspect-ratio: 1;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    // About us
+    .about--content--wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 54px;
+        width: 100%;
+        .about--text--content {
+            margin: 94px 20px 32px 0px;
+            width: min(90%, 900px);
+        }
+        .about--video--content {
+            width: min(90%, 480px);
+            aspect-ratio: 48/59;            
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    // What we do
+    .wwd--flex--wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        padding-bottom: 96px;
+        .wwd--text--wrap {
+            width: 100%;
+            margin-left: 0;
+            .list--of--deals {
+                display: flex;
+                justify-content: start;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+        }
+        .wwd--img--wrap {
+            width: min(100%, 350px);
+            // aspect-ratio: 1;
+            margin-top: 0px;
+            img {
+                border-radius: 20px;
+            }
+        }
+    }
+}  

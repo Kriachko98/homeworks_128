@@ -1,11 +1,9 @@
 @import 'style';
 
 .contribution--wrap {
-    // background-image: url(../images/home-our-events-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
-    border: none;
     text-align: center;
     position: relative;
     &::before {
@@ -21,24 +19,24 @@
     .contribution--content {
         position: relative;
         z-index: 1;
+        padding: 93px 0;
         h2 {
-            width: min(70%, 805px);
+            width: min(90%, 805px);
             color: #fff;
             margin: 0 auto 32px;
-            padding-top: 93px;
         }
         .contribution--btn--wrap {
             width: min(90%, 351px);
             margin-inline: auto;
-            padding-bottom: 92px;
+            color: black;
+            display: flex;
+            justify-content: space-between;
             .btn--volonteer {
                 width: 200px;
                 height: 51px;
                 background-color: $yellow-bg-color;
-                color: black;
                 border-radius: 4px;
                 font-weight: 500;
-                margin-right: 32px;
                 font-family: 'Roboto';
                 font-size: 1rem;
                 &:hover {
@@ -50,16 +48,54 @@
                 width: 115px;
                 height: 51px;
                 background-color: #fff;
-                color: black;
+                border: 3px solid transparent;
                 border-radius: 4px;
-                font-weight: 500;
-                font-family: 'Roboto';
-                font-size: 1rem;
+                a {
+                    display: block;
+                    width: 100%;
+                    font-family: 'Roboto';
+                    text-align: center;
+                    font-weight: 500;
+                    color: #000;
+                    line-height: 45px;
+                }
                 &:hover {
                     border: 3px solid white;
                     background-color: rgba($color: #fff, $alpha: .6);
-                    // color: $secondary-text-color;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contribution--wrap {
+        .contribution--content {
+            padding: 60px 0;
+            h2 {
+                font-size: 2rem;
+                font-weight: 500;
+                line-height: 2.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contribution--wrap {
+        .contribution--content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            h2 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                margin-bottom: 26px;
+            }
+            .contribution--btn--wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
             }
         }
     }

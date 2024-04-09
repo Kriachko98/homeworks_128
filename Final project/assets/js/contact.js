@@ -106,6 +106,11 @@ $(document).ready(function () {
     subject = subjectFld.val().trim();
     comment = commentFld.val().trim();
 
+    function isValidEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
     if (firstName === '') {
       errors.push('Enter your first name, please');
       firstNameFld.addClass('is-invalid');
@@ -175,9 +180,6 @@ $(document).ready(function () {
     return false;
   });
 
-  function isValidEmail(email) {
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email);
-  }
+  
 }); 
 
