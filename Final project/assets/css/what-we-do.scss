@@ -157,7 +157,6 @@ body {
     // What we do 
     .wwd--section {
         .wwd--flex--wrap {
-            display: block;
             padding: 56px 0 0 0;
             margin-bottom: 40px;
             .wwd--text--wrap {
@@ -171,8 +170,6 @@ body {
                 }
             }
             .wwwd--photo--wrap {
-                // width: 250px;
-                // height: 200px;
                 width: 100%;
                 position: static;
                 margin-inline: auto;
