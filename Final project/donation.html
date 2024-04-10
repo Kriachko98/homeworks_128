@@ -72,7 +72,16 @@
                         <h3 class="uppercase">Donate</h3>
                         <h1>Making a donation for our children.</h1>
                         <p>When you donate, you're supporting effective care to children with special needs—an investment in the leaders of tomorrow.</p>
-                        <button type="button">Donate now</button>
+                        <button id="donateBtn" type="button">Donate now</button>
+                        <div id="modal" class="modal">
+                            <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <h2>Donation</h2>
+                              <p>Enter donation amount:</p>
+                              <input type="number" id="donationAmount" placeholder="amount">
+                              <button id="donateSubmit">Submit</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="donate--photo--wrap">
                         <img src="assets/images/donation-donate.jpg" alt="box with donation">
