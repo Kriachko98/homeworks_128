@@ -138,26 +138,29 @@ header {
 }
 
 @media screen and (max-width: 935px) {
-    header {
-        .header--wrap {
-            display: flex;
-            justify-content: space-between;
-            nav {
-                .nav--header {
-                    display: none;
-                    width: 50px;
+    .page--wrapper {
+        overflow: hidden; /* Запретить прокрутку страницы, когда открыто мобильное меню */
+        header {
+            .header--wrap {
+                display: flex;
+                justify-content: space-between;
+                nav {
+                    .nav--header {
+                        display: none;
+                        width: 50px;
+                    }
+                    .btn--donate {
+                        margin-right: 30px;
+                        display: none;
+                    }
+                }
+                .hamburger--wrapper {
+                    display: inline-block;
+                    margin-top: 5px;
                 }
                 .btn--donate {
-                    margin-right: 30px;
                     display: none;
                 }
-            }
-            .hamburger--wrapper {
-                display: inline-block;
-                margin-top: 5px;
-            }
-            .btn--donate {
-                display: none;
             }
         }
     }

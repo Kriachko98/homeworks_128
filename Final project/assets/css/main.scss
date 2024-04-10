@@ -3,10 +3,6 @@
 // Header
 @import 'header'; 
 
-body {
-    border: 1px solid red; 
-}
-
 h2 {
     font-size: 3rem;
     font-weight: 700;
@@ -410,6 +406,29 @@ h2 {
 }
 
 @media screen and (max-width: 800px){
+    // First screen
+    .first--screen--section {
+        .main--title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 4rem;
+        }
+        .fs--btn--wrap {
+            margin-bottom: 112px;
+        }
+    }
+    // About us
+    .about--section {
+        .about--content--wrap {
+            .about--text--content {
+                h2 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 2.6rem;
+                }
+            }
+        }
+    }
     // How we spend donation
     .chart--section {
         padding: 48px 0;
@@ -443,11 +462,40 @@ h2 {
     }
     // What we do
     .wwd--section {
+        padding-top: 70px;
         .wwd--flex--wrap {
             display: block;
             position: relative;
+            padding-bottom: 48px;
             .wwd--text--wrap {
                 width: min(100%, 800px);
+                margin-left: 0;
+                h3 {
+                    margin-left: 95px;
+                }
+                h2 {
+                    width: 60%;
+                    margin-bottom: 16px;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 2.6rem;
+                }
+                p {
+                    width: 60%;
+                }
+                .list--of--deals {
+                    width: min(100%, 720px);
+                    margin-left: 52px;
+                    li {
+                        .wwd--list--title {
+                            font-size: 1.3rem;
+                            font-weight: 500;
+                        }
+                        p {
+                            width: min(90%, 720px);
+                        }
+                    }
+                }
             }
             .wwd--img--wrap {
                 position: absolute;
@@ -455,12 +503,71 @@ h2 {
                 right: 0;
                 width: 200px;
                 height: 274px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 578px) {
+    // About us
+    .about--section {
+        .about--content--wrap {
+            .about--text--content {
+                h3 {
+                    font-weight: 500;
+                    letter-spacing: 0;
+                }
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    line-height: 2.3rem;
+                }
+            }
+        }
+    }
+    // What we do  
+    .wwd--section {
+        .wwd--flex--wrap {
+            .wwd--text--wrap {
+                h3 {
+                    font-weight: 500;
+                    letter-spacing: 0;
+                }
+                h2 {
+                    margin-bottom: 44px;
+                    font-size: 1.8rem;
+                    line-height: 2.3rem;
+                }
+                p {
+                    width: 100%;
+                }
+                .list--of--deals {
+                    li {
+                        p {
+                            width: min(80%, 460px);
+                        }
+                    }
+                }
+            }
+            .wwd--img--wrap {
+                width: 125px;
+                height: 171px;
             }
         }
     }
 }
 
 @media screen and (max-width: 530px) {
+    // First screen
+    .first--screen--section {
+        .qnt--donation--wrap {
+            div {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
     // About us
     .about--section {
         .about--content--wrap {
@@ -488,6 +595,14 @@ h2 {
 }
 
 @media screen and (max-width: 435px){
+    // First screen
+    .first--screen--section {
+        .main--title {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 3rem;
+        }
+    }
     // How we spend donation
     .chart--section {
         padding: 40px 0 ;
@@ -514,6 +629,15 @@ h2 {
                 height: 125px;
                 margin-left: auto;
                 margin-bottom: 0;
+            }
+        }
+    }
+     // What we do
+     .wwd--section {
+        padding-top: 50px;
+        .wwd--flex--wrap {
+            .wwd--img--wrap {
+                top: 28px;
             }
         }
     }
