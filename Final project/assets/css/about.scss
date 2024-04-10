@@ -165,7 +165,8 @@ body {
         justify-content: space-between;
         margin-bottom: 96px;
         .journey--text {
-            width: min(40%, 488px);
+            width: min(100%, 488px);
+            margin-right: 45px;
             h4 {
                 margin-top: 64px;
                 color: #000;
@@ -203,11 +204,12 @@ body {
             }
         }
         .journey--photo {
-            width: min(100%, 612px);
-            // height: 448px;
+            width: min(50%, 612px);
             aspect-ratio: 61/45;
             img {
                 border-radius: 20px;
+                max-width: 100%;
+                height: auto;
             }
         }
     }
@@ -325,6 +327,28 @@ body {
     }
 }
 
+@media screen and (max-width: 1070px) {
+    // Awards
+    .awards--section {
+        .journey--flex--wrap {
+            padding: 40px 36px 40px 68px;
+            display: block;
+            .journey--text {
+                width: min(100%, 830px);
+                margin-right: 0;
+                margin-bottom: -62px;
+                h4 {
+                    margin-top: 20px;
+                }
+            }
+            .journey--photo {
+                width: min(100%, 360px);
+                margin-left: auto;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 880px) {
     // About us
     .about--us--section {
@@ -377,6 +401,67 @@ body {
             }
         }
     }
+    // Awards 
+    .awards--section {
+        h2 {
+            margin-top: 56px;
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 3rem;
+        }
+        .journey--flex--wrap {
+            padding: 40px;
+            .journey--text {
+                width: min(100%, 710px);
+                margin-bottom: 32px;
+                div {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 2.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    // Awards
+    .awards--section {
+        h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+            line-height: 2.6rem;
+            margin-bottom: 32px;
+        }
+        .awards--flex--wrap {
+            width: min(100%, 1115px);
+            .award--card {
+                width: 100px;
+                margin-bottom: 56px;
+                .award--icon {
+                    width: 100px;
+                    height: 83px;
+                    margin-inline: auto;
+                    margin-bottom: 10px;
+                }
+                .year--award {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    line-height: 1.8rem;
+                }
+                .name--award {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 1.3rem;
+                }
+                .place--award {
+                    font-size: 0.6rem;
+                    font-weight: 400;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 625px) {
@@ -425,6 +510,79 @@ body {
             display: block;
             padding-top: 40px;
             margin-bottom: 56px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    // Awards
+    .awards--section {
+        h2 {
+            margin-top: 40px;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            margin-bottom: 32px;
+        }
+        .awards--flex--wrap {
+            width: min(100%, 468px);
+            margin-inline: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            .award--card {
+                width: 164px;
+                text-align: center;
+                margin-bottom: 32px;
+                .award--icon {
+                    width: 111px;
+                    height: 92px;
+                    margin-inline: auto;
+                    margin-bottom: 16px;
+                }
+                .year--award {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 2.4rem;
+                    color: $primary-text-color;
+                    margin-bottom: 4px;
+                }
+                .name--award {
+                    font-weight: 700;
+                    line-height: 1.6rem;
+                    color: $primary-text-color;
+                    margin-bottom: 4px;
+                }
+                .place--award {
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    line-height: 1.2rem;
+                    color: $primary-text-color;
+                }
+            }
+        }
+        .journey--flex--wrap {
+            padding: 20px;
+            .journey--text {
+                width: min(100%, 710px);
+                margin-bottom: 0;
+                div {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2rem;
+                }
+                ul {
+                    text-align: center;
+                    li {
+                        margin-right: 15px;
+                        margin-bottom: 28px;
+                        .quantity {
+                            font-size: 1.5rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
