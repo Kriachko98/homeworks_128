@@ -1,9 +1,6 @@
 @import 'style';
 @import 'header';
 
-body {
-    border: 1px solid red; 
-}
 
 // What we do 
 .wwd--section {
@@ -41,12 +38,14 @@ body {
 // Categories of assistance
 .assistance--section {
     padding-top: 96px;
+    margin-bottom: 70px;
     h2 {
         margin-bottom: 64px;
     }
     .categories--wrap {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         flex-wrap: wrap;
         gap: 48px 116px;
         margin-left: 48px;
@@ -74,22 +73,11 @@ body {
     }
 }
 
-// Our project
-.project--section {
-    h3 {
-        margin-top: 56px;
-        margin-left: 96px;
-    }
-    h2 {
-        width: min(90%, 640px);
-        margin-bottom: 65px;
-        margin-left: 96px;
-    }
-}
-
 // Contribution
 @import 'contribution';
-
+.contribution--wrap {
+    margin-bottom: 70px;
+}
 
 // Footer
 @import 'footer';
@@ -117,6 +105,16 @@ body {
                 width: 350px;
                 height: 282px;
             }
+        }
+    }
+    // Categories of assistance
+    .assistance--section {
+        padding-top: 56px;
+        h2 {
+            margin-bottom: 64px;
+            font-size: 2.5rem;
+            line-height: 3rem;
+            text-align: center;
         }
     }
 }
@@ -148,6 +146,26 @@ body {
                 position: absolute;
                 top: 56px;
                 right: 0;
+            }
+        }
+    }
+    // Categories of assistance
+    .assistance--section {
+        padding-top: 56px;
+        h2 {
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            font-weight: 500;
+        }
+        .categories--wrap {
+            padding-bottom: 40px;
+            ul {
+                width: min(100%, 550px);
+                .categories--name {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
             }
         }
     }
