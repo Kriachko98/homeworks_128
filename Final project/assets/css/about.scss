@@ -315,6 +315,14 @@ body {
             }
         }
     }
+    // Mission and vission
+    .mission--section {
+        .mission--flex--wrap {
+            width: min(100%, 1080px);
+            padding-top: 220px;
+            margin-bottom: 56px;
+        }
+    }
 }
 
 @media screen and (max-width: 880px) {
@@ -345,6 +353,26 @@ body {
                             height: 30px;
                         }
                     }
+                }
+            }
+        }
+    }
+    // Mission and vission
+    .mission--section {
+        .mission--flex--wrap {
+            width: min(100%, 792px);
+            padding-top: 120px;
+            margin-bottom: 40px;
+            gap: 30px;
+            .block--mission--vission {
+                width: 100%;
+                div {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 2.5rem;
+                }
+                p {
+                    margin-bottom: 32px;
                 }
             }
         }
@@ -387,6 +415,16 @@ body {
                     }
                 }
             }
+        }
+    }
+    // Mission and vission
+    .mission--section {
+        padding-bottom: 48px;
+        .mission--flex--wrap {
+            width: min(100%, 563px);
+            display: block;
+            padding-top: 40px;
+            margin-bottom: 56px;
         }
     }
 }
