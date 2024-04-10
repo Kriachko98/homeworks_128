@@ -1,6 +1,9 @@
 @import 'style';
 @import 'header';
 
+body {
+    border: 1px solid red; 
+}
 
 // About us
 .about--us--section {
@@ -45,29 +48,27 @@
                 width: min(100%, 1280px);
                 aspect-ratio: 3 / 1;
                 margin-inline: auto;
-                position: relative;
-                img {
-                    border-radius: 20px;
-                }
-                &::before {
-                    content: '';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
+                a {
+                    display: block;
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0, 0, 0, 0.40);
-                    border-radius: 20px;
-                    z-index: 1;
-                }
-                &::after {
-                    content: url(../images/play-icon-video.svg);
-                    width: 64px;
-                    aspect-ratio: 1;
-                    position: absolute;
-                    left: calc(50% - 32px);
-                    top: calc(50% - 32px);
-                    z-index: 2;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        background-image: url(../images/play-icon-video.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;   
+                        width: 64px;
+                        aspect-ratio: 1;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 1;
+                    }
+                    img {
+                        border-radius: 20px;
+                    }
                 }
             }
         }
@@ -274,3 +275,118 @@
 
 // Footer
 @import 'footer';
+
+
+// Adaptive
+@media screen and (max-width: 1200px) {
+    // About us
+    .about--us--section {
+        padding-top: 46px;
+        .relative--for--video {
+            position: relative;
+            .about--wrap {
+                h1 {
+                    float: none;
+                    margin-right: 0;
+                    width: min(90%, 900px);
+                    margin-left: 70px;
+                    font-size: 3rem;
+                    line-height: 4rem;
+                }
+                .primary--text {
+                    width: min(50%, 662px);
+                    margin-left: 70px;
+                    margin-bottom: 40px;
+                }
+                .secondary--text {
+                    margin-bottom: 224px;
+                }
+            }
+            .video--between--sections {
+                bottom: -380px;
+                .video--about--wrap {
+                    a {
+                        &::after {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    // About us
+    .about--us--section {
+        padding-top: 40px;
+        .relative--for--video {
+            .about--wrap {
+                h1 {
+                    width: min(100%, 800px);
+                    margin-left: 70px;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    line-height: 3rem;
+                }
+                .secondary--text {
+                    margin-bottom: 110px;
+                }
+            }
+            .video--between--sections {
+                bottom: -190px;
+                .video--about--wrap {
+                    width: min(100%, 500px);
+                    aspect-ratio: 3 / 1;
+                    a {
+                        &::after {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 625px) {
+    // About us
+    .about--us--section {
+        .relative--for--video {
+            position: relative;
+            .about--wrap {
+                h1 {
+                    width: min(100%, 560px);
+                    margin-left: 70px;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 2.8rem;
+                    margin-left: 0;
+                }
+                .primary--text {
+                    width: min(100%, 560px);
+                    margin-left: 0;
+                }
+                .secondary--text {
+                    margin-bottom: 32px;
+                }
+            }
+            .video--between--sections {
+                position: static;
+                margin-bottom: 24px;
+                .video--about--wrap {
+                    width: min(100%, 500px);
+                    aspect-ratio: 3 / 1;
+                    a {
+                        &::after {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
