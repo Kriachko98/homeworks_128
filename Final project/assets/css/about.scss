@@ -228,16 +228,16 @@ body {
     }
     .team--grid--wrap {
         display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 0 31px;
         margin-bottom: 40px;
-        grid-template-columns: repeat(4, 23%);
-        grid-template-rows: 1fr 1fr;
-        gap: 0 33px;
         .grid--item {
             width: min(100%, 296px);
             font-weight: 500;
             color: $primary-text-color;
             text-align: center;
             margin-bottom: 48px;
+            justify-self: center;
             .staff--photo {
                 margin-bottom: 16px;
                 width: min(100%, 296px);
@@ -273,6 +273,9 @@ body {
 
 // Contribution
 @import 'contribution';
+.contribution--wrap {
+    margin-bottom: 70px;
+}
 
 
 // Footer
@@ -411,6 +414,7 @@ body {
         }
         .journey--flex--wrap {
             padding: 40px;
+            margin-bottom: 48px;
             .journey--text {
                 width: min(100%, 710px);
                 margin-bottom: 32px;
@@ -420,6 +424,14 @@ body {
                     line-height: 2.6rem;
                 }
             }
+        }
+    }
+    // Team
+    .team--section {
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 3rem;
         }
     }
 }
@@ -510,6 +522,13 @@ body {
             display: block;
             padding-top: 40px;
             margin-bottom: 56px;
+        }
+    }
+    // Team
+    .team--section {
+        h2 {
+            font-size: 2rem;
+            line-height: 2.8rem;
         }
     }
 }
