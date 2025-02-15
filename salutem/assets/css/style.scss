@@ -162,6 +162,10 @@ header {
                 padding: 22px 0;
                 background-color: $green-primary-color;
                 border-radius: 40px;
+                &:hover {
+                    cursor: pointer;
+                    background-color: lighten($color: $green-primary-color, $amount: 8%);
+                }
             }
         }
     }
