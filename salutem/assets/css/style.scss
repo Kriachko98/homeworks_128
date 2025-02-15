@@ -45,7 +45,12 @@ body {
 // Header
 header {
     height: 88px;
-    background-color: bisque;
+    background-color: rgba(255, 255, 255, .95);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
     .container {
         display: flex;
         justify-content: space-between;
@@ -116,6 +121,47 @@ header {
                 display: flex;
                 gap: 16px;
                 margin-left: 56px;
+            }
+        }
+    }
+}
+
+
+// First screen
+.first-screen {
+    background-color: lightpink;
+    background-image: url(../images/bg-first-screen-desktop-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // height: calc(100vh - 88px);
+    margin-top: 88px;
+    .short-info {
+        width: min(60%, 527px);
+        margin-left: auto;
+        padding: 249px 0 234px;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 4.2rem;
+            color: $light-black-color;
+            margin-bottom: 24px;
+        }
+        p {
+            width: min(100%, 497px);
+            line-height: 1.3rem;
+            margin-bottom: 56px;
+        }
+        .btn-wrap {
+            .btn-modal {
+                width: 414px;
+                font-family: 'Nunito';
+                font-size: 1.375rem;
+                font-weight: 600;
+                line-height: 1.7875rem;
+                color: white;
+                padding: 22px 0;
+                background-color: $green-primary-color;
+                border-radius: 40px;
             }
         }
     }
