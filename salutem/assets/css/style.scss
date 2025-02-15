@@ -78,18 +78,44 @@ header {
     ul {
         display: flex;
         li {
+            display: flex;
+            align-items: center;
             a {
                 color: $green-primary-color;
                 font-size: 1.125rem;
                 line-height: 1.4625rem;
+                &:hover {
+                    color: $light-black-color;
+                    .media-icon {
+                        fill: #003D5A; 
+                    }
+                    .phone-icon {
+                        .media-icon {
+                            stroke: #003D5A;
+                        }
+                    }
+                }
                 svg {
                     width: 28px;
-                    height: 28px; 
+                    height: 28px;
+                    .media-icon {
+                        fill: #5BBA4B;
+                    }
                 }
                 .phone-icon {
                     width: 16px;
                     height: 16px;
+                    margin-right: 7px;
+                    .media-icon {
+                        stroke: #5BBA4B;
+                        fill: transparent;
+                    }
                 }
+            }
+            .social-media-list {
+                display: flex;
+                gap: 16px;
+                margin-left: 56px;
             }
         }
     }
