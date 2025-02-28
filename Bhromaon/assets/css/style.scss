@@ -28,7 +28,107 @@ ul {
     list-style: none;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .container {
     width: min(90%, 1320px);
     margin-inline: auto;
+}
+
+body {
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    color: #fff;
+}
+
+// Header
+header {
+    height: 84px;
+    background-color: #5373FD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+// First screen
+.first-screen {
+    height: calc(100vh - 84px);
+    background-image: url(../images/HeaderBackground-min.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3.25rem;
+        padding-top: 175px;
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 1.375rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+        letter-spacing: 0.42625rem;
+        margin-bottom: 48px;
+    }
+    .scroll-anchor {
+        a {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            letter-spacing: 0.175rem;
+            color: #fff;
+            position: relative;
+            &::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid white;
+                border-bottom: 2px solid white;
+                border-radius: 1px;
+                position: absolute;
+                bottom: -6px;
+                right: calc(50% - 5px);
+                transform: rotate(-0.125turn);
+            }
+        }
+    }
+}
+
+.search-wrap {
+    width: min(90%, 647px);
+    position: relative;
+    // margin: 0 auto 211px;
+    margin: 0 auto 200px;
+    input {
+        width: 100%;
+        height: 60px;
+        border: none;
+        &::placeholder {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.25rem;
+            letter-spacing: 0.175rem;
+            padding: 20px 0 20px 36px;
+            color: #999;;
+        }
+    }
+    button {
+        width: 139px;
+        height: 52px;
+        background-color: #5373FD;
+        color: #fff;
+        font-family: 'Aleo';
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: 0.0875rem;
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        border: none;
+    }
 }
