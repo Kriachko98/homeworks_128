@@ -171,6 +171,18 @@ header {
         top: 4px;
         right: 5px;
         border: none;
+        padding-left: 25px;
+        &::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 24px;
+            top: 16px;
+            background-image: url(../images/search-white.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         &:hover {
             background-color: #3150d6;
         }
