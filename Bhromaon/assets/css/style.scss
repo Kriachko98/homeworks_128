@@ -362,6 +362,11 @@ header {
         font-weight: 400;
         line-height: 1.25rem;
         letter-spacing: 0.07rem;
+        border: none;
+        &:hover {
+            cursor: pointer;
+            background-color: #3150d6;
+        }
     }
 }
 
@@ -420,3 +425,44 @@ header {
 }
 
 // Footer
+footer {
+    padding: 80px 0;
+    background-color: #000;
+    text-align: center;
+    .logo-wrap {
+        a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.75rem;
+            letter-spacing: 0.15rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+    }
+    .slogan {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        letter-spacing: 0.175rem;
+        margin-bottom: 20px;
+    }
+    .media-wrap {
+        ul {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            a {
+                svg {
+                    fill: #fff;
+                    transition: all .2s ease;
+                }
+                &:hover {
+                    svg {
+                        fill: #5373FD;
+                    }
+                }
+            }
+            
+        }
+    }
+}
