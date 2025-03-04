@@ -143,7 +143,6 @@ header {
 .search-wrap {
     width: min(90%, 647px);
     position: relative;
-    // margin: 0 auto 211px;
     margin: 0 auto 170px;
     input {
         width: 100%;
@@ -199,7 +198,6 @@ header {
                 line-height: 2.5rem;
             }
             p {
-                font-family: 'Josefin Sans';
                 font-size: 1rem;
                 font-weight: 300;
                 line-height: 1.75rem;
@@ -308,5 +306,59 @@ header {
                 left: calc(50% - 32px);
             }
         }
+    }
+}
+
+// Book now
+.cottage-part {
+    background-color: rgb(144, 64, 144);
+    padding: 220px 0 120px;
+    background-image: url(../images/CottageBackground-min.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sunset-part {
+    background-color: rgb(211, 124, 62);
+    padding: 220px 0 120px;
+    background-image: url(../images/SunsetBackground-min.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .proposition-card {
+        margin-left: auto;
+    }
+}
+.proposition-card {
+    width: min(90%, 648px);
+    background: rgba(35, 35, 35, 0.90);
+    padding: 44px 32px;
+    .country {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        letter-spacing: 0.125rem;
+        margin-bottom: 16px;
+    }
+    .city {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-bottom: 16px;
+    }
+    .info {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 24px;
+    }
+    .btn-book-now {
+        width: 213px;
+        height: 60px;
+        background-color: #5373FD;
+        color: #fff;
+        font-family: 'Aleo';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: 0.07rem;
     }
 }
