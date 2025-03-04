@@ -241,3 +241,72 @@ header {
         }
     }
 }
+
+// Travel steps
+.travel-steps {
+    background-color: #333;
+    padding: 207px 0 59px;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        &::before {
+            content: '';
+            background-image: url(../images/dots-lines.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 66%;
+            height: 90px;
+            position: absolute;
+            top: -187px;
+            left: 17%;
+        }
+        li {
+            font-family: 'Aleo';
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        .search-icon {
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url(../images/search-blue.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 64px;
+                height: 64px;
+                position: absolute;
+                top: -84px;
+                left: calc(50% - 32px);
+            }
+        }
+        .select-icon {
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url(../images/check-circle.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 64px;
+                height: 64px;
+                position: absolute;
+                top: -84px;
+                left: calc(50% - 32px);
+            }
+        }
+        .enjoy-icon {
+            position: relative;
+            &::before {
+                content: '';
+                background-image: url(../images/like-icon.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 64px;
+                height: 64px;
+                position: absolute;
+                top: -84px;
+                left: calc(50% - 32px);
+            }
+        }
+    }
+}
