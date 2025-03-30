@@ -491,6 +491,65 @@ footer {
         }
     }
 
+    // First screen
+    @media screen and (max-width: 660px){
+        .first-screen {
+            .container {
+                h1 {
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+                p {
+                    font-size: 1.25rem;
+                    line-height: 1.25rem;
+                }
+            }
+        }
+        .search-wrap {
+            input {
+                height: 40px;
+                &::placeholder {
+                    font-size: 0.875rem;
+                    line-height: 0.875rem;
+                    padding: 12px;
+                    letter-spacing: 0.08rem;
+                }
+            }
+            button {
+                height: 40px;
+                top: 0;
+                right: 0;
+                &::before {
+                    top: 11px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 548px){
+        .search-wrap {
+            input {
+                height: 40px;
+                &::placeholder {
+                    font-size: 0.875rem;
+                    line-height: 0.875rem;
+                    padding: 12px;
+                }
+            }
+            button {
+                width: 40px;
+                height: 40px;
+                font-size: 0;
+                
+                &::before {
+                    left: 14px;
+                }
+                &:hover {
+                    background-color: #3150d6;
+                }
+            }
+        }
+    }
+
     // Why Choose Us
     @media screen and (max-width: 924px){
         .why-section {
@@ -648,6 +707,36 @@ footer {
             width: 100%;
             .container {
                 width: 100%;
+            }
+        }
+    }
+
+    // What Our Tourists Say
+    @media screen and (max-width: 924px){
+        .feedback {
+            padding: 60px 0 60px;
+            h2 {
+                margin-bottom: 40px;
+            }
+            .feedback-wrap {
+                .photo-wrap {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 548px){
+        .feedback {
+            padding: 40px 0 40px;
+            h2 {
+                font-size: 1.75rem;
+                line-height: 2rem;
+                margin-bottom: 30px;
+            }
+            .feedback-wrap {
+                .comment-wrap {
+                    padding: 20px;
+                }
             }
         }
     }
