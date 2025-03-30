@@ -478,3 +478,177 @@ footer {
         }
     }
 }
+
+
+// RWD
+
+    // Header
+    @media screen and (max-width: 924px){
+        header {
+            .nav-wrap {
+                display: none;
+            }
+        }
+    }
+
+    // Why Choose Us
+    @media screen and (max-width: 924px){
+        .why-section {
+            .container {
+                flex-direction: column;
+                gap: 60px;
+                .text-content {
+                    width: 100%;
+                    padding: 0;
+                    text-align: center;
+                    .explore-wrap {
+                        margin-inline: auto;
+                    }
+                }
+                .pic-content {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 30px;
+                    .img-up {
+                        margin-bottom: 0;
+                    }
+                    .img-down {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px){
+        .why-section {
+            .container {
+                .pic-content {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Travel steps
+    @media screen and (max-width: 880px){
+        .travel-steps {
+            ul {
+                li {
+                    font-family: 'Aleo';
+                    font-size: 1.5rem;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 660px){
+        .travel-steps {
+            padding: 150px 0 40px;
+            ul {
+                justify-content: space-between;
+                &::before {
+                    top: -125px;
+                }
+                .search-icon {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        top: -64px;
+                        left: calc(50% - 20px);
+                    }
+                }
+                .select-icon {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        top: -64px;
+                        left: calc(50% - 20px);
+                    }
+                }
+                .enjoy-icon {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        top: -64px;
+                        left: calc(50% - 20px);
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 548px){
+        .travel-steps {
+            padding: 110px 0 40px;
+            ul {
+                flex-direction: column;
+                gap: 100px;
+                align-items: center;
+                &::before {
+                    z-index: -1;
+                }
+                .search-icon {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        top: -64px;
+                        left: calc(50% - 20px);
+                    }
+                }
+                .select-icon {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        top: -64px;
+                        left: calc(50% - 20px);
+                    }
+                }
+                .enjoy-icon {
+                    &::before {
+                        width: 40px;
+                        height: 40px;
+                        top: -64px;
+                        left: calc(50% - 20px);
+                    }
+                }
+            }
+        }
+    }
+
+    // Book now
+    @media screen and (max-width: 924px){
+        .cottage-part {
+            padding: 120px 0 120px;
+        }
+        .sunset-part {
+            padding: 120px 0 120px;
+        }
+    }
+    @media screen and (max-width: 780px){
+        .cottage-part {
+            padding: 50px 0 50px;
+        }
+        .sunset-part {
+            padding: 50px 0 50px;
+        }
+    }
+    @media screen and (max-width: 660px){
+        .cottage-part {
+            padding: 0;
+            .container {
+                width: 100%;
+            }
+        }
+        .sunset-part {
+            padding: 0;
+            .container {
+                width: 100%;
+            }
+        }
+        .proposition-card {
+            width: 100%;
+            .container {
+                width: 100%;
+            }
+        }
+    }
+
