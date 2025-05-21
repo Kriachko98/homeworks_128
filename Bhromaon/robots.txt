@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /log/
+Disallow: /temp/
+Sitemap: https://kriachko98.github.io/homeworks_128/Bhromaon/sitemap.xml
+
+Host: Kriachko98/homeworks_128/
