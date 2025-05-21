@@ -103,8 +103,8 @@ body {
 header {
     height: 84px;
     background-color: #5373FD;
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -251,7 +251,6 @@ header {
 // Why Choose Us
 .why-section {
     padding: 124px 0;
-    margin-top: 84px;
     background-color: rgb(50, 32, 20);
     background-image: url(../images/WhyBackground-min.jpg);
     background-repeat: no-repeat;
