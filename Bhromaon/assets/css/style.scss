@@ -79,8 +79,12 @@ body {
                 line-height: 1.25rem;
                 letter-spacing: 0.0875rem;
                 color: #fff;
-                &:hover {
+                &:active {
                     color: #000;
+                }
+                &:focus {
+                    color: #000;
+                    border: 1px solid black;
                 }
             }
         }
@@ -137,6 +141,13 @@ header {
                         color: #fff;
                         &:hover {
                             color: #000;
+                        }
+                        &:active {
+                            color: #2f0e2f;
+                        }
+                        &:focus {
+                            color: #000;
+                            border: 1px solid black;
                         }
                     }
                 }
@@ -195,6 +206,19 @@ header {
                     border-color: #999;
                 }
             }
+            &:active {
+                color: #747474;
+                &::after {
+                    border-color: #747474;
+                }
+            }
+            &:focus {
+                color: #999;
+                border: 1px solid black;
+                &::after {
+                    border-color: #999;
+                }
+            }
         }
     }
 }
@@ -244,6 +268,13 @@ header {
         }
         &:hover {
             background-color: #3150d6;
+        }
+        &:active {
+            background-color: #223794;
+        }
+        &:focus {
+            background-color: #3150d6;
+            border: 1px solid black;
         }
     }
 }
@@ -296,6 +327,12 @@ header {
                 }
                 &:hover {
                     background-position: left;
+                }
+                &:active {
+                    background-color: #3a58cf;
+                }
+                &:focus {
+                    border: 1px solid black;
                 }
             }
         }
@@ -443,6 +480,12 @@ header {
             cursor: pointer;
             background-position: left;
         }
+        &:active {
+            background-color: #3a58cf;
+        }
+        &:focus {
+            border: 1px solid black;
+        }
     }
 }
 
@@ -533,6 +576,17 @@ footer {
                     transition: all .2s ease;
                 }
                 &:hover {
+                    svg {
+                        fill: #5373FD;
+                    }
+                }
+                &:active {
+                    svg {
+                        fill: #283c94;
+                    }
+                }
+                &:focus {
+                    border: 1px solid black;
                     svg {
                         fill: #5373FD;
                     }
